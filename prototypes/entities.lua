@@ -9,6 +9,7 @@ data:extend({
 			corpse = "medium-remnants",
 			dying_explosion = "medium-explosion",
 			energy_per_hit_point = 0.5,
+			terrain_friction_modifier = 0,
 			resistances =
     {
       {
