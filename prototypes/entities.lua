@@ -1,5 +1,6 @@
-data:extend({
-  {
+data:extend(
+{
+ {
       type = "car",
       name = "gunship",
       icon = "__Aircraft__/graphics/icon.png",
@@ -151,7 +152,7 @@ data:extend({
 		
   },
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  {
+ {
       type = "car",
       name = "cargo-plane",
       icon = "__Aircraft__/graphics/flyer_3-icon.png",
@@ -302,7 +303,7 @@ data:extend({
 			guns = { "cargo-plane-machine-gun"},
   },
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  {
+ {
       type = "car",
       name = "jet",
       icon = "__Aircraft__/graphics/flyer_2-icon.png",
@@ -453,7 +454,7 @@ data:extend({
 			guns = { "aircraft-machine-gun", "aircraft-rocket-launcher"},
   },
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  {
+ {
       type = "car",
       name = "flying-fortress",
       icon = "__Aircraft__/graphics/flyer_2-icon.png",
@@ -604,7 +605,7 @@ data:extend({
 			guns = { "aircraft-machine-gun", "aircraft-cannon"},
   },
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    {
+ {
     type = "projectile",
     name = "high-explosive-cannon-projectile",
     flags = {"not-on-map"},
@@ -675,4 +676,5 @@ data:extend({
       priority = "high"
     },
   }
-})
+}
+)
