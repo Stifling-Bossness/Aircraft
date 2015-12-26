@@ -187,6 +187,36 @@ data:extend(
     subgroup = "ammo",
     order = "d[cannon-shell]-b[explosive]",
     stack_size = 100
-  }
+  },
+   {
+    type = "gun",
+    name = "flying-fortress-machine-gun",
+    icon = "__base__/graphics/icons/submachine-gun.png",
+    flags = {"goes-to-main-inventory", "hidden"},
+    subgroup = "gun",
+    order = "a[basic-clips]-c[aircraft-machine-gun]",
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "bullet",
+      cooldown = 0.01,
+      movement_slow_down_factor = 0.2,
+      shell_particle =
+      {
+        name = "shell-particle",
+        direction_deviation = 0.1,
+        speed = 0.8,
+        speed_deviation = 0.03,
+        center = {0, 0},
+        creation_distance = -0.6875,
+        starting_frame_speed = 0.4,
+        starting_frame_speed_deviation = 0.1
+      },
+      projectile_creation_distance = 0.65,
+      range = 40,
+      sound = make_heavy_gunshot_sounds(),
+    },
+    stack_size = 1
+  },
 }
 )
