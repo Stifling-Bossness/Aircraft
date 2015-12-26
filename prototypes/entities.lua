@@ -602,7 +602,7 @@ data:extend(
 			tank_driving = true,
       weight = 5000,
       inventory_size = 10,
-			guns = { "aircraft-machine-gun", "aircraft-cannon"},
+			guns = { "flying-fortress-machine-gun", "aircraft-cannon"},
   },
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  {
