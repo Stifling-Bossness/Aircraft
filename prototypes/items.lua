@@ -1,6 +1,5 @@
 data:extend(
 {
-
  {
     type = "item",
     name = "gunship",
@@ -10,7 +9,8 @@ data:extend(
     place_result= "gunship",
     stack_size= 1,
   },
-   {
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
     type = "item",
     name = "cargo-plane",
     icon = "__Aircraft__/graphics/flyer_3-icon.png",
@@ -19,7 +19,8 @@ data:extend(
     place_result= "cargo-plane",
     stack_size= 1,
   },
-   {
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
     type = "item",
     name = "jet",
     icon = "__Aircraft__/graphics/flyer_2-icon.png",
@@ -28,7 +29,8 @@ data:extend(
     place_result= "jet",
     stack_size= 1,
   },
-   {
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
     type = "item",
     name = "flying-fortress",
     icon = "__Aircraft__/graphics/flyer_2-icon.png",
@@ -37,7 +39,8 @@ data:extend(
     place_result= "flying-fortress",
     stack_size= 1,
   },
-	{
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
     type = "gun",
     name = "aircraft-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
@@ -67,7 +70,8 @@ data:extend(
     },
     stack_size = 1
   },
-  {
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
     type = "gun",
     name = "aircraft-rocket-launcher",
     icon = "__base__/graphics/icons/explosive-rocket.png",
@@ -93,7 +97,8 @@ data:extend(
     },
     stack_size = 5
   },
-	{
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
     type = "gun",
     name = "cargo-plane-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
@@ -123,7 +128,8 @@ data:extend(
     },
     stack_size = 1
   },
-  {
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
     type = "gun",
     name = "aircraft-cannon",
     icon = "__base__/graphics/icons/explosive-cannon-shell.png",
@@ -149,7 +155,8 @@ data:extend(
     },
     stack_size = 1
   },
-    {
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
     type = "ammo",
     name = "high-explosive-cannon-shell",
     icon = "__base__/graphics/icons/explosive-cannon-shell.png",
@@ -180,6 +187,36 @@ data:extend(
     subgroup = "ammo",
     order = "d[cannon-shell]-b[explosive]",
     stack_size = 100
-  }
- }
+  },
+   {
+    type = "gun",
+    name = "flying-fortress-machine-gun",
+    icon = "__base__/graphics/icons/submachine-gun.png",
+    flags = {"goes-to-main-inventory", "hidden"},
+    subgroup = "gun",
+    order = "a[basic-clips]-c[aircraft-machine-gun]",
+    attack_parameters =
+    {
+      type = "projectile",
+      ammo_category = "bullet",
+      cooldown = 0.01,
+      movement_slow_down_factor = 0.2,
+      shell_particle =
+      {
+        name = "shell-particle",
+        direction_deviation = 0.1,
+        speed = 0.8,
+        speed_deviation = 0.03,
+        center = {0, 0},
+        creation_distance = -0.6875,
+        starting_frame_speed = 0.4,
+        starting_frame_speed_deviation = 0.1
+      },
+      projectile_creation_distance = 0.65,
+      range = 40,
+      sound = make_heavy_gunshot_sounds(),
+    },
+    stack_size = 1
+  },
+}
 )

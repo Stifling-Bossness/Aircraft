@@ -1,5 +1,6 @@
-data:extend({
-  {
+data:extend(
+{
+ {
       type = "car",
       name = "gunship",
       icon = "__Aircraft__/graphics/icon.png",
@@ -123,20 +124,20 @@ data:extend({
     {
       sound =
       {
-        filename = "__base__/sound/car-engine.ogg",
+        filename = "__Aircraft__/sounds/jet-loop.ogg",
         volume = 0.6
       },
       activate_sound =
       {
-        filename = "__base__/sound/car-engine-start.ogg",
+        filename = "__Aircraft__/sounds/jet-start.ogg",
         volume = 0.6
       },
       deactivate_sound =
       {
-        filename = "__base__/sound/car-engine-stop.ogg",
+        filename = "__Aircraft__/sounds/jet-stop.ogg",
         volume = 0.6
       },
-      match_speed_to_activity = true,
+      match_speed_to_activity = false,
     },
 			stop_trigger_speed = 0.2,
       acceleration_per_energy = 0.35,
@@ -150,8 +151,8 @@ data:extend({
 			guns = { "aircraft-machine-gun", "aircraft-rocket-launcher"},
 		
   },
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-  {
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
       type = "car",
       name = "cargo-plane",
       icon = "__Aircraft__/graphics/flyer_3-icon.png",
@@ -275,20 +276,20 @@ data:extend({
     {
       sound =
       {
-        filename = "__base__/sound/car-engine.ogg",
+        filename = "__Aircraft__/sounds/jet-loop.ogg",
         volume = 0.6
       },
       activate_sound =
       {
-        filename = "__base__/sound/car-engine-start.ogg",
+        filename = "__Aircraft__/sounds/jet-start.ogg",
         volume = 0.6
       },
       deactivate_sound =
       {
-        filename = "__base__/sound/car-engine-stop.ogg",
+        filename = "__Aircraft__/sounds/jet-stop.ogg",
         volume = 0.6
       },
-      match_speed_to_activity = true,
+      match_speed_to_activity = false,
     },
 			stop_trigger_speed = 0.2,
       acceleration_per_energy = 0.15,
@@ -301,8 +302,8 @@ data:extend({
       inventory_size = 60,
 			guns = { "cargo-plane-machine-gun"},
   },
-  ---------------------------------------------------------------------------------------------------
-  {
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
       type = "car",
       name = "jet",
       icon = "__Aircraft__/graphics/flyer_2-icon.png",
@@ -426,20 +427,20 @@ data:extend({
     {
       sound =
       {
-        filename = "__base__/sound/car-engine.ogg",
+        filename = "__Aircraft__/sounds/jet-loop.ogg",
         volume = 0.6
       },
       activate_sound =
       {
-        filename = "__base__/sound/car-engine-start.ogg",
+        filename = "__Aircraft__/sounds/jet-start.ogg",
         volume = 0.6
       },
       deactivate_sound =
       {
-        filename = "__base__/sound/car-engine-stop.ogg",
+        filename = "__Aircraft__/sounds/jet-stop.ogg",
         volume = 0.6
       },
-      match_speed_to_activity = true,
+      match_speed_to_activity = false,
     },
 			stop_trigger_speed = 0.2,
       acceleration_per_energy = 0.80,
@@ -452,8 +453,8 @@ data:extend({
       inventory_size = 3,
 			guns = { "aircraft-machine-gun", "aircraft-rocket-launcher"},
   },
-  ---------------------------------------------------------------------------------------------------------------
-  {
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
       type = "car",
       name = "flying-fortress",
       icon = "__Aircraft__/graphics/flyer_2-icon.png",
@@ -577,20 +578,20 @@ data:extend({
     {
       sound =
       {
-        filename = "__base__/sound/car-engine.ogg",
+        filename = "__Aircraft__/sounds/jet-loop.ogg",
         volume = 0.6
       },
       activate_sound =
       {
-        filename = "__base__/sound/car-engine-start.ogg",
+        filename = "__Aircraft__/sounds/jet-start.ogg",
         volume = 0.6
       },
       deactivate_sound =
       {
-        filename = "__base__/sound/car-engine-stop.ogg",
+        filename = "__Aircraft__/sounds/jet-stop.ogg",
         volume = 0.6
       },
-      match_speed_to_activity = true,
+      match_speed_to_activity = false,
     },
 			stop_trigger_speed = 0.1,
       acceleration_per_energy = 0.15,
@@ -601,9 +602,10 @@ data:extend({
 			tank_driving = true,
       weight = 5000,
       inventory_size = 10,
-			guns = { "aircraft-machine-gun", "aircraft-cannon"},
+			guns = { "flying-fortress-machine-gun", "aircraft-cannon"},
   },
-    {
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
     type = "projectile",
     name = "high-explosive-cannon-projectile",
     flags = {"not-on-map"},
@@ -674,4 +676,5 @@ data:extend({
       priority = "high"
     },
   }
-})
+}
+)

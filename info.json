@@ -1,9 +1,9 @@
 {
   "name": "Aircraft",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "title": "Aircraft",
   "author": "Eldwen (Modified by SuicidalKid)",
   "homepage": "http://www.factorioforums.com",
   "dependencies": ["base"],
-  "description": "A recon and combat aircraft, along with an AC-130 flying fortress and other aerocraft."
+  "description": "A recon and combat aircraft, along with a flying fortress and other aerocraft."
 }
