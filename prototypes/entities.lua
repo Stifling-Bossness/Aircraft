@@ -124,20 +124,20 @@ data:extend(
     {
       sound =
       {
-        filename = "__base__/sound/car-engine.ogg",
+        filename = "__Aircraft__/sounds/jet-loop.ogg",
         volume = 0.6
       },
       activate_sound =
       {
-        filename = "__base__/sound/car-engine-start.ogg",
+        filename = "__Aircraft__/sounds/jet-start.ogg",
         volume = 0.6
       },
       deactivate_sound =
       {
-        filename = "__base__/sound/car-engine-stop.ogg",
+        filename = "__Aircraft__/sounds/jet-stop.ogg",
         volume = 0.6
       },
-      match_speed_to_activity = true,
+      match_speed_to_activity = false,
     },
 			stop_trigger_speed = 0.2,
       acceleration_per_energy = 0.35,
@@ -276,20 +276,20 @@ data:extend(
     {
       sound =
       {
-        filename = "__base__/sound/car-engine.ogg",
+        filename = "__Aircraft__/sounds/jet-loop.ogg",
         volume = 0.6
       },
       activate_sound =
       {
-        filename = "__base__/sound/car-engine-start.ogg",
+        filename = "__Aircraft__/sounds/jet-start.ogg",
         volume = 0.6
       },
       deactivate_sound =
       {
-        filename = "__base__/sound/car-engine-stop.ogg",
+        filename = "__Aircraft__/sounds/jet-stop.ogg",
         volume = 0.6
       },
-      match_speed_to_activity = true,
+      match_speed_to_activity = false,
     },
 			stop_trigger_speed = 0.2,
       acceleration_per_energy = 0.15,
@@ -427,20 +427,20 @@ data:extend(
     {
       sound =
       {
-        filename = "__base__/sound/car-engine.ogg",
+        filename = "__Aircraft__/sounds/jet-loop.ogg",
         volume = 0.6
       },
       activate_sound =
       {
-        filename = "__base__/sound/car-engine-start.ogg",
+        filename = "__Aircraft__/sounds/jet-start.ogg",
         volume = 0.6
       },
       deactivate_sound =
       {
-        filename = "__base__/sound/car-engine-stop.ogg",
+        filename = "__Aircraft__/sounds/jet-stop.ogg",
         volume = 0.6
       },
-      match_speed_to_activity = true,
+      match_speed_to_activity = false,
     },
 			stop_trigger_speed = 0.2,
       acceleration_per_energy = 0.80,
@@ -578,20 +578,20 @@ data:extend(
     {
       sound =
       {
-        filename = "__base__/sound/car-engine.ogg",
+        filename = "__Aircraft__/sounds/jet-loop.ogg",
         volume = 0.6
       },
       activate_sound =
       {
-        filename = "__base__/sound/car-engine-start.ogg",
+        filename = "__Aircraft__/sounds/jet-start.ogg",
         volume = 0.6
       },
       deactivate_sound =
       {
-        filename = "__base__/sound/car-engine-stop.ogg",
+        filename = "__Aircraft__/sounds/jet-stop.ogg",
         volume = 0.6
       },
-      match_speed_to_activity = true,
+      match_speed_to_activity = false,
     },
 			stop_trigger_speed = 0.1,
       acceleration_per_energy = 0.15,
