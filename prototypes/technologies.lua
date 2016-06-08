@@ -76,7 +76,7 @@ data:extend(
  {
 		type = "technology",
 		name = "jets",
-		icon = "__Aircraft__/graphics/flyer_2-icon.png",
+		icon = "__Aircraft__/graphics/flyer-icon.png",
 		effects =
     {
       {

@@ -23,7 +23,7 @@ data:extend(
  {
     type = "item",
     name = "jet",
-    icon = "__Aircraft__/graphics/flyer_2-icon.png",
+    icon = "__Aircraft__/graphics/flyer-icon.png",
     flags = { "goes-to-quickbar" },
     subgroup = "ammo",
     place_result= "jet",

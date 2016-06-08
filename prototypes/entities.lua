@@ -76,7 +76,7 @@ data:extend(
           width = 250,
           height = 250
         },
-        shift = {-0.6, -14},
+        shift = {-0.1, -20},
         size = 3,
         intensity = 0.7
       },
@@ -91,7 +91,7 @@ data:extend(
           width = 200,
           height = 200
         },
-        shift = {0.6, -14},
+        shift = {-0.1, -12},
         size = 2,
         intensity = 0.8
       }
@@ -125,17 +125,17 @@ data:extend(
       sound =
       {
         filename = "__Aircraft__/sounds/jet-loop.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       activate_sound =
       {
         filename = "__Aircraft__/sounds/jet-start.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       deactivate_sound =
       {
         filename = "__Aircraft__/sounds/jet-stop.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       match_speed_to_activity = false,
     },
@@ -144,7 +144,7 @@ data:extend(
       breaking_speed = 0.09,
 			open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
       close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-      rotation_speed = 0.02,
+      rotation_speed = 0.005,
 			tank_driving = true,
       weight = 750,
       inventory_size = 15,
@@ -193,7 +193,7 @@ data:extend(
     },
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
-    effectivity = 0.6,
+    effectivity = 1.0,
     braking_power = "650kW",
     burner =
     {
@@ -228,7 +228,7 @@ data:extend(
           width = 350,
           height = 350
         },
-        shift = {-0.6, -14},
+        shift = {-0.1, -26.0},
         size = 4,
         intensity = 0.8
       },
@@ -243,7 +243,7 @@ data:extend(
           width = 250,
           height = 250
         },
-        shift = {0.6, -14},
+        shift = {-0.1, -18.0},
         size = 3,
         intensity = 0.9
       }
@@ -277,17 +277,17 @@ data:extend(
       sound =
       {
         filename = "__Aircraft__/sounds/jet-loop.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       activate_sound =
       {
         filename = "__Aircraft__/sounds/jet-start.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       deactivate_sound =
       {
         filename = "__Aircraft__/sounds/jet-stop.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       match_speed_to_activity = false,
     },
@@ -306,7 +306,7 @@ data:extend(
  {
       type = "car",
       name = "jet",
-      icon = "__Aircraft__/graphics/flyer_2-icon.png",
+      icon = "__Aircraft__/graphics/flyer-icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "jet"},
       max_health = 1250,
@@ -345,7 +345,7 @@ data:extend(
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
     effectivity = 0.9,
-    braking_power = "350kW",
+    braking_power = "2000kW",
     burner =
     {
       effectivity = 0.90,
@@ -379,7 +379,7 @@ data:extend(
           width = 250,
           height = 250
         },
-        shift = {-0.6, -14},
+        shift = {-0.1, -20},
         size = 3,
         intensity = 0.7
       },
@@ -394,7 +394,7 @@ data:extend(
           width = 200,
           height = 200
         },
-        shift = {0.6, -14},
+        shift = {-0.1, -12},
         size = 2,
         intensity = 0.8
       }
@@ -428,17 +428,17 @@ data:extend(
       sound =
       {
         filename = "__Aircraft__/sounds/jet-loop.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       activate_sound =
       {
         filename = "__Aircraft__/sounds/jet-start.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       deactivate_sound =
       {
         filename = "__Aircraft__/sounds/jet-stop.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       match_speed_to_activity = false,
     },
@@ -495,8 +495,8 @@ data:extend(
     },
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
-    effectivity = 0.5,
-    braking_power = "250kW",
+    effectivity = 2.3,
+    braking_power = "650kW",
     burner =
     {
       effectivity = 0.50,
@@ -530,7 +530,7 @@ data:extend(
           width = 250,
           height = 250
         },
-        shift = {-0.6, -14},
+        shift = {-0.1, -20},
         size = 3,
         intensity = 0.7
       },
@@ -545,7 +545,7 @@ data:extend(
           width = 200,
           height = 200
         },
-        shift = {0.6, -14},
+        shift = {-0.1, -12},
         size = 2,
         intensity = 0.8
       }
@@ -579,17 +579,17 @@ data:extend(
       sound =
       {
         filename = "__Aircraft__/sounds/jet-loop.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       activate_sound =
       {
         filename = "__Aircraft__/sounds/jet-start.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       deactivate_sound =
       {
         filename = "__Aircraft__/sounds/jet-stop.ogg",
-        volume = 0.6
+        volume = 0.8
       },
       match_speed_to_activity = false,
     },
