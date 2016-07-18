@@ -151,7 +151,7 @@ data:extend(
 			guns = { "aircraft-machine-gun", "aircraft-rocket-launcher"},
 		
   },
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  {
       type = "car",
       name = "cargo-plane",
@@ -296,20 +296,20 @@ data:extend(
       breaking_speed = 0.15,
 			open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
       close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-      rotation_speed = 0.002,
+      rotation_speed = 0.006,
 			tank_driving = true,
       weight = 3500,
-      inventory_size = 60,
+      inventory_size = 90,
 			guns = { "cargo-plane-machine-gun"},
   },
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  {
       type = "car",
       name = "jet",
       icon = "__Aircraft__/graphics/flyer-icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "jet"},
-      max_health = 1250,
+      max_health = 750,
 			corpse = "medium-remnants",
 			dying_explosion = "medium-explosion",
 			energy_per_hit_point = 0.5,
@@ -318,22 +318,22 @@ data:extend(
     {
       {
         type = "fire",
-        decrease = 10,
+        decrease = 5,
         percent = 50
       },
       {
         type = "physical",
-        decrease = 10,
+        decrease = 5,
         percent = 30
       },
       {
         type = "impact",
-        decrease = 40,
+        decrease = 5,
         percent = 60
       },
       {
         type = "explosion",
-        decrease = 10,
+        decrease = 20,
         percent = 30
       },
       {
@@ -451,16 +451,16 @@ data:extend(
 			tank_driving = true,
       weight = 500,
       inventory_size = 3,
-			guns = { "aircraft-machine-gun", "aircraft-rocket-launcher"},
+			guns = { "aircraft-machine-gun", "aircraft-rocket-launcher", "napalm-launcher"},
   },
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  {
       type = "car",
       name = "flying-fortress",
       icon = "__Aircraft__/graphics/flyer_2-icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "flying-fortress"},
-      max_health = 6000,
+      max_health = 7500,
 			corpse = "medium-remnants",
 			dying_explosion = "medium-explosion",
 			energy_per_hit_point = 0.8,
@@ -469,12 +469,12 @@ data:extend(
     {
       {
         type = "fire",
-        decrease = 35,
+        decrease = 40,
         percent = 50
       },
       {
         type = "physical",
-        decrease = 25,
+        decrease = 35,
         percent = 30
       },
       {
@@ -484,19 +484,19 @@ data:extend(
       },
       {
         type = "explosion",
-        decrease = 25,
+        decrease = 30,
         percent = 30
       },
       {
         type = "acid",
-        decrease = 15,
+        decrease = 20,
         percent = 20
       }
     },
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
     effectivity = 2.3,
-    braking_power = "650kW",
+    braking_power = "850kW",
     burner =
     {
       effectivity = 0.50,
@@ -515,7 +515,7 @@ data:extend(
         }
       }
     },
-		consumption = "2000kW",
+		consumption = "1850kW",
     friction = 0.015,
 		light =
     {
@@ -594,17 +594,168 @@ data:extend(
       match_speed_to_activity = false,
     },
 			stop_trigger_speed = 0.1,
-      acceleration_per_energy = 0.15,
+      acceleration_per_energy = 0.30,
       breaking_speed = 0.001,
 			open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
       close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-      rotation_speed = 0.005,
+      rotation_speed = 0.004,
 			tank_driving = true,
-      weight = 5000,
-      inventory_size = 10,
-			guns = { "flying-fortress-machine-gun", "aircraft-cannon"},
+      weight = 3000,
+      inventory_size = 15,
+			guns = { "flying-fortress-machine-gun", "aircraft-cannon", "flying-fortress-rocket-launcher"},
   },
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {
+      type = "car",
+      name = "cheat-machine",
+      icon = "__Aircraft__/graphics/flyer_2-icon.png",
+      flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
+      minable = {mining_time = 1, result = "cheat-machine"},
+      max_health = 1000000000,
+			corpse = "medium-remnants",
+			dying_explosion = "medium-explosion",
+			energy_per_hit_point = 0.8,
+			terrain_friction_modifier = 0,
+			resistances =
+    {
+      {
+        type = "fire",
+        decrease = 40,
+        percent = 50
+      },
+      {
+        type = "physical",
+        decrease = 35,
+        percent = 30
+      },
+      {
+        type = "impact",
+        decrease = 60,
+        percent = 60
+      },
+      {
+        type = "explosion",
+        decrease = 30,
+        percent = 30
+      },
+      {
+        type = "acid",
+        decrease = 20,
+        percent = 20
+      }
+    },
+		collision_mask = {},
+		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    effectivity = 2.3,
+    braking_power = "3000kW",
+    burner =
+    {
+      effectivity = 0.99,
+      fuel_inventory_size = 1,
+      smoke =
+      {
+        {
+          name = "smoke",
+          deviation = {0.25, 0.25},
+          frequency = 50,
+          position = {0, 1.5},
+          starting_frame = 3,
+          starting_frame_deviation = 5,
+          starting_frame_speed = 0,
+          starting_frame_speed_deviation = 5
+        }
+      }
+    },
+		consumption = "9001kW",
+    friction = 0.001,
+		light =
+    {
+      {
+        type = "oriented",
+        minimum_darkness = 0.3,
+        picture =
+        {
+          filename = "__core__/graphics/light-cone.png",
+          priority = "medium",
+          scale = 2,
+          width = 250,
+          height = 250
+        },
+        shift = {-0.1, -20},
+        size = 3,
+        intensity = 0.7
+      },
+      {
+        type = "oriented",
+        minimum_darkness = 0.3,
+        picture =
+        {
+          filename = "__core__/graphics/light-cone.png",
+          priority = "medium",
+          scale = 2,
+          width = 200,
+          height = 200
+        },
+        shift = {-0.1, -12},
+        size = 2,
+        intensity = 0.8
+      }
+    },
+		render_layer = "air-object", 
+	  final_render_layer = "air-object",
+		animation =
+    {
+			    filename = "__Aircraft__/graphics/flyer2_sheet.png",
+          priority = "high",
+				  width = 224,
+          height = 224,
+          frame_count = 1,
+          direction_count = 36,
+					line_length = 6,
+					line_height = 6,
+          shift = {0, 0},
+          max_advance = 1,
+    },
+      sound_no_fuel =
+    {
+      {
+        filename = "__base__/sound/fight/tank-no-fuel-1.ogg",
+        volume = 0.6
+      },
+    },
+		  sound_minimum_speed = 0.15;
+    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    working_sound =
+    {
+      sound =
+      {
+        filename = "__Aircraft__/sounds/jet-loop.ogg",
+        volume = 0.8
+      },
+      activate_sound =
+      {
+        filename = "__Aircraft__/sounds/jet-start.ogg",
+        volume = 0.8
+      },
+      deactivate_sound =
+      {
+        filename = "__Aircraft__/sounds/jet-stop.ogg",
+        volume = 0.8
+      },
+      match_speed_to_activity = false,
+    },
+			stop_trigger_speed = 0.1,
+      acceleration_per_energy = 1,
+      breaking_speed = 1,
+			open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
+      close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
+      rotation_speed = 1,
+			tank_driving = true,
+      weight = 0.000001,
+      inventory_size = 15,
+			guns = { "flying-fortress-machine-gun", "aircraft-cannon", "flying-fortress-rocket-launcher", "napalm-launcher"},
+  },
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  {
     type = "projectile",
     name = "high-explosive-cannon-projectile",
@@ -646,7 +797,7 @@ data:extend(
             action =
             {
               type = "area",
-              perimeter = 12,
+              perimeter = 18,
               action_delivery =
               {
                 type = "instant",
@@ -675,6 +826,7 @@ data:extend(
       height = 50,
       priority = "high"
     },
-  }
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ }
 }
 )
