@@ -82,6 +82,7 @@ data:extend(
 	type = "recipe",
 	name = "aircraft-engine-upgrade",
 	enabled = "false",
+	category = "crafting-with-fluid",
 	ingredients =
 	{
 		{"electric-engine-unit", 10},
