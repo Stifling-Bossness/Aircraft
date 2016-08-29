@@ -85,7 +85,7 @@ data:extend(
 	ingredients =
 	{
 		{"electric-engine-unit", 10},
-		{"lubricant", 5},
+		{type="fluid", name= "lubricant", amount = 5},
 		{"solid-fuel", 5},
 	},
 	result = "aircraft-engine-upgrade",
