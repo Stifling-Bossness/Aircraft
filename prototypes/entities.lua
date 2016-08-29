@@ -3,7 +3,7 @@ data:extend(
  {
       type = "car",
       name = "gunship",
-      icon = "__Aircraft__/graphics/icon.png",
+      icon = "__Aircraft__/graphics/Gunship_Icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "gunship"},
       max_health = 500,
@@ -101,7 +101,7 @@ data:extend(
 	  final_render_layer = "air-object",
 		animation =
     {
-			    filename = "__Aircraft__/graphics/gunship_1_sheet.png",
+			    filename = "__Aircraft__/graphics/Gunship_Spritesheet.png",
           priority = "high",
 				  width = 224,
           height = 224,
@@ -156,7 +156,7 @@ data:extend(
  {
       type = "car",
       name = "cargo-plane",
-      icon = "__Aircraft__/graphics/flyer_3-icon.png",
+      icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "cargo-plane"},
       max_health = 500,
@@ -254,7 +254,7 @@ data:extend(
 	  final_render_layer = "air-object",
 		animation =
     {
-			    filename = "__Aircraft__/graphics/flyer3_sheet.png",
+			    filename = "__Aircraft__/graphics/Cargo_Plane_Spritesheet.png",
           priority = "high",
 				  width = 224,
           height = 224,
@@ -308,7 +308,7 @@ data:extend(
  {
       type = "car",
       name = "jet",
-      icon = "__Aircraft__/graphics/flyer-icon.png",
+      icon = "__Aircraft__/graphics/Jet_Icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "jet"},
       max_health = 250,
@@ -406,7 +406,7 @@ data:extend(
 	  final_render_layer = "air-object",
 		animation =
     {
-			    filename = "__Aircraft__/graphics/flyer2_sb.png",
+			    filename = "__Aircraft__/graphics/Jet_Spritesheet.png",
           priority = "high",
 				  width = 224,
           height = 224,
@@ -461,7 +461,7 @@ data:extend(
  {
       type = "car",
       name = "flying-fortress",
-      icon = "__Aircraft__/graphics/flyer_2-icon.png",
+      icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "flying-fortress"},
       max_health = 2000,
@@ -559,7 +559,7 @@ data:extend(
 	  final_render_layer = "air-object",
 		animation =
     {
-			    filename = "__Aircraft__/graphics/flyer2_sheet.png",
+			    filename = "__Aircraft__/graphics/Flying_Fortress_Spritesheet.png",
           priority = "high",
 				  width = 224,
           height = 224,
@@ -614,7 +614,7 @@ data:extend(
  {
       type = "car",
       name = "cheat-machine",
-      icon = "__Aircraft__/graphics/flyer_2-icon.png",
+      icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "cheat-machine"},
       max_health = 1000000000,
@@ -712,7 +712,7 @@ data:extend(
 	  final_render_layer = "air-object",
 		animation =
     {
-			    filename = "__Aircraft__/graphics/flyer2_sheet.png",
+			    filename = "__Aircraft__/graphics/Flying_Fortress_Spritesheet.png",
           priority = "high",
 				  width = 224,
           height = 224,

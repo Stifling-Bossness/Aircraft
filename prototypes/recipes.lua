@@ -9,7 +9,7 @@ data:extend(
       {"electric-engine-unit",64},
       {"steel-plate",200},
       {"iron-plate",400},
-      {"advanced-circuit",40},
+      {"processing-unit",40},
 			{"submachine-gun",5},
 			{"rocket-launcher",5}
     },
@@ -80,27 +80,28 @@ data:extend(
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   {
 	type = "recipe",
-	name = "aircraft-engine-upgrade",
+	name = "aircraft-afterburner",
 	enabled = "false",
+	category = "crafting-with-fluid",
 	ingredients =
 	{
 		{"electric-engine-unit", 10},
 		{type="fluid", name= "lubricant", amount = 5},
 		{"solid-fuel", 5},
 	},
-	result = "aircraft-engine-upgrade",
+	result = "aircraft-afterburner",
   },
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   {
 	type = "recipe",
-	name = "aircraft-energy-shield-equipment",
+	name = "aircraft-energy-shield",
 	enabled = "false",
 	ingredients =
 	{
 		{"energy-shield-mk2-equipment", 2},
 		{"battery", 10},
 	},
-	result = "aircraft-energy-shield-equipment",
+	result = "aircraft-energy-shield",
   },
 }
 )

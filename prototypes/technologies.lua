@@ -3,7 +3,8 @@ data:extend(
  {
 		type = "technology",
 		name = "advanced-aerodynamics",
-		icon = "__Aircraft__/graphics/gunship-1.png",
+		icon = "__Aircraft__/graphics/Gunship.png",
+		icon_size = 128,
 		prerequisites = {"flying"},
 		unit =
 		{
@@ -22,7 +23,8 @@ data:extend(
  {
 		type = "technology",
 		name = "gunships",
-		icon = "__Aircraft__/graphics/gunship-1.png",
+		icon = "__Aircraft__/graphics/Gunship.png",
+		icon_size = 128,
 		effects =
     {
       {
@@ -49,7 +51,8 @@ data:extend(
  {
 		type = "technology",
 		name = "cargo-planes",
-		icon = "__Aircraft__/graphics/flyer_3-icon.png",
+		icon = "__Aircraft__/graphics/Cargo_Plane.png",
+		icon_size = 128,
 		effects =
     {
       {
@@ -76,7 +79,8 @@ data:extend(
  {
 		type = "technology",
 		name = "jets",
-		icon = "__Aircraft__/graphics/flyer-icon.png",
+		icon = "__Aircraft__/graphics/Jet.png",
+		icon_size = 128,
 		effects =
     {
       {
@@ -103,7 +107,8 @@ data:extend(
  {
 		type = "technology",
 		name = "flying-fortress",
-		icon = "__Aircraft__/graphics/flyer_2-icon.png",
+		icon = "__Aircraft__/graphics/Flying_Fortress.png",
+		icon_size = 128,
 		effects =
     {
       {
@@ -155,12 +160,13 @@ data:extend(
  {
 		type = "technology",
 		name = "afterburner",
-		icon = "__Aircraft__/graphics/aircraft-engine-upgrade.png",
+		icon = "__Aircraft__/graphics/Aircraft_Afterburner.png",
+		icon_size = 128,
 		effects =
 	{
 		{
 		  type = "unlock-recipe",
-		  recipe = "aircraft-engine-upgrade",
+		  recipe = "aircraft-afterburner",
 		},
 	},
 		prerequisites = {"advanced-aerodynamics"},
@@ -180,12 +186,12 @@ data:extend(
  {
 		type = "technology",
 		name = "aircraft-energy-shield",
-		icon = "__Aircraft__/graphics/aircraft-energy-shield-equipment.png",
+		icon = "__Aircraft__/graphics/Aircraft_Energy_Shield.png",
 		effects =
 	{
 	{
 		type = "unlock-recipe",
-		recipe = "aircraft-energy-shield-equipment",
+		recipe = "aircraft-energy-shield",
 	},
 	},
 	prerequisites = {"advanced-aerodynamics"},

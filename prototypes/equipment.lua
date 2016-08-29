@@ -2,7 +2,7 @@ data:extend(
 {
   {
     type = "energy-shield-equipment",
-    name = "aircraft-energy-shield-equipment",
+    name = "aircraft-energy-shield",
     max_shield_value = 250,
     energy_per_shield = "18kJ",
     energy_source =
@@ -20,7 +20,7 @@ data:extend(
     },
     sprite = 
     {
-      filename = "__Aircraft__/graphics/aircraft-energy-shield-equipment.png",
+      filename = "__Aircraft__/graphics/Aircraft_Energy_Shield.png",
       width = 64,
       height = 64,
       priority = "medium"
@@ -29,10 +29,10 @@ data:extend(
   },
   {
     type = "movement-bonus-equipment",
-    name = "aircraft-engine-upgrade",
+    name = "aircraft-afterburner",
     sprite = 
     {
-      filename = "__Aircraft__/graphics/aircraft-engine-upgrade.png",
+      filename = "__Aircraft__/graphics/Aircraft_Afterburner.png",
       width = 64,
       height = 128,
       priority = "medium"
