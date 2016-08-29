@@ -302,5 +302,27 @@ data:extend(
     place_result= "cheat-machine",
     stack_size= 1,
   },
+  {
+	type = "item",
+	name = "aircraft-energy-shield-equipment",
+	icon = "__Aircraft__/graphics/aircraft-energy-shield-equipment-icon.png",
+	placed_as_equipment_result = "aircraft-energy-shield-equipment",
+	flags = { "goes-to-main-inventory"},
+	subgroup = "equipment",
+	order = "b[shield]-c[aircraft-energy-shield-equipment]",
+	stack_size = 10,
+	default_request_amount = 10,
+  },
+  {
+    type = "item",
+    name = "aircraft-engine-upgrade",
+    icon = "__Aircraft__/graphics/aircraft-engine-upgrade-icon.png",
+    placed_as_equipment_result = "aircraft-engine-upgrade",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "equipment",
+    order = "e[engine]-a[aircraft-engine-upgrade]",
+    stack_size = 10,
+	default_request_amount = 10,
+  },
 }
 )

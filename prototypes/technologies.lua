@@ -151,6 +151,85 @@ data:extend(
 			time = 45
 		},
 		order = "c-h-g"
-	}
+	},
+ {
+		type = "technology",
+		name = "afterburner",
+		icon = "__Aircraft__/graphics/aircraft-engine-upgrade.png",
+		effects =
+	{
+		{
+		  type = "unlock-recipe",
+		  recipe = "aircraft-engine-upgrade",
+		},
+	},
+		prerequisites = {"advanced-aerodynamics"},
+		unit =
+		{
+			count = 350,
+			ingredients =
+			{
+				{"science-pack-1", 2},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+			},
+			time = 45,
+		},
+		order = "c-h-h",
+ },
+ {
+		type = "technology",
+		name = "aircraft-energy-shield",
+		icon = "__Aircraft__/graphics/aircraft-energy-shield-equipment.png",
+		effects =
+	{
+	{
+		type = "unlock-recipe",
+		recipe = "aircraft-energy-shield-equipment",
+	},
+	},
+	prerequisites = {"advanced-aerodynamics"},
+	unit =
+	{
+		count = 350,
+		ingredients =
+		{
+		{"science-pack-1", 2},
+		{"science-pack-2", 1},
+		{"science-pack-3", 1},
+		},
+		time = 45,
+	},
+	order = "c-h-i",
+	--Hey,   ^^^^^   a lil' easter egg for ya
+ },
 }
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

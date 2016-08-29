@@ -6,7 +6,7 @@ data:extend(
       icon = "__Aircraft__/graphics/icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "gunship"},
-      max_health = 2000,
+      max_health = 500,
 			corpse = "medium-remnants",
 			dying_explosion = "medium-explosion",
 			energy_per_hit_point = 0.5,
@@ -15,30 +15,31 @@ data:extend(
     {
       {
         type = "fire",
-        decrease = 15,
+        decrease = 2,
         percent = 50
       },
       {
         type = "physical",
-        decrease = 15,
+        decrease = 2,
         percent = 30
       },
       {
         type = "impact",
-        decrease = 50,
+        decrease = 10,
         percent = 60
       },
       {
         type = "explosion",
-        decrease = 15,
+        decrease = 2,
         percent = 30
       },
       {
         type = "acid",
-        decrease = 10,
+        decrease = 1,
         percent = 20
       }
     },
+		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
     effectivity = 0.7,
@@ -139,17 +140,17 @@ data:extend(
       },
       match_speed_to_activity = false,
     },
-			stop_trigger_speed = 0.2,
+	  stop_trigger_speed = 0.2,
       acceleration_per_energy = 0.35,
       breaking_speed = 0.09,
-			open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
+	  open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
       close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-      rotation_speed = 0.005,
-			tank_driving = true,
+      rotation_speed = 0.01,
+	  tank_driving = true,
       weight = 750,
       inventory_size = 15,
-			guns = { "aircraft-machine-gun", "aircraft-rocket-launcher"},
-		
+	  guns = { "aircraft-machine-gun", "aircraft-rocket-launcher"},
+	  equipment_grid="gunship-equipment-grid",
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  {
@@ -158,7 +159,7 @@ data:extend(
       icon = "__Aircraft__/graphics/flyer_3-icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "cargo-plane"},
-      max_health = 1000,
+      max_health = 500,
 			corpse = "medium-remnants",
 			dying_explosion = "medium-explosion",
 			energy_per_hit_point = 0.5,
@@ -167,22 +168,22 @@ data:extend(
     {
       {
         type = "fire",
-        decrease = 5,
+        decrease = 2,
         percent = 50
       },
       {
         type = "physical",
-        decrease = 5,
+        decrease = 2,
         percent = 30
       },
       {
         type = "impact",
-        decrease = 20,
+        decrease = 5,
         percent = 60
       },
       {
         type = "explosion",
-        decrease = 5,
+        decrease = 2,
         percent = 30
       },
       {
@@ -191,6 +192,7 @@ data:extend(
         percent = 20
       }
     },
+		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
     effectivity = 1.0,
@@ -309,7 +311,7 @@ data:extend(
       icon = "__Aircraft__/graphics/flyer-icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "jet"},
-      max_health = 750,
+      max_health = 250,
 			corpse = "medium-remnants",
 			dying_explosion = "medium-explosion",
 			energy_per_hit_point = 0.5,
@@ -323,25 +325,26 @@ data:extend(
       },
       {
         type = "physical",
-        decrease = 5,
+        decrease = 0,
         percent = 30
       },
       {
         type = "impact",
-        decrease = 5,
+        decrease = 0,
         percent = 60
       },
       {
         type = "explosion",
-        decrease = 20,
+        decrease = 1,
         percent = 30
       },
       {
         type = "acid",
-        decrease = 5,
+        decrease = 0,
         percent = 20
       }
     },
+		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
     effectivity = 0.9,
@@ -452,6 +455,7 @@ data:extend(
       weight = 500,
       inventory_size = 3,
 			guns = { "aircraft-machine-gun", "aircraft-rocket-launcher", "napalm-launcher"},
+	  equipment_grid = "jet-grid",
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  {
@@ -460,7 +464,7 @@ data:extend(
       icon = "__Aircraft__/graphics/flyer_2-icon.png",
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "flying-fortress"},
-      max_health = 7500,
+      max_health = 2000,
 			corpse = "medium-remnants",
 			dying_explosion = "medium-explosion",
 			energy_per_hit_point = 0.8,
@@ -469,30 +473,31 @@ data:extend(
     {
       {
         type = "fire",
-        decrease = 40,
+        decrease = 10,
         percent = 50
       },
       {
         type = "physical",
-        decrease = 35,
+        decrease = 7,
         percent = 30
       },
       {
         type = "impact",
-        decrease = 60,
+        decrease = 20,
         percent = 60
       },
       {
         type = "explosion",
-        decrease = 30,
+        decrease = 10,
         percent = 30
       },
       {
         type = "acid",
-        decrease = 20,
+        decrease = 7,
         percent = 20
       }
     },
+		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
     effectivity = 2.3,
@@ -603,6 +608,7 @@ data:extend(
       weight = 3000,
       inventory_size = 15,
 			guns = { "flying-fortress-machine-gun", "aircraft-cannon", "flying-fortress-rocket-launcher"},
+	  equipment_grid = "flying-fortress-grid",
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  {
@@ -620,30 +626,31 @@ data:extend(
     {
       {
         type = "fire",
-        decrease = 40,
-        percent = 50
+        decrease = 100,
+        percent = 100
       },
       {
         type = "physical",
-        decrease = 35,
-        percent = 30
+        decrease = 100,
+        percent = 100
       },
       {
         type = "impact",
-        decrease = 60,
-        percent = 60
+        decrease = 100,
+        percent = 100
       },
       {
         type = "explosion",
-        decrease = 30,
-        percent = 30
+        decrease = 100,
+        percent = 100
       },
       {
         type = "acid",
-        decrease = 20,
-        percent = 20
+        decrease = 100,
+        percent = 100
       }
     },
+		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
     effectivity = 2.3,

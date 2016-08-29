@@ -76,6 +76,49 @@ data:extend(
 		{"explosives", 5}
     },
     result = "high-explosive-cannon-shell"
-  }
+  },
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  {
+	type = "recipe",
+	name = "aircraft-engine-upgrade",
+	enabled = "false",
+	ingredients =
+	{
+		{"electric-engine-unit", 10},
+		{"lubricant", 5},
+		{"solid-fuel", 5},
+	},
+	result = "aircraft-engine-upgrade",
+  },
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  {
+	type = "recipe",
+	name = "aircraft-energy-shield-equipment",
+	enabled = "false",
+	ingredients =
+	{
+		{"energy-shield-mk2-equipment", 2},
+		{"battery", 10},
+	},
+	result = "aircraft-energy-shield-equipment",
+  },
 }
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
