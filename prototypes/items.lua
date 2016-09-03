@@ -1,6 +1,5 @@
-data:extend(
-{
- {
+data:extend({
+ { -- Gunship
     type = "item",
     name = "gunship",
     icon = "__Aircraft__/graphics/Gunship_Icon.png",
@@ -10,7 +9,7 @@ data:extend(
     stack_size= 1,
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- Cargo Plane
     type = "item",
     name = "cargo-plane",
     icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
@@ -20,7 +19,7 @@ data:extend(
     stack_size= 1,
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- Jet
     type = "item",
     name = "jet",
     icon = "__Aircraft__/graphics/Jet_Icon.png",
@@ -30,7 +29,7 @@ data:extend(
     stack_size= 1,
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- Flying Fortress
     type = "item",
     name = "flying-fortress",
     icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
@@ -40,7 +39,7 @@ data:extend(
     stack_size= 1,
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- Aircraft machine gun
     type = "gun",
     name = "aircraft-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
@@ -71,7 +70,7 @@ data:extend(
     stack_size = 1
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- Aircraft rocket launcher
     type = "gun",
     name = "aircraft-rocket-launcher",
     icon = "__base__/graphics/icons/explosive-rocket.png",
@@ -98,7 +97,7 @@ data:extend(
     stack_size = 5
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- Cargo plane machine gun
     type = "gun",
     name = "cargo-plane-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
@@ -129,7 +128,7 @@ data:extend(
     stack_size = 1
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- Aircraft cannon
     type = "gun",
     name = "aircraft-cannon",
     icon = "__base__/graphics/icons/explosive-cannon-shell.png",
@@ -156,7 +155,7 @@ data:extend(
     stack_size = 1
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- High explosive cannon shell
     type = "ammo",
     name = "high-explosive-cannon-shell",
     icon = "__base__/graphics/icons/explosive-cannon-shell.png",
@@ -189,7 +188,7 @@ data:extend(
     stack_size = 100
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  {
+ { -- Flying Fortress machine gun
     type = "gun",
     name = "flying-fortress-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
@@ -220,7 +219,7 @@ data:extend(
     stack_size = 1
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  {
+ { -- Flying Fortress rocket launcher
     type = "gun",
     name = "flying-fortress-rocket-launcher",
     icon = "__base__/graphics/icons/explosive-rocket.png",
@@ -247,7 +246,7 @@ data:extend(
     stack_size = 1
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  {
+ { -- Napalm launcher
     type = "gun",
     name = "napalm-launcher",
     icon = "__base__/graphics/icons/flame-thrower.png",
@@ -293,7 +292,7 @@ data:extend(
     stack_size = 1
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  {
+--[[ { -- Cheat machine (DO NOT USE)
     type = "item",
     name = "cheat-machine",
     icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
@@ -301,9 +300,10 @@ data:extend(
     subgroup = "ammo",
     place_result= "cheat-machine",
     stack_size= 1,
-  },
-  {
-	type = "item",
+  }, ]]
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ { -- Aircraft energy shield
+	type = "item-with-entity-data",
 	name = "aircraft-energy-shield",
 	icon = "__Aircraft__/graphics/Aircraft_Energy_Shield_Icon.png",
 	placed_as_equipment_result = "aircraft-energy-shield",
@@ -313,8 +313,9 @@ data:extend(
 	stack_size = 10,
 	default_request_amount = 10,
   },
-  {
-    type = "item",
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ { -- Aircraft afterburner
+    type = "item-with-entity-data",
     name = "aircraft-afterburner",
     icon = "__Aircraft__/graphics/Aircraft_Afterburner_Icon.png",
     placed_as_equipment_result = "aircraft-afterburner",
@@ -324,5 +325,5 @@ data:extend(
     stack_size = 10,
 	default_request_amount = 10,
   },
-}
-)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+})

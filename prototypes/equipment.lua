@@ -1,6 +1,5 @@
-data:extend(
-{
-  {
+data:extend({
+  { -- Aircraft Energy Shield
     type = "energy-shield-equipment",
     name = "aircraft-energy-shield",
     max_shield_value = 250,
@@ -27,7 +26,8 @@ data:extend(
     },
     categories = {"aircraft"}
   },
-  {
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  { -- Aircraft Afterburner
     type = "movement-bonus-equipment",
     name = "aircraft-afterburner",
     sprite = 
@@ -52,5 +52,5 @@ data:extend(
     movement_bonus = 0.30,
     categories = {"aircraft"}
   },
-}
-)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+})

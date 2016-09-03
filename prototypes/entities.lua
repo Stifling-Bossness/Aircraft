@@ -1,6 +1,5 @@
-data:extend(
-{
- {
+data:extend({
+ { -- Gunship
       type = "car",
       name = "gunship",
       icon = "__Aircraft__/graphics/Gunship_Icon.png",
@@ -153,7 +152,7 @@ data:extend(
 	  equipment_grid="gunship-equipment-grid",
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- Cargo Plane
       type = "car",
       name = "cargo-plane",
       icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
@@ -305,7 +304,7 @@ data:extend(
 			guns = { "cargo-plane-machine-gun"},
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- Jet
       type = "car",
       name = "jet",
       icon = "__Aircraft__/graphics/Jet_Icon.png",
@@ -458,7 +457,7 @@ data:extend(
 	  equipment_grid = "jet-grid",
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- Flying Fortress
       type = "car",
       name = "flying-fortress",
       icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
@@ -611,7 +610,7 @@ data:extend(
 	  equipment_grid = "flying-fortress-grid",
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+--[[ { -- Cheat Machine (DO NOT USE)
       type = "car",
       name = "cheat-machine",
       icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
@@ -761,9 +760,9 @@ data:extend(
       weight = 0.000001,
       inventory_size = 15,
 			guns = { "flying-fortress-machine-gun", "aircraft-cannon", "flying-fortress-rocket-launcher", "napalm-launcher"},
-  },
+  }, ]]
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- {
+ { -- High explosive cannon projectile
     type = "projectile",
     name = "high-explosive-cannon-projectile",
     flags = {"not-on-map"},
@@ -833,7 +832,6 @@ data:extend(
       height = 50,
       priority = "high"
     },
+ },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- }
-}
-)
+})
