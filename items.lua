@@ -1,6 +1,6 @@
 data:extend({
  { -- Gunship
-    type = "item",
+    type = "item-with-entity-data",
     name = "gunship",
     icon = "__Aircraft__/graphics/Gunship_Icon.png",
     flags = { "goes-to-quickbar" },
@@ -10,7 +10,7 @@ data:extend({
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Cargo Plane
-    type = "item",
+    type = "item-with-entity-data",
     name = "cargo-plane",
     icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
     flags = { "goes-to-quickbar" },
@@ -20,7 +20,7 @@ data:extend({
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Jet
-    type = "item",
+    type = "item-with-entity-data",
     name = "jet",
     icon = "__Aircraft__/graphics/Jet_Icon.png",
     flags = { "goes-to-quickbar" },
@@ -30,7 +30,7 @@ data:extend({
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Flying Fortress
-    type = "item",
+    type = "item-with-entity-data",
     name = "flying-fortress",
     icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
     flags = { "goes-to-quickbar" },
@@ -293,7 +293,7 @@ data:extend({
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --[[ { -- Cheat machine (DO NOT USE)
-    type = "item",
+    type = "item-with-entity-data",
     name = "cheat-machine",
     icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
     flags = { "goes-to-quickbar", "hidden"},
@@ -303,7 +303,7 @@ data:extend({
   }, ]]
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Aircraft energy shield
-	type = "item-with-entity-data",
+	type = "item",
 	name = "aircraft-energy-shield",
 	icon = "__Aircraft__/graphics/Aircraft_Energy_Shield_Icon.png",
 	placed_as_equipment_result = "aircraft-energy-shield",
@@ -315,7 +315,7 @@ data:extend({
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Aircraft afterburner
-    type = "item-with-entity-data",
+    type = "item",
     name = "aircraft-afterburner",
     icon = "__Aircraft__/graphics/Aircraft_Afterburner_Icon.png",
     placed_as_equipment_result = "aircraft-afterburner",

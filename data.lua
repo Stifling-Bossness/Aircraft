@@ -4,4 +4,4 @@ require("prototypes.recipes")
 require("prototypes.technologies")
 require("prototypes.equipment-grid")
 require("prototypes.equipment")
-require("prototypes.recipe-updates")
+require("prototypes.recipe-updates") --Bob's mods recipe replacements
