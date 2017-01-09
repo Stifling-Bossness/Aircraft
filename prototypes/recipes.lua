@@ -38,7 +38,6 @@ data:extend({
     {
       {"electric-engine-unit",256},
       {"steel-plate",150},
-      {"iron-plate",100},
       {"electronic-circuit",120},
 	  {"advanced-circuit",50},
 	  {"low-density-structure",50},

@@ -125,17 +125,17 @@ data:extend({
       sound =
       {
         filename = "__Aircraft__/sounds/jet-loop.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       activate_sound =
       {
         filename = "__Aircraft__/sounds/jet-start.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       deactivate_sound =
       {
         filename = "__Aircraft__/sounds/jet-stop.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       match_speed_to_activity = false,
     },
@@ -278,17 +278,17 @@ data:extend({
       sound =
       {
         filename = "__Aircraft__/sounds/jet-loop.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       activate_sound =
       {
         filename = "__Aircraft__/sounds/jet-start.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       deactivate_sound =
       {
         filename = "__Aircraft__/sounds/jet-stop.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       match_speed_to_activity = false,
     },
@@ -430,17 +430,17 @@ data:extend({
       sound =
       {
         filename = "__Aircraft__/sounds/jet-loop.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       activate_sound =
       {
         filename = "__Aircraft__/sounds/jet-start.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       deactivate_sound =
       {
         filename = "__Aircraft__/sounds/jet-stop.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       match_speed_to_activity = false,
     },
@@ -583,17 +583,17 @@ data:extend({
       sound =
       {
         filename = "__Aircraft__/sounds/jet-loop.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       activate_sound =
       {
         filename = "__Aircraft__/sounds/jet-start.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       deactivate_sound =
       {
         filename = "__Aircraft__/sounds/jet-stop.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       match_speed_to_activity = false,
     },
@@ -610,7 +610,7 @@ data:extend({
 	  equipment_grid = "flying-fortress-grid",
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
---[[ { -- Cheat Machine (DO NOT USE)
+--[[ { -- Cheat Machine (DO NOT USE, BREAKS GAME HILARIOUSLY)
       type = "car",
       name = "cheat-machine",
       icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
@@ -736,17 +736,17 @@ data:extend({
       sound =
       {
         filename = "__Aircraft__/sounds/jet-loop.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       activate_sound =
       {
         filename = "__Aircraft__/sounds/jet-start.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       deactivate_sound =
       {
         filename = "__Aircraft__/sounds/jet-stop.ogg",
-        volume = 0.8
+        volume = 0.4
       },
       match_speed_to_activity = false,
     },

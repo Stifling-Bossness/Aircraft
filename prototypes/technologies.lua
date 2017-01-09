@@ -87,7 +87,7 @@ data:extend({
         recipe = "jet"
       },
     },
-		prerequisites = {"gunships"},
+		prerequisites = {"gunships", "rocket-silo"},
 		unit = 
 		{
 			count = 650,
@@ -115,7 +115,7 @@ data:extend({
         recipe = "flying-fortress"
       },
     },
-		prerequisites = {"gunships", "cargo-planes", "jets"},
+		prerequisites = {"gunships", "cargo-planes", "jets", "tanks"},
 		unit = 
 		{
 			count = 1000,
@@ -195,7 +195,7 @@ data:extend({
 		recipe = "aircraft-energy-shield",
 	},
 	},
-	prerequisites = {"advanced-aerodynamics"},
+	prerequisites = {"advanced-aerodynamics", "energy-shield-mk2-equipment"},
 	unit =
 	{
 		count = 350,
