@@ -14,7 +14,7 @@ data:extend({
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Flying Fortress grid
     type = "equipment-grid",
-	name = "flying-fortress-grid",
+	name = "flying-fortress-equipment-grid",
 	width = 13,
 	height = 12,
 	equipment_categories = {"armor", "aircraft"}
@@ -22,7 +22,7 @@ data:extend({
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Jet grid
     type = "equipment-grid",
-	name = "jet-grid",
+	name = "jet-equipment-grid",
 	width = 7,
 	height = 4,
 	equipment_categories = {"armor", "aircraft"}

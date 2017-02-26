@@ -31,7 +31,7 @@ data:extend({
         recipe = "gunship"
       },
     },
-		prerequisites = {"flying", "military-4", "advanced-aerodynamics"},
+		prerequisites = {"flying", "military-3", "advanced-aerodynamics"},
 		unit = 
 		{
 			count = 500,
@@ -59,7 +59,7 @@ data:extend({
         recipe = "cargo-plane"
       },
     },
-		prerequisites = {"gunships"},
+		prerequisites = {"advanced-aerodynamics"},
 		unit = 
 		{
 			count = 350,
@@ -87,7 +87,7 @@ data:extend({
         recipe = "jet"
       },
     },
-		prerequisites = {"gunships", "rocket-silo"},
+		prerequisites = {"gunships", "rocket-silo", "military-4"},
 		unit = 
 		{
 			count = 650,

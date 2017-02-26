@@ -147,7 +147,7 @@ data:extend({
       rotation_speed = 0.01,
 	  tank_driving = true,
       weight = 750,
-      inventory_size = 15,
+      inventory_size = 30,
 	  guns = { "aircraft-machine-gun", "aircraft-rocket-launcher"},
 	  equipment_grid="gunship-equipment-grid",
   },
@@ -300,7 +300,7 @@ data:extend({
       rotation_speed = 0.006,
 			tank_driving = true,
       weight = 3500,
-      inventory_size = 90,
+      inventory_size = 120,
 			guns = { "cargo-plane-machine-gun"},
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -452,9 +452,9 @@ data:extend({
       rotation_speed = 0.01,
 			tank_driving = true,
       weight = 500,
-      inventory_size = 3,
+      inventory_size = 5,
 			guns = { "aircraft-machine-gun", "aircraft-rocket-launcher", "napalm-launcher"},
-	  equipment_grid = "jet-grid",
+	  equipment_grid = "jet-equipment-grid",
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Flying Fortress
@@ -605,9 +605,9 @@ data:extend({
       rotation_speed = 0.004,
 			tank_driving = true,
       weight = 3000,
-      inventory_size = 15,
+      inventory_size = 20,
 			guns = { "flying-fortress-machine-gun", "aircraft-cannon", "flying-fortress-rocket-launcher"},
-	  equipment_grid = "flying-fortress-grid",
+	  equipment_grid = "flying-fortress-equipment-grid",
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --[[ { -- Cheat Machine (DO NOT USE, BREAKS GAME HILARIOUSLY)
