@@ -319,8 +319,8 @@ data:extend({
     {
       {
         type = "fire",
-        decrease = 5,
-        percent = 50
+        decrease = 25,
+        percent = 40
       },
       {
         type = "physical",
@@ -803,7 +803,7 @@ data:extend({
             action =
             {
               type = "area",
-              perimeter = 18,
+              perimeter = 13,
               action_delivery =
               {
                 type = "instant",

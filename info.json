@@ -1,10 +1,10 @@
 {
   "name": "Aircraft",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "factorio_version": "0.14",
   "title": "Aircraft",
   "author": "Eldwen (Updated by SuicidalKid)",
   "homepage": "https://forums.factorio.com/viewtopic.php?f=120&t=18714",
-  "dependencies": ["base >= 0.14.0", "? bobplates >= 0.14.0", "? bobelectronics >= 0.14.0", "? boblibrary >= 0.14.0", "? bobwarfare >= 0.14.0", "? bobvehicleequipment >= 0.14.0"],
+  "dependencies": ["base >= 0.14.0", "? bobplates >= 0.14.0", "? bobelectronics >= 0.14.0", "? boblibrary >= 0.14.0", "? bobwarfare >= 0.14.0", "? bobvehicleequipment >= 0.14.0", "? electric-vehicles >= 0.3.5", "? electric-vehicles-lib >=0.2.8"],
   "description": "A recon and combat aircraft, along with a flying fortress and other aerocraft."
 }

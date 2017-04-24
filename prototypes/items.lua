@@ -50,7 +50,7 @@ data:extend({
     {
       type = "projectile",
       ammo_category = "bullet",
-      cooldown = 0.5,
+      cooldown = 3,
       movement_slow_down_factor = 0.5,
       shell_particle =
       {
@@ -82,7 +82,7 @@ data:extend({
       type = "projectile",
       ammo_category = "rocket",
       movement_slow_down_factor = 0.9,
-      cooldown = 8,
+      cooldown = 10000,
       projectile_creation_distance = 0.6,
       range = 35,
       projectile_center = {-0.17, 0},
@@ -139,7 +139,7 @@ data:extend({
     {
       type = "projectile",
       ammo_category = "cannon-shell",
-      cooldown = 20.0,
+      cooldown = 40.0,
       movement_slow_down_factor = 0.2,
       projectile_creation_distance = 1.6,
       projectile_center = {-0.15625, -0.07812},
@@ -199,7 +199,7 @@ data:extend({
     {
       type = "projectile",
       ammo_category = "bullet",
-      cooldown = 0.01,
+      cooldown = 2.5,
       movement_slow_down_factor = 0.2,
       shell_particle =
       {
@@ -231,7 +231,7 @@ data:extend({
       type = "projectile",
       ammo_category = "rocket",
       movement_slow_down_factor = 0.9,
-      cooldown = 6,
+      cooldown = 20,
       projectile_creation_distance = 0.6,
       range = 50,
       projectile_center = {-0.17, 0},

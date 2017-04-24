@@ -7,7 +7,13 @@ if data.raw["equipment-category"]["armoured-vehicle"] then
 	table.insert(data.raw["equipment-grid"]["gunship-equipment-grid"].equipment_categories,"vehicle")
 	table.insert(data.raw["equipment-grid"]["gunship-equipment-grid"].equipment_categories,"armoured-vehicle")
 end
---And thanks to Articulating for this one :)
+--Updates equipment grids to support electric vehicles equipment (making them electric!)
+if data.raw["equipment-category"]["electric-vehicles-equipment"] then
+	table.insert(data.raw["equipment-grid"]["flying-fortress-equipment-grid"].equipment_categories,"electric-vehicles-equipment")
+	table.insert(data.raw["equipment-grid"]["jet-equipment-grid"].equipment_categories,"electric-vehicles-equipment")
+	table.insert(data.raw["equipment-grid"]["gunship-equipment-grid"].equipment_categories,"electric-vehicles-equipment")
+end
+--Thanks to Articulating for this one :)
 --Updates Gunship, Jet, and Flying Fortress recipes to use Rifles instead of Submachine Guns.
 if data.raw["recipe"]["rifle"] then 
     for i, ingredient in pairs(data.raw["recipe"]["gunship"].ingredients) do
