@@ -73,21 +73,6 @@ data:extend({
           filename = "__core__/graphics/light-cone.png",
           priority = "medium",
           scale = 2,
-          width = 250,
-          height = 250
-        },
-        shift = {-0.1, -20},
-        size = 3,
-        intensity = 0.7
-      },
-      {
-        type = "oriented",
-        minimum_darkness = 0.3,
-        picture =
-        {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
-          scale = 2,
           width = 200,
           height = 200
         },
@@ -226,27 +211,12 @@ data:extend({
           filename = "__core__/graphics/light-cone.png",
           priority = "medium",
           scale = 2,
-          width = 350,
-          height = 350
+          width = 200,
+          height = 200
         },
-        shift = {-0.1, -26.0},
-        size = 4,
+        shift = {-0.1, -12},
+        size = 2,
         intensity = 0.8
-      },
-      {
-        type = "oriented",
-        minimum_darkness = 0.3,
-        picture =
-        {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
-          scale = 2,
-          width = 250,
-          height = 250
-        },
-        shift = {-0.1, -18.0},
-        size = 3,
-        intensity = 0.9
       }
     },
 		render_layer = "air-object", 
@@ -370,21 +340,6 @@ data:extend({
     friction = 0.001,
 		light =
     {
-      {
-        type = "oriented",
-        minimum_darkness = 0.3,
-        picture =
-        {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
-          scale = 2,
-          width = 250,
-          height = 250
-        },
-        shift = {-0.1, -20},
-        size = 3,
-        intensity = 0.7
-      },
       {
         type = "oriented",
         minimum_darkness = 0.3,
@@ -531,21 +486,6 @@ data:extend({
           filename = "__core__/graphics/light-cone.png",
           priority = "medium",
           scale = 2,
-          width = 250,
-          height = 250
-        },
-        shift = {-0.1, -20},
-        size = 3,
-        intensity = 0.7
-      },
-      {
-        type = "oriented",
-        minimum_darkness = 0.3,
-        picture =
-        {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
-          scale = 2,
           width = 200,
           height = 200
         },
@@ -676,21 +616,6 @@ data:extend({
     friction = 0.001,
 		light =
     {
-      {
-        type = "oriented",
-        minimum_darkness = 0.3,
-        picture =
-        {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
-          scale = 2,
-          width = 250,
-          height = 250
-        },
-        shift = {-0.1, -20},
-        size = 3,
-        intensity = 0.7
-      },
       {
         type = "oriented",
         minimum_darkness = 0.3,

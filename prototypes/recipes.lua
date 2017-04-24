@@ -37,10 +37,9 @@ data:extend({
     ingredients = 
     {
       {"electric-engine-unit",256},
-      {"steel-plate",150},
       {"electronic-circuit",120},
 	  {"advanced-circuit",50},
-	  {"low-density-structure",50},
+	  {"low-density-structure",200},
 			{"submachine-gun",3},
 			{"rocket-launcher",3}
     },
@@ -54,13 +53,11 @@ data:extend({
     ingredients = 
     {
       {"electric-engine-unit",100},
-      {"steel-plate",800},
-      {"iron-plate",2000},
+      {"steel-plate",2000},
       {"advanced-circuit",80},
 	  {"processing-unit", 40},
 			{"submachine-gun",15},
 			{"rocket-launcher",15},
-			{"explosive-cannon-shell", 100}
     },
     result = "flying-fortress"
   },

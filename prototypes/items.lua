@@ -249,14 +249,14 @@ data:extend({
  { -- Napalm launcher
     type = "gun",
     name = "napalm-launcher",
-    icon = "__base__/graphics/icons/flame-thrower.png",
+    icon = "__base__/graphics/icons/flamethrower.png",
     flags = {"goes-to-main-inventory", "hidden"},
     subgroup = "gun",
     order = "e[napalm-launcher]",
     attack_parameters =
     {
       type = "stream",
-      ammo_category = "flame-thrower",
+      ammo_category = "flamethrower",
       cooldown = 0.5,
       movement_slow_down_factor = 0.6,
       projectile_creation_distance = 0.6,

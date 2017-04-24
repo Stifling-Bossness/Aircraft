@@ -39,8 +39,7 @@ data:extend({
 			{
 				{"science-pack-1", 4},
 				{"science-pack-2", 3},
-				{"science-pack-3", 2},
-				{"alien-science-pack", 1}
+				{"science-pack-3", 2}
 			},
 			time = 60
 		},
@@ -67,8 +66,7 @@ data:extend({
 			{
 				{"science-pack-1", 4},
 				{"science-pack-2", 3},
-				{"science-pack-3", 2},
-				{"alien-science-pack", 1}
+				{"science-pack-3", 2}
 			},
 			time = 30
 		},
@@ -95,8 +93,7 @@ data:extend({
 			{
 				{"science-pack-1", 5},
 				{"science-pack-2", 4},
-				{"science-pack-3", 3},
-				{"alien-science-pack", 2}
+				{"science-pack-3", 3}
 			},
 			time = 75
 		},
@@ -123,8 +120,7 @@ data:extend({
 			{
 				{"science-pack-1", 10},
 				{"science-pack-2", 8},
-				{"science-pack-3", 6},
-				{"alien-science-pack", 4}
+				{"science-pack-3", 6}
 			},
 			time = 120
 		},
@@ -135,6 +131,7 @@ data:extend({
 		type = "technology",
 		name = "high-explosive-cannon-shells",
 		icon = "__base__/graphics/icons/explosive-cannon-shell.png",
+		icon_size=32,
 		effects =
     {
       {
@@ -160,8 +157,8 @@ data:extend({
  { -- Afterburner
 		type = "technology",
 		name = "afterburner",
-		icon = "__Aircraft__/graphics/Aircraft_Afterburner.png",
-		icon_size = 128,
+		icon = "__Aircraft__/graphics/Aircraft_Afterburner_Icon.png",
+		icon_size = 32,
 		effects =
 	{
 		{
@@ -188,6 +185,7 @@ data:extend({
 		type = "technology",
 		name = "aircraft-energy-shield",
 		icon = "__Aircraft__/graphics/Aircraft_Energy_Shield.png",
+		icon_size=64,
 		effects =
 	{
 	{
