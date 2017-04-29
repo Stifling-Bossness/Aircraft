@@ -206,7 +206,33 @@ data:extend({
 		time = 45,
 	},
 	order = "c-h-i",
-	--Hey,   ^^^^^   a lil' easter egg for ya
+	--Hey,     ^^^   a lil' easter egg for ya
  },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ { -- Napalm
+		type = "technology",
+		name = "napalm",
+		icon = "__base__/graphics/icons/flamethrower-ammo.png",
+		icon_size = 32,
+		effects =
+	{
+		{
+		  type = "unlock-recipe",
+		  recipe = "napalm",
+		},
+	},
+		prerequisites = {"flammables", "jets"},
+		unit =
+		{
+			count = 150,
+			ingredients =
+			{
+				{"science-pack-1", 2},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+			},
+			time = 20,
+		},
+		order = "c-h-h",
+ },
 })

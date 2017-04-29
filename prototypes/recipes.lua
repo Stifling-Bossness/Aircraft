@@ -100,4 +100,15 @@ data:extend({
 	result = "aircraft-energy-shield",
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ { -- Napalm
+	type = "recipe",
+	name = "napalm",
+	enabled = "false",
+	ingredients =
+	{
+		{"flamethrower-ammo", 2},
+		{"iron-plate", 2},
+	},
+	result = "napalm",
+  },
 })

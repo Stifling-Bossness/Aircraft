@@ -289,8 +289,8 @@ data:extend({
     {
       {
         type = "fire",
-        decrease = 25,
-        percent = 40
+        decrease = 0,
+        percent = 100
       },
       {
         type = "physical",

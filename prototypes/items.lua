@@ -82,7 +82,7 @@ data:extend({
       type = "projectile",
       ammo_category = "rocket",
       movement_slow_down_factor = 0.9,
-      cooldown = 10000,
+      cooldown = 30,
       projectile_creation_distance = 0.6,
       range = 35,
       projectile_center = {-0.17, 0},
@@ -263,7 +263,7 @@ data:extend({
       gun_barrel_length = 0.8,
       gun_center_shift = { 0, -1 },
       range = 25,
-      min_range = 0.1,
+      min_range = 3,
       cyclic_sound =
       {
         begin_sound =
@@ -325,5 +325,38 @@ data:extend({
     stack_size = 10,
 	default_request_amount = 10,
   },
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ { -- Napalm
+    type = "ammo",
+    name = "napalm",
+    icon = "__base__/graphics/icons/flamethrower-ammo.png",
+    flags = {"goes-to-main-inventory"},
+    ammo_type =
+    {
+      {
+        source_type = "vehicle",
+        consumption_modifier = 1.5,
+        category = "flamethrower",
+        target_type = "position",
+        clamp_position = true,
+
+        action =
+        {
+          type = "direct",
+          action_delivery =
+          {
+            type = "stream",
+            stream = "handheld-flamethrower-fire-stream",
+            max_length = 30,
+            duration = 320,
+          }
+        }
+      }
+    },
+    magazine_size = 100,
+    subgroup = "ammo",
+    order = "e[napalm]",
+    stack_size = 100
+  }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 })
