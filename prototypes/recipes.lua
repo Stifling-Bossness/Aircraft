@@ -2,113 +2,233 @@ data:extend({
  { -- Gunship
     type = "recipe",
     name = "gunship",
-    enabled = "false",
+	normal = 
+	 {
+	enabled=false,
     ingredients = 
-    {
-      {"electric-engine-unit",64},
-      {"steel-plate",200},
-      {"iron-plate",400},
-      {"electronic-circuit",40},
-			{"submachine-gun",5},
-			{"rocket-launcher",5}
-    },
+      {
+       {"electric-engine-unit",64},
+       {"steel-plate",200},
+       {"iron-plate",400},
+       {"electronic-circuit",40},
+	   {"submachine-gun",5},
+	   {"rocket-launcher",5}
+      },
     result = "gunship"
+	 },
+	expensive =
+	 {
+	enabled=false,
+	ingredients =
+	  {
+	   {"electric-engine-unit",128},
+	   {"steel-plate",400},
+	   {"iron-plate",800},
+	   {"electronic-circuit",80},
+	   {"submachine-gun",10},
+	   {"rocket-launcher",10},
+	  },
+	result = "gunship"
+	},
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Cargo Plane
     type = "recipe",
     name = "cargo-plane",
-    enabled = "false",
+	normal =
+	 {
+	enabled=false,
     ingredients = 
-    {
-      {"electric-engine-unit",128},
-      {"steel-plate",400},
-      {"iron-plate",500},
-      {"advanced-circuit",20},
-			{"submachine-gun",1}
-    },
+      {
+       {"electric-engine-unit",128},
+       {"steel-plate",400},
+       {"iron-plate",500},
+       {"advanced-circuit",20},
+	   {"submachine-gun",1}
+      },
     result = "cargo-plane"
+	 },
+	expensive =
+	 {
+	enabled=false,
+	ingredients =
+	  {
+	   {"electric-engine-unit",256},
+	   {"steel-plate",800},
+	   {"iron-plate",1000},
+	   {"advanced-circuit",20},
+	   {"submachine-gun",2},
+	  },
+	result = "cargo-plane"
+	 },
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Jet
     type = "recipe",
     name = "jet",
-    enabled = "false",
+    normal =
+	 {
+	enabled=false,
     ingredients = 
-    {
-      {"electric-engine-unit",256},
-      {"electronic-circuit",120},
-	  {"advanced-circuit",50},
-	  {"low-density-structure",200},
-			{"submachine-gun",3},
-			{"rocket-launcher",3}
-    },
+      {
+       {"electric-engine-unit",256},
+       {"electronic-circuit",120},
+	   {"advanced-circuit",50},
+	   {"low-density-structure",200},
+	   {"submachine-gun",3},
+	   {"rocket-launcher",3}
+      },
     result = "jet"
+	 },
+	expensive =
+	 {
+	enabled=false,
+	ingredients =
+	  {
+	   {"electric-engine-unit",512},
+	   {"electronic-circuit",240},
+	   {"advanced-circuit",100},
+	   {"low-density-structure",400},
+	   {"submachine-gun",6},
+	   {"rocket-launcher",6},
+	  },
+	result = "jet"
+	 },
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Flying Fortress
     type = "recipe",
     name = "flying-fortress",
-    enabled = "false",
+	normal =
+	 {
+	enabled=false,
     ingredients = 
-    {
-      {"electric-engine-unit",100},
-      {"steel-plate",2000},
-      {"advanced-circuit",80},
-	  {"processing-unit", 40},
-			{"submachine-gun",15},
-			{"rocket-launcher",15},
-    },
-    result = "flying-fortress"
+      {
+       {"electric-engine-unit",100},
+       {"steel-plate",2000},
+       {"advanced-circuit",80},
+	   {"processing-unit", 40},
+	   {"submachine-gun",15},
+	   {"rocket-launcher",15},
+      },
+    result = "flying-fortress",
+	 },
+	expensive =
+	 {
+	enabled=false,
+	ingredients =
+	  {
+	   {"electric-engine-unit",200},
+	   {"steel-plate",4000},
+	   {"advanced-circuit",160},
+	   {"processing-unit",80},
+	   {"submachine-gun",30},
+	   {"rocket-launcher",30},
+	  },
+	result = "flying-fortress",
+	 },
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- High explosive cannon shell
     type = "recipe",
     name = "high-explosive-cannon-shell",
-    enabled = "false",
+	normal =
+	 {
+	enabled=false,
     ingredients = 
-    {
-		{"explosive-cannon-shell", 10},
-		{"explosives", 5}
-    },
+      {
+	   {"explosive-cannon-shell", 10},
+	   {"explosives", 5}
+      },
     result = "high-explosive-cannon-shell"
+	 },
+	expensive =
+	 {
+	enabled=false,
+	ingredients =
+	  {
+	   {"explosive-cannon-shell",20},
+	   {"explosives",10},
+	  },
+	result = "high-explosive-cannon-shell",
+	 },
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Aircraft afterburner
 	type = "recipe",
 	name = "aircraft-afterburner",
-	enabled = "false",
 	category = "crafting-with-fluid",
+	normal =
+	 {
+	enabled=false,
 	ingredients =
-	{
-		{"electric-engine-unit", 10},
-		{type="fluid", name= "lubricant", amount = 5},
-		{"solid-fuel", 5},
-	},
+	  {
+	   {"electric-engine-unit", 10},
+	   {type="fluid", name = "lubricant", amount = 5},
+	   {"solid-fuel", 5},
+	  },
 	result = "aircraft-afterburner",
+	 },
+	expensive =
+	 {
+	enabled=false,
+	ingredients =
+	  {
+	   {"electric-engine-unit",20},
+	   {type="fluid", name = "lubricant", amount = 10},
+	   {"solid-fuel", 10},
+	  },
+	result = "aircraft-afterburner",
+	 },
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Aircraft energy shield
 	type = "recipe",
 	name = "aircraft-energy-shield",
-	enabled = "false",
+	normal =
+	 {
+	enabled=false,
 	ingredients =
-	{
-		{"energy-shield-mk2-equipment", 2},
-		{"battery", 10},
-	},
+	  {
+	   {"energy-shield-mk2-equipment", 2},
+	   {"battery", 10},
+	  },
 	result = "aircraft-energy-shield",
+	 },
+	expensive =
+	 {
+	enabled=false,
+	ingredients =
+	  {
+	   {"energy-shield-mk2-equipment", 4},
+	   {"battery", 20},
+	  },
+	result = "aircraft-energy-shield",
+	 },
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Napalm
 	type = "recipe",
 	name = "napalm",
-	enabled = "false",
+	normal =
+	 {
+	enabled=false,
 	ingredients =
-	{
-		{"flamethrower-ammo", 2},
-		{"iron-plate", 2},
-	},
+	  {
+	   {"flamethrower-ammo", 2},
+	   {"iron-plate", 2},
+	  },
 	result = "napalm",
+	 },
+	expensive =
+	 {
+	enabled=false,
+	ingredients =
+	  {
+	   {"flamethrower-ammo", 4},
+	   {"iron-plate", 4},
+	  },
+	result = "napalm",
+	 },
   },
 })

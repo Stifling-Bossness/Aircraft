@@ -39,7 +39,8 @@ data:extend({
 			{
 				{"science-pack-1", 4},
 				{"science-pack-2", 3},
-				{"science-pack-3", 2}
+				{"science-pack-3", 2},
+				{"military-science-pack", 1},
 			},
 			time = 60
 		},
@@ -93,7 +94,8 @@ data:extend({
 			{
 				{"science-pack-1", 5},
 				{"science-pack-2", 4},
-				{"science-pack-3", 3}
+				{"science-pack-3", 3},
+				{"military-science-pack", 2},
 			},
 			time = 75
 		},
@@ -120,7 +122,9 @@ data:extend({
 			{
 				{"science-pack-1", 10},
 				{"science-pack-2", 8},
-				{"science-pack-3", 6}
+				{"science-pack-3", 6},
+				{"military-science-pack",5},
+				{"high-tech-science-pack",4},
 			},
 			time = 120
 		},
@@ -148,6 +152,7 @@ data:extend({
 				{"science-pack-1", 2},
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
+				{"military-science-pack",1},
 			},
 			time = 45
 		},
@@ -175,6 +180,7 @@ data:extend({
 				{"science-pack-1", 2},
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
+				{"high-tech-science-pack",1},
 			},
 			time = 45,
 		},
@@ -202,6 +208,8 @@ data:extend({
 		{"science-pack-1", 2},
 		{"science-pack-2", 1},
 		{"science-pack-3", 1},
+		{"military-science-pack",1},
+		{"high-tech-science-pack",1},
 		},
 		time = 45,
 	},
@@ -230,6 +238,7 @@ data:extend({
 				{"science-pack-1", 2},
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
+				{"military-science-pack",1},
 			},
 			time = 20,
 		},
