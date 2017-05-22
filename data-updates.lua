@@ -53,3 +53,34 @@ if data.raw["recipe"]["rifle"] then
 	table.insert(data.raw["recipe"]["flying-fortress"]["normal"].ingredients, {"rifle", 15})
 	table.insert(data.raw["recipe"]["flying-fortress"]["expensive"].ingredients, {"rifle", 30})
 end
+--Hardmode changes
+if settings.startup["aircraft-hardmode"].value == true then
+	--Gunship
+	table.remove(data.raw["car"]["gunship"].resistances)
+	table.insert(data.raw["car"]["gunship"].resistances, {type = "fire", decrease = 0, percent = 25})
+	table.insert(data.raw["car"]["gunship"].resistances, {type = "physical", decrease = 0, percent = 15})
+	table.insert(data.raw["car"]["gunship"].resistances, {type = "impact", decrease = 0, percent = 30})
+	table.insert(data.raw["car"]["gunship"].resistances, {type = "explosion", decrease = 0, percent = 15})
+	table.insert(data.raw["car"]["gunship"].resistances, {type = "acid", decrease = 0, percent = 10})
+	--Cargo Plane
+	table.remove(data.raw["car"]["cargo-plane"].resistances)
+	table.insert(data.raw["car"]["cargo-plane"].resistances, {type = "fire", decrease = 0, percent = 10})
+	table.insert(data.raw["car"]["cargo-plane"].resistances, {type = "physical", decrease = 0, percent = 5})
+	table.insert(data.raw["car"]["cargo-plane"].resistances, {type = "impact", decrease = 0, percent = 5})
+	table.insert(data.raw["car"]["cargo-plane"].resistances, {type = "explosion", decrease = 0, percent = 10})
+	table.insert(data.raw["car"]["cargo-plane"].resistances, {type = "acid", decrease = 0, percent = 5})
+	--Jet
+	table.remove(data.raw["car"]["jet"].resistances)
+	table.insert(data.raw["car"]["jet"].resistances, {type = "fire", decrease = 0, percent = 25})
+	table.insert(data.raw["car"]["jet"].resistances, {type = "physical", decrease = 0, percent = 15})
+	table.insert(data.raw["car"]["jet"].resistances, {type = "impact", decrease = 0, percent = 30})
+	table.insert(data.raw["car"]["jet"].resistances, {type = "explosion", decrease = 0, percent = 15})
+	table.insert(data.raw["car"]["jet"].resistances, {type = "acid", decrease = 0, percent = 10})
+	--Flying Fortress
+	table.remove(data.raw["car"]["flying-fortress"].resistances)
+	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "fire", decrease = 0, percent = 25})
+	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "physical", decrease = 0, percent = 20})
+	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "impact", decrease = 0, percent = 35})
+	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "explosion", decrease = 0, percent = 20})
+	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "acid", decrease = 0, percent = 15})
+end
