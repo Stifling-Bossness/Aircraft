@@ -31,7 +31,7 @@ data:extend({
         recipe = "gunship"
       },
     },
-		prerequisites = {"flying", "military-3", "advanced-aerodynamics"},
+		prerequisites = {"flying", "military-3", "advanced-aerodynamics", "rocketry"},
 		unit = 
 		{
 			count = 500,

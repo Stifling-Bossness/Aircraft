@@ -83,4 +83,19 @@ if settings.startup["aircraft-hardmode"].value == true then
 	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "impact", decrease = 0, percent = 35})
 	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "explosion", decrease = 0, percent = 20})
 	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "acid", decrease = 0, percent = 15})
+	--Cheat Machine (ONLY ENABLE IF YOU HAVE ALSO ENABLED THE CHEAT MACHINE IN OTHER FILES!!!)
+	--table.remove(data.raw["car"]["cheat-machine"].resistances)
+	--table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "fire", decrease = 0, percent = 100})
+	--table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "physical", decrease = 0, percent = 100})
+	--table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "impact", decrease = 0, percent = 100})
+	--table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "explosion", decrease = 0, percent = 100})
+	--table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "acid", decrease = 0, percent = 100})
+end
+--Helicopters Technology change
+if settings.startup["helicopter-tech"].value == true then
+	table.insert(data.raw["technology"]["heli-technology"].prerequisites, "advanced-aerodynamics")
+end
+--Raven Technology change
+if settings.startup["raven-tech"].value == true then
+	table.insert(data.raw["technology"]["raven"].prerequisites, "advanced-aerodynamics")
 end
