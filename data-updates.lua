@@ -92,10 +92,10 @@ if settings.startup["aircraft-hardmode"].value == true then
 	--table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "acid", decrease = 0, percent = 100})
 end
 --Helicopters Technology change
-if settings.startup["helicopter-tech"].value == true then
-	table.insert(data.raw["technology"]["heli-technology"].prerequisites, "advanced-aerodynamics")
-end
+--if settings.startup["helicopter-tech"].value == true then
+--	table.insert(data.raw["technology"]["heli-technology"].prerequisites, "advanced-aerodynamics")
+--end
 --Raven Technology change
-if settings.startup["raven-tech"].value == true then
-	table.insert(data.raw["technology"]["raven"].prerequisites, "advanced-aerodynamics")
-end
+--if settings.startup["raven-tech"].value == true then
+--	table.insert(data.raw["technology"]["raven"].prerequisites, "advanced-aerodynamics")
+--end
