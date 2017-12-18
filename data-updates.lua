@@ -1,6 +1,6 @@
 --Thanks to Arch666Angel for this snippet of code.
 --Updates equipment grids to support the various bob's vehicle grids, within reason.
-if data.raw["equipment-category"]["armoured-vehicle"] then 
+--[[if data.raw["equipment-category"]["armoured-vehicle"] then 
     table.insert(data.raw["equipment-grid"]["flying-fortress-equipment-grid"].equipment_categories,"vehicle")
 	table.insert(data.raw["equipment-grid"]["flying-fortress-equipment-grid"].equipment_categories,"armoured-vehicle")
 	table.insert(data.raw["equipment-grid"]["jet-equipment-grid"].equipment_categories,"vehicle")
@@ -53,6 +53,7 @@ if data.raw["recipe"]["rifle"] then
 	table.insert(data.raw["recipe"]["flying-fortress"]["normal"].ingredients, {"rifle", 15})
 	table.insert(data.raw["recipe"]["flying-fortress"]["expensive"].ingredients, {"rifle", 30})
 end
+--]]
 --Hardmode changes
 if settings.startup["aircraft-hardmode"].value == true then
 	--Gunship
@@ -84,18 +85,19 @@ if settings.startup["aircraft-hardmode"].value == true then
 	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "explosion", decrease = 0, percent = 20})
 	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "acid", decrease = 0, percent = 15})
 	--Cheat Machine (ONLY ENABLE IF YOU HAVE ALSO ENABLED THE CHEAT MACHINE IN OTHER FILES!!!)
-	--table.remove(data.raw["car"]["cheat-machine"].resistances)
-	--table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "fire", decrease = 0, percent = 100})
-	--table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "physical", decrease = 0, percent = 100})
-	--table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "impact", decrease = 0, percent = 100})
-	--table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "explosion", decrease = 0, percent = 100})
-	--table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "acid", decrease = 0, percent = 100})
+	--[[table.remove(data.raw["car"]["cheat-machine"].resistances)
+	table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "fire", decrease = 0, percent = 100})
+	table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "physical", decrease = 0, percent = 100})
+	table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "impact", decrease = 0, percent = 100})
+	table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "explosion", decrease = 0, percent = 100})
+	table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "acid", decrease = 0, percent = 100})
+	--]]
 end
 --Helicopters Technology change
 if settings.startup["helicopter-tech"].value == true then
 	table.insert(data.raw["technology"]["heli-technology"].prerequisites, "advanced-aerodynamics")
 end
 --Raven Technology change
---if settings.startup["raven-tech"].value == true then
---	table.insert(data.raw["technology"]["raven"].prerequisites, "advanced-aerodynamics")
---end
+if settings.startup["raven-tech"].value == true then
+	table.insert(data.raw["technology"]["raven"].prerequisites, "advanced-aerodynamics")
+end

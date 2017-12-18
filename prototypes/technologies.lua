@@ -10,8 +10,8 @@ data:extend({
 			count = 350,
 			ingredients =
 			{
-				{"science-pack-1", 3},
-				{"science-pack-2", 2},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
 				{"science-pack-3", 1}
 			},
 			time = 45
@@ -37,9 +37,9 @@ data:extend({
 			count = 500,
 			ingredients = 
 			{
-				{"science-pack-1", 4},
-				{"science-pack-2", 3},
-				{"science-pack-3", 2},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
 				{"military-science-pack", 1},
 			},
 			time = 60
@@ -62,12 +62,12 @@ data:extend({
 		prerequisites = {"advanced-aerodynamics"},
 		unit = 
 		{
-			count = 350,
+			count = 500,
 			ingredients = 
 			{
-				{"science-pack-1", 4},
-				{"science-pack-2", 3},
-				{"science-pack-3", 2}
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1}
 			},
 			time = 30
 		},
@@ -89,13 +89,13 @@ data:extend({
 		prerequisites = {"gunships", "rocket-silo", "military-4"},
 		unit = 
 		{
-			count = 650,
+			count = 1000,
 			ingredients = 
 			{
-				{"science-pack-1", 5},
-				{"science-pack-2", 4},
-				{"science-pack-3", 3},
-				{"military-science-pack", 2},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+				{"military-science-pack", 1},
 			},
 			time = 75
 		},
@@ -117,14 +117,14 @@ data:extend({
 		prerequisites = {"gunships", "cargo-planes", "jets", "tanks"},
 		unit = 
 		{
-			count = 1000,
+			count = 3000,
 			ingredients = 
 			{
-				{"science-pack-1", 10},
-				{"science-pack-2", 8},
-				{"science-pack-3", 6},
-				{"military-science-pack",5},
-				{"high-tech-science-pack",4},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+				{"military-science-pack",1},
+				{"high-tech-science-pack",1},
 			},
 			time = 120
 		},
@@ -146,10 +146,10 @@ data:extend({
 		prerequisites = {"tanks"},
 		unit = 
 		{
-			count = 300,
+			count = 350,
 			ingredients = 
 			{
-				{"science-pack-1", 2},
+				{"science-pack-1", 1},
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
 				{"military-science-pack",1},
@@ -174,10 +174,10 @@ data:extend({
 		prerequisites = {"advanced-aerodynamics"},
 		unit =
 		{
-			count = 350,
+			count = 400,
 			ingredients =
 			{
-				{"science-pack-1", 2},
+				{"science-pack-1", 1},
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
 				{"high-tech-science-pack",1},
@@ -202,10 +202,10 @@ data:extend({
 	prerequisites = {"advanced-aerodynamics", "energy-shield-mk2-equipment"},
 	unit =
 	{
-		count = 350,
+		count = 400,
 		ingredients =
 		{
-		{"science-pack-1", 2},
+		{"science-pack-1", 1},
 		{"science-pack-2", 1},
 		{"science-pack-3", 1},
 		{"military-science-pack",1},
@@ -232,10 +232,10 @@ data:extend({
 		prerequisites = {"flammables", "jets"},
 		unit =
 		{
-			count = 150,
+			count = 200,
 			ingredients =
 			{
-				{"science-pack-1", 2},
+				{"science-pack-1", 1},
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
 				{"military-science-pack",1},
