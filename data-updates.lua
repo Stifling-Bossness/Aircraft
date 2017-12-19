@@ -1,6 +1,6 @@
 --Thanks to Arch666Angel for this snippet of code.
 --Updates equipment grids to support the various bob's vehicle grids, within reason.
---[[if data.raw["equipment-category"]["armoured-vehicle"] then 
+if data.raw["equipment-category"]["armoured-vehicle"] then 
     table.insert(data.raw["equipment-grid"]["flying-fortress-equipment-grid"].equipment_categories,"vehicle")
 	table.insert(data.raw["equipment-grid"]["flying-fortress-equipment-grid"].equipment_categories,"armoured-vehicle")
 	table.insert(data.raw["equipment-grid"]["jet-equipment-grid"].equipment_categories,"vehicle")
@@ -53,7 +53,6 @@ if data.raw["recipe"]["rifle"] then
 	table.insert(data.raw["recipe"]["flying-fortress"]["normal"].ingredients, {"rifle", 15})
 	table.insert(data.raw["recipe"]["flying-fortress"]["expensive"].ingredients, {"rifle", 30})
 end
---]]
 --Hardmode changes
 if settings.startup["aircraft-hardmode"].value == true then
 	--Gunship

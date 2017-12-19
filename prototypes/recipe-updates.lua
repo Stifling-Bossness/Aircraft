@@ -1,5 +1,5 @@
 -- Replaces Iron Plates in the Flying Fortress recipe with Invar Plates if Bob's mods are detected.
---[[if data.raw.item["invar-alloy"] then
+if data.raw.item["invar-alloy"] then
   bobmods.lib.recipe.replace_ingredient("flying-fortress", "iron-plate", "invar-alloy")
 end
 -- Replaces Steel Plates in the Flying Fortress recipe with Copper-Tungsten Plates if Bob's mods are detected.
@@ -19,4 +19,3 @@ end
 if data.raw.item["cobalt-steel-alloy"] then
   bobmods.lib.recipe.replace_ingredient("gunship", "iron-plate", "cobalt-steel-alloy")
 end
---]]

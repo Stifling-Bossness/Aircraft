@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.3
+Date: 19. 12. 2017
+  Compatibility:
+    - Re-enabled Bob's mods compatibility.
+    - Updated Bob's mods optional prerequisite version numbers.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.2
 Date: 17. 12. 2017
   Changes:
