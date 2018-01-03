@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.5
+Date: 3. 1. 2018.
+  Changes:
+    - Significantly increased crafting times for nearly all items.
+    - Significantly reduced damage of High-Explosive Cannon Shell to bring it more in-line to fit inbetween Explosive Cannon Shells and Explosive Uranium Cannon Shells. (AoE still larger than EUCS)
+    - Moderately increased the number of batteries used in the Aircraft Energy Shield recipe.
+    - Added minimum range to High-Explosive Cannon Shells.
+    - Reduced range of High-Explosive Cannon Shells to match other cannon shells.
+    - Doubled stack size of High-Explosive Cannon Shells to match other cannon shells.
+    - Re-ordered High-Explosive Cannon Shells to be in-between Explosive and Uranium Cannon Shells.
+    - Re-ordered all Aircraft to be in Logistics tab along with other vehicles.
+---------------------------------------------------------------------------------------------------
+Version: 1.4.4
+Date: 28. 12. 2017
+  Locale:
+    - Updated German translation.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.3
 Date: 19. 12. 2017
   Compatibility:

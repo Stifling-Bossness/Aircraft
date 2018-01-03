@@ -5,6 +5,7 @@ data:extend({
 	normal = 
 	 {
 	enabled=false,
+	energy_required=10,
     ingredients = 
       {
        {"electric-engine-unit",64},
@@ -19,6 +20,7 @@ data:extend({
 	expensive =
 	 {
 	enabled=false,
+	energy_required=20,
 	ingredients =
 	  {
 	   {"electric-engine-unit",128},
@@ -38,6 +40,7 @@ data:extend({
 	normal =
 	 {
 	enabled=false,
+	energy_required=5,
     ingredients = 
       {
        {"electric-engine-unit",128},
@@ -51,6 +54,7 @@ data:extend({
 	expensive =
 	 {
 	enabled=false,
+	energy_required=10,
 	ingredients =
 	  {
 	   {"electric-engine-unit",256},
@@ -69,6 +73,7 @@ data:extend({
     normal =
 	 {
 	enabled=false,
+	energy_required=10,
     ingredients = 
       {
        {"electric-engine-unit",256},
@@ -83,6 +88,7 @@ data:extend({
 	expensive =
 	 {
 	enabled=false,
+	energy_required=20,
 	ingredients =
 	  {
 	   {"electric-engine-unit",512},
@@ -102,6 +108,7 @@ data:extend({
 	normal =
 	 {
 	enabled=false,
+	energy_required=20,
     ingredients = 
       {
        {"electric-engine-unit",100},
@@ -116,6 +123,7 @@ data:extend({
 	expensive =
 	 {
 	enabled=false,
+	energy_required=40,
 	ingredients =
 	  {
 	   {"electric-engine-unit",200},
@@ -135,20 +143,22 @@ data:extend({
 	normal =
 	 {
 	enabled=false,
+	energy_required = 10,
     ingredients = 
       {
-	   {"explosive-cannon-shell", 10},
-	   {"explosives", 5}
+	   {"explosive-cannon-shell", 3},
+	   {"explosives", 1}
       },
     result = "high-explosive-cannon-shell"
 	 },
 	expensive =
 	 {
 	enabled=false,
+	energy_required = 15,
 	ingredients =
 	  {
-	   {"explosive-cannon-shell",20},
-	   {"explosives",10},
+	   {"explosive-cannon-shell",6},
+	   {"explosives", 2},
 	  },
 	result = "high-explosive-cannon-shell",
 	 },
@@ -161,6 +171,7 @@ data:extend({
 	normal =
 	 {
 	enabled=false,
+	energy_required=3,
 	ingredients =
 	  {
 	   {"electric-engine-unit", 10},
@@ -172,6 +183,7 @@ data:extend({
 	expensive =
 	 {
 	enabled=false,
+	energy_required=6,
 	ingredients =
 	  {
 	   {"electric-engine-unit",20},
@@ -188,20 +200,22 @@ data:extend({
 	normal =
 	 {
 	enabled=false,
+	energy_required=5,
 	ingredients =
 	  {
 	   {"energy-shield-mk2-equipment", 2},
-	   {"battery", 10},
+	   {"battery", 20},
 	  },
 	result = "aircraft-energy-shield",
 	 },
 	expensive =
 	 {
 	enabled=false,
+	energy_required=10,
 	ingredients =
 	  {
 	   {"energy-shield-mk2-equipment", 4},
-	   {"battery", 20},
+	   {"battery", 40},
 	  },
 	result = "aircraft-energy-shield",
 	 },
@@ -213,6 +227,7 @@ data:extend({
 	normal =
 	 {
 	enabled=false,
+	energy_required=1,
 	ingredients =
 	  {
 	   {"flamethrower-ammo", 2},
@@ -223,6 +238,7 @@ data:extend({
 	expensive =
 	 {
 	enabled=false,
+	energy_required=2,
 	ingredients =
 	  {
 	   {"flamethrower-ammo", 4},

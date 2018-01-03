@@ -5,7 +5,8 @@ data:extend({
     icon = "__Aircraft__/graphics/Gunship_Icon.png",
 	icon_size = 32,
     flags = { "goes-to-quickbar" },
-    subgroup = "ammo",
+    subgroup = "transport",
+	order = "b[personal-transport]-e[gunship]",
     place_result= "gunship",
     stack_size= 1,
   },
@@ -16,7 +17,8 @@ data:extend({
     icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
 	icon_size = 32,
     flags = { "goes-to-quickbar" },
-    subgroup = "ammo",
+    subgroup = "transport",
+	order = "b[personal-transport]-f[cargo-plane]",
     place_result= "cargo-plane",
     stack_size= 1,
   },
@@ -27,7 +29,8 @@ data:extend({
     icon = "__Aircraft__/graphics/Jet_Icon.png",
 	icon_size = 32,
     flags = { "goes-to-quickbar" },
-    subgroup = "ammo",
+    subgroup = "transport",
+	order = "b[personal-transport]-g[jet]",
     place_result= "jet",
     stack_size= 1,
   },
@@ -38,7 +41,8 @@ data:extend({
     icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
 	icon_size = 32,
     flags = { "goes-to-quickbar" },
-    subgroup = "ammo",
+    subgroup = "transport",
+	order = "b[personal-transport]-h[flying-fortress]",
     place_result= "flying-fortress",
     stack_size= 1,
   },
@@ -183,7 +187,8 @@ data:extend({
           starting_speed = 1,
           direction_deviation = 0.1,
           range_deviation = 0.1,
-          max_range = 50,
+          max_range = 30,
+		  min_range = 5,
           source_effects =
           {
             type = "create-explosion",
@@ -193,8 +198,8 @@ data:extend({
       },
     },
     subgroup = "ammo",
-    order = "d[cannon-shell]-b[explosive]",
-    stack_size = 100
+    order = "d[cannon-shell]-c[explosive]",
+    stack_size = 200
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Flying Fortress machine gun
@@ -348,27 +353,27 @@ data:extend({
 	icon_size = 32,
     flags = {"goes-to-main-inventory"},
     ammo_type =
-    {
-      {
-        source_type = "vehicle",
-        consumption_modifier = 1.5,
-        category = "flamethrower",
-        target_type = "position",
-        clamp_position = true,
-
-        action =
+	  {
         {
-          type = "direct",
-          action_delivery =
+          source_type = "vehicle",
+          consumption_modifier = 1.5,
+          category = "flamethrower",
+          target_type = "position",
+          clamp_position = true,
+
+          action =
           {
-            type = "stream",
-            stream = "handheld-flamethrower-fire-stream",
-            max_length = 30,
-            duration = 320,
+            type = "direct",
+            action_delivery =
+            {
+              type = "stream",
+              stream = "handheld-flamethrower-fire-stream",
+              max_length = 30,
+              duration = 320,
+            }
           }
         }
-      }
-    },
+      },
     magazine_size = 100,
     subgroup = "ammo",
     order = "e[napalm]",

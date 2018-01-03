@@ -145,7 +145,7 @@ data:extend({
     collision_box = {{-0.05, -1.1}, {0.05, 1.1}},
     acceleration = 0,
     direction_only = true,
-    piercing_damage = 300,
+    piercing_damage = 125,
     action =
     {
       type = "direct",
@@ -156,7 +156,7 @@ data:extend({
         {
           {
             type = "damage",
-            damage = { amount = 300, type = "physical"}
+            damage = { amount = 275, type = "physical"}
           }
         }
       }
@@ -179,7 +179,7 @@ data:extend({
             action =
             {
               type = "area",
-              radius = 13,
+              radius = 6,
               action_delivery =
               {
                 type = "instant",
@@ -187,7 +187,7 @@ data:extend({
                 {
                   {
                     type = "damage",
-                    damage = {amount = 800, type = "explosion"}
+                    damage = {amount = 325, type = "explosion"}
                   },
                   {
                     type = "create-entity",
