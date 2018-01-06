@@ -191,7 +191,7 @@ data:extend({
 		type = "technology",
 		name = "aircraft-energy-shield",
 		icon = "__Aircraft__/graphics/Aircraft_Energy_Shield_Tech.png",
-		icon_size = 128,
+		icon_size=128,
 		effects =
 	{
 	{
