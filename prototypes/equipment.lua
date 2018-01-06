@@ -19,7 +19,7 @@ data:extend({
     },
     sprite = 
     {
-      filename = "__Aircraft__/graphics/Aircraft_Energy_Shield.png",
+      filename = "__Aircraft__/graphics/Aircraft_Energy_Shield_Sprite.png",
       width = 64,
       height = 64,
       priority = "medium"
