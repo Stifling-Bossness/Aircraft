@@ -134,8 +134,8 @@ data:extend({
  { -- High Explosive Cannon Shells
 		type = "technology",
 		name = "high-explosive-cannon-shells",
-		icon = "__base__/graphics/icons/explosive-cannon-shell.png",
-		icon_size=32,
+		icon = "__Aircraft__/graphics/High_Explosive_Shell_Tech.png",
+		icon_size = 128,
 		effects =
     {
       {

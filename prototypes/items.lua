@@ -170,7 +170,7 @@ data:extend({
  { -- High explosive cannon shell
     type = "ammo",
     name = "high-explosive-cannon-shell",
-    icon = "__base__/graphics/icons/explosive-cannon-shell.png",
+    icon = "__Aircraft__/graphics/High_Explosive_Shell_Icon.png",
 	icon_size = 32,
     flags = {"goes-to-main-inventory"},
     ammo_type =
