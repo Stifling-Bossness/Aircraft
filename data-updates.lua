@@ -100,3 +100,12 @@ end
 if settings.startup["raven-tech"].value == true then
 	table.insert(data.raw["technology"]["raven"].prerequisites, "advanced-aerodynamics")
 end
+--Raven Equipment change
+--[[if settings.startup["raven-equipment-grid"].value == true then
+	data.raw["car"]["raven-1"].equipment_grid = "gunship-equipment-grid"
+	data.raw["car"]["raven-2"].equipment_grid = "gunship-equipment-grid"
+end--]]
+--Helicopters Equipment change
+if settings.startup["heli-equipment-grid"].value == true then
+	data.raw["car"]["heli-entity-_-"].equipment_grid = "gunship-equipment-grid"
+end

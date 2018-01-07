@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.7
+Date: 7. 1. 2018.
+  Changes:
+    - Gave all Aircraft belt immunity.
+    - Updated High-Explosive Cannon Shell graphics, thanks to ST-DDT.
+  Compatibility:
+    - Added Helicopters Equipment Grid setting.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.6
 Date: 6. 1. 2018.
   Changes:

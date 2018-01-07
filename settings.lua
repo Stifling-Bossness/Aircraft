@@ -27,5 +27,19 @@ data:extend(
   setting_type = "startup",
   default_value = false,
   per_user = false,
-  }
+  },
+--[[  {
+  type = "bool-setting",
+  name = "raven-equipment-grid",
+  setting_type = "startup",
+  default_value = false,
+  per_user = false,
+  },--]]
+  {
+  type = "bool-setting",
+  name = "heli-equipment-grid",
+  setting_type = "startup",
+  default_value = false,
+  per_user = false,
+  },
 })
