@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.8
+Date: 8. 1. 2018.
+  Changes:
+    - Considerably simplified some internal workings, thanks to Yousei9 and ST-DDT.
+    - Re-orders some of the settings, thanks to Yousei9 and ST-DDT.
+    - Made belt immunity a setting, instead of forced, thanks to Yousei9 and ST-DDT.
+  Locale:
+    - Minor German translation tweaks.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.7
 Date: 7. 1. 2018.
   Changes:

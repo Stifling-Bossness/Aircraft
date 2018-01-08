@@ -1,10 +1,10 @@
 {
   "name": "Aircraft",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "factorio_version": "0.16",
   "title": "Aircraft",
-  "author": "Eldwen (Updated by SuicidalKid)",
+  "author": "SuicidalKid (original by Eldwen)",
   "homepage": "https://forums.factorio.com/viewtopic.php?f=120&t=18714",
-  "dependencies": ["base >= 0.16.0", "? bobplates >= 0.16.0", "? bobelectronics >= 0.16.0", "? boblibrary >= 0.16.0", "? bobwarfare >= 0.16.0", "? bobvehicleequipment >= 0.16.0", "? electric-vehicles >= 0.3.6", "? electric-vehicles-lib >=0.2.9"],
+  "dependencies": ["base >= 0.16.0", "? bobplates >= 0.16.0", "? bobelectronics >= 0.16.0", "? boblibrary >= 0.16.0", "? bobwarfare >= 0.16.0", "? bobvehicleequipment >= 0.16.0"],
   "description": "Adds 4 aircraft, each with their benefits and drawbacks, to allow for more biter-killing fun!"
 }
