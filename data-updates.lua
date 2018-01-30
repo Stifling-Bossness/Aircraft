@@ -94,18 +94,26 @@ if settings.startup["aircraft-hardmode"].value == true then
 end
 --Helicopters Technology change
 if settings.startup["helicopter-tech"].value == true then
-	table.insert(data.raw["technology"]["heli-technology"].prerequisites, "advanced-aerodynamics")
+	if data.raw["car"]["heli-entity-_-"] then
+		table.insert(data.raw["technology"]["heli-technology"].prerequisites, "advanced-aerodynamics")
+	end
 end
 --Raven Technology change
 if settings.startup["raven-tech"].value == true then
-	table.insert(data.raw["technology"]["raven"].prerequisites, "advanced-aerodynamics")
+	if data.raw["car"]["raven-1"] then
+		table.insert(data.raw["technology"]["raven"].prerequisites, "advanced-aerodynamics")
+	end
 end
 --Raven Equipment change
 --[[if settings.startup["raven-equipment-grid"].value == true then
-	data.raw["car"]["raven-1"].equipment_grid = "gunship-equipment-grid"
-	data.raw["car"]["raven-2"].equipment_grid = "gunship-equipment-grid"
+	if data.raw["car"]["raven-1"] then
+		data.raw["car"]["raven-1"].equipment_grid = "gunship-equipment-grid"
+		data.raw["car"]["raven-2"].equipment_grid = "gunship-equipment-grid"
+	end
 end--]]
 --Helicopters Equipment change
 if settings.startup["heli-equipment-grid"].value == true then
-	data.raw["car"]["heli-entity-_-"].equipment_grid = "gunship-equipment-grid"
+	if data.raw["car"]["heli-entity-_-"] then
+		data.raw["car"]["heli-entity-_-"].equipment_grid = "gunship-equipment-grid"
+	end
 end

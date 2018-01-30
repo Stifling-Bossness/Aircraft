@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.9
+Date: 30. 1. 2018.
+  Locale:
+    - Minor Russian translation tweaks, thanks to IgorLutiy.
+  Bugfixes:
+    - Fixed that toggling a compatibility setting for a non-installed mod would crash the game on startup.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.8
 Date: 8. 1. 2018.
   Changes:
