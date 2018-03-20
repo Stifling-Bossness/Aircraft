@@ -230,7 +230,7 @@ data:extend({
     name = "gunship",
     icon = "__Aircraft__/graphics/Gunship_Icon.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
+    flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
     minable = {mining_time = 1, result = "gunship"},
     max_health = 500,
@@ -370,7 +370,7 @@ data:extend({
     name = "cargo-plane",
     icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
+    flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
     minable = {mining_time = 1, result = "cargo-plane"},
     max_health = 500,
@@ -509,7 +509,7 @@ data:extend({
     name = "jet",
     icon = "__Aircraft__/graphics/Jet_Icon.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
+    flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
     minable = {mining_time = 1, result = "jet"},
     max_health = 250,
@@ -649,7 +649,7 @@ data:extend({
     name = "flying-fortress",
     icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
+    flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
     minable = {mining_time = 1, result = "flying-fortress"},
     max_health = 2000,
@@ -815,7 +815,6 @@ for k, v in pairs(planes) do
     if settings.startup["aircraft-belt-immunity"].value == true then
       plane.has_belt_immunity = v.belt_immunity
     end
-    
   end
 end
 
