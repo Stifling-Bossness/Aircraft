@@ -162,8 +162,8 @@ data:extend({
  { -- Afterburner
 		type = "technology",
 		name = "afterburner",
-		icon = "__Aircraft__/graphics/Aircraft_Afterburner_Icon.png",
-		icon_size = 32,
+		icon = "__Aircraft__/graphics/Aircraft_Afterburner_Tech.png",
+		icon_size = 128,
 		effects =
 	{
 		{
