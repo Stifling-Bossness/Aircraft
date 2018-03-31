@@ -33,14 +33,14 @@ data:extend({
     sprite = 
     {
       filename = "__Aircraft__/graphics/Aircraft_Afterburner.png",
-      width = 64,
-      height = 128,
+      width = 128,
+      height = 64,
       priority = "medium"
     },
     shape =
     {
-      width = 2,
-      height = 4,
+      width = 4,
+      height = 2,
       type = "full"
     },
     energy_source =
