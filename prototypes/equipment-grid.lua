@@ -7,7 +7,7 @@ data:extend({
   { -- Gunship grid
     type = "equipment-grid",
     name = "gunship-equipment-grid",
-    width = 7,
+    width = 8,
     height = 4,
     equipment_categories = {"armor", "aircraft"}
   },
@@ -23,7 +23,7 @@ data:extend({
   { -- Jet grid
     type = "equipment-grid",
 	name = "jet-equipment-grid",
-	width = 7,
+	width = 8,
 	height = 4,
 	equipment_categories = {"armor", "aircraft"}
   },

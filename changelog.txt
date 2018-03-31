@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.11
+Date: 30. 3. 2018.
+  Changes:
+    - Graphics for Aircraft Afterburner have been updated, thanks to ST-DDT.
+    - Grid size in Jet and Gunship have been widened by 1 to accomadate orientation change to the Aircraft Afterburner.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.10
 Date: 20. 3. 2018.
   Bugfixes:
