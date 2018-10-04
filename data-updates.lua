@@ -117,3 +117,7 @@ if settings.startup["heli-equipment-grid"].value == true then
 		data.raw["car"]["heli-entity-_-"].equipment_grid = "gunship-equipment-grid"
 	end
 end
+--Potential fix for incompatibility with Alternative Oil Processing (https://mods.factorio.com/mod/AlternativeOil)
+if data.raw["technology"]["hydrocarbons"] then
+	data.raw["technology"]["napalm"].prerequisites = {"flamethrower"}
+end
