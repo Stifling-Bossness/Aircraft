@@ -1,5 +1,6 @@
 --Thanks to Arch666Angel for this snippet of code.
 --Updates equipment grids to support the various bob's vehicle grids, within reason.
+if settings.startup["non-combat-mode"].value == false then
 if data.raw["equipment-category"]["armoured-vehicle"] then 
     table.insert(data.raw["equipment-grid"]["flying-fortress-equipment-grid"].equipment_categories,"vehicle")
 	table.insert(data.raw["equipment-grid"]["flying-fortress-equipment-grid"].equipment_categories,"armoured-vehicle")
@@ -53,15 +54,9 @@ if data.raw["recipe"]["rifle"] then
 	table.insert(data.raw["recipe"]["flying-fortress"]["normal"].ingredients, {"rifle", 15})
 	table.insert(data.raw["recipe"]["flying-fortress"]["expensive"].ingredients, {"rifle", 30})
 end
+end
 --Hardmode changes
 if settings.startup["aircraft-hardmode"].value == true then
-	--Gunship
-	table.remove(data.raw["car"]["gunship"].resistances)
-	table.insert(data.raw["car"]["gunship"].resistances, {type = "fire", decrease = 0, percent = 25})
-	table.insert(data.raw["car"]["gunship"].resistances, {type = "physical", decrease = 0, percent = 15})
-	table.insert(data.raw["car"]["gunship"].resistances, {type = "impact", decrease = 0, percent = 30})
-	table.insert(data.raw["car"]["gunship"].resistances, {type = "explosion", decrease = 0, percent = 15})
-	table.insert(data.raw["car"]["gunship"].resistances, {type = "acid", decrease = 0, percent = 10})
 	--Cargo Plane
 	table.remove(data.raw["car"]["cargo-plane"].resistances)
 	table.insert(data.raw["car"]["cargo-plane"].resistances, {type = "fire", decrease = 0, percent = 10})
@@ -69,6 +64,14 @@ if settings.startup["aircraft-hardmode"].value == true then
 	table.insert(data.raw["car"]["cargo-plane"].resistances, {type = "impact", decrease = 0, percent = 5})
 	table.insert(data.raw["car"]["cargo-plane"].resistances, {type = "explosion", decrease = 0, percent = 10})
 	table.insert(data.raw["car"]["cargo-plane"].resistances, {type = "acid", decrease = 0, percent = 5})
+	if settings.startup["non-combat-mode"].value == false then
+	--Gunship
+	table.remove(data.raw["car"]["gunship"].resistances)
+	table.insert(data.raw["car"]["gunship"].resistances, {type = "fire", decrease = 0, percent = 25})
+	table.insert(data.raw["car"]["gunship"].resistances, {type = "physical", decrease = 0, percent = 15})
+	table.insert(data.raw["car"]["gunship"].resistances, {type = "impact", decrease = 0, percent = 30})
+	table.insert(data.raw["car"]["gunship"].resistances, {type = "explosion", decrease = 0, percent = 15})
+	table.insert(data.raw["car"]["gunship"].resistances, {type = "acid", decrease = 0, percent = 10})
 	--Jet
 	table.remove(data.raw["car"]["jet"].resistances)
 	table.insert(data.raw["car"]["jet"].resistances, {type = "fire", decrease = 0, percent = 25})
@@ -83,6 +86,7 @@ if settings.startup["aircraft-hardmode"].value == true then
 	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "impact", decrease = 0, percent = 35})
 	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "explosion", decrease = 0, percent = 20})
 	table.insert(data.raw["car"]["flying-fortress"].resistances, {type = "acid", decrease = 0, percent = 15})
+	end
 	--Cheat Machine (ONLY ENABLE IF YOU HAVE ALSO ENABLED THE CHEAT MACHINE IN OTHER FILES!!!)
 	--[[table.remove(data.raw["car"]["cheat-machine"].resistances)
 	table.insert(data.raw["car"]["cheat-machine"].resistances, {type = "fire", decrease = 0, percent = 100})
@@ -104,13 +108,6 @@ if settings.startup["raven-tech"].value == true then
 		table.insert(data.raw["technology"]["raven"].prerequisites, "advanced-aerodynamics")
 	end
 end
---Raven Equipment change
---[[if settings.startup["raven-equipment-grid"].value == true then
-	if data.raw["car"]["raven-1"] then
-		data.raw["car"]["raven-1"].equipment_grid = "gunship-equipment-grid"
-		data.raw["car"]["raven-2"].equipment_grid = "gunship-equipment-grid"
-	end
-end--]]
 --Helicopters Equipment change
 if settings.startup["heli-equipment-grid"].value == true then
 	if data.raw["car"]["heli-entity-_-"] then
@@ -118,6 +115,18 @@ if settings.startup["heli-equipment-grid"].value == true then
 	end
 end
 --Potential fix for incompatibility with Alternative Oil Processing (https://mods.factorio.com/mod/AlternativeOil)
+if settings.startup["non-combat-mode"].value == false then
 if data.raw["technology"]["hydrocarbons"] then
 	data.raw["technology"]["napalm"].prerequisites = {"flamethrower"}
+end
+end
+--Non-combat mode
+if settings.startup["non-combat-mode"].value == true then
+	data.raw["recipe"]["gunship"].enabled = false
+	data.raw["recipe"]["jet"].enabled = false
+	data.raw["recipe"]["flying-fortress"].enabled = false
+	data.raw["technology"]["napalm"].prerequisites = {"flammables"}
+	data.raw["technology"]["jets"].enabled = false
+	data.raw["technology"]["gunships"].enabled = false
+	data.raw["technology"]["flying-fortress"].enabled = false
 end

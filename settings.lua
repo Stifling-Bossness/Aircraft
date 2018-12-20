@@ -35,13 +35,6 @@ data:extend(
     default_value = false,
     order="bc",
   },
---[[  {
-  type = "bool-setting",
-  name = "raven-equipment-grid",
-  setting_type = "startup",
-  default_value = false,
-  order="bd",
-  },--]]
   {
     type = "bool-setting",
     name = "heli-equipment-grid",
@@ -49,4 +42,11 @@ data:extend(
     default_value = false,  
     order="bb",    
   },
+  {
+  	type = "bool-setting",
+	name = "non-combat-mode",
+	setting_type = "startup",
+	default_value = false,
+	order="bd",
+  }
 })
