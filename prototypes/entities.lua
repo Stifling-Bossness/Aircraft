@@ -269,6 +269,7 @@ data:extend({
 		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+	selection_priority = 60,
     effectivity = 0.7,
     braking_power = "450kW",
     burner =
@@ -409,6 +410,7 @@ data:extend({
 		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+	selection_priority = 60,
     effectivity = 1.0,
     braking_power = "650kW",
     burner =
@@ -548,6 +550,7 @@ data:extend({
 		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+	selection_priority = 60,
     effectivity = 0.9,
     braking_power = "2000kW",
     burner =
@@ -688,6 +691,7 @@ data:extend({
 		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
 		collision_mask = {},
 		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+	selection_priority = 60,
     effectivity = 2.3,
     braking_power = "850kW",
     burner =
