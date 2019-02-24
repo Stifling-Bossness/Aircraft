@@ -1,4 +1,4 @@
-    The Aircraft mod for Factorio
+The Aircraft mod for Factorio
 
   Factorio is a game about building and managing your ever-growing factory, while defending yourself from the native population that don't
 much care you for ruining their planet with pollution. In the late-game, it can be a bit of a chore to get to all your different outposts
