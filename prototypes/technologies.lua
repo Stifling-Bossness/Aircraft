@@ -4,15 +4,15 @@ data:extend({
 		name = "advanced-aerodynamics",
 		icon = "__Aircraft__/graphics/Gunship.png",
 		icon_size = 128,
-		prerequisites = {"flying"},
+		prerequisites = {"robotics"},
 		unit =
 		{
 			count = 350,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1}
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
 			},
 			time = 45
 		},
@@ -31,15 +31,15 @@ data:extend({
         recipe = "gunship"
       },
     },
-		prerequisites = {"flying", "military-3", "advanced-aerodynamics", "rocketry"},
+		prerequisites = {"military-3", "advanced-aerodynamics", "rocketry"},
 		unit = 
 		{
 			count = 500,
 			ingredients = 
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 				{"military-science-pack", 1},
 			},
 			time = 60
@@ -65,9 +65,9 @@ data:extend({
 			count = 500,
 			ingredients = 
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1}
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1}
 			},
 			time = 30
 		},
@@ -92,9 +92,9 @@ data:extend({
 			count = 1000,
 			ingredients = 
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 				{"military-science-pack", 1},
 			},
 			time = 75
@@ -120,11 +120,11 @@ data:extend({
 			count = 3000,
 			ingredients = 
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 				{"military-science-pack",1},
-				{"high-tech-science-pack",1},
+				{"utility-science-pack",1},
 			},
 			time = 120
 		},
@@ -149,9 +149,9 @@ data:extend({
 			count = 350,
 			ingredients = 
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 				{"military-science-pack",1},
 			},
 			time = 45
@@ -177,10 +177,10 @@ data:extend({
 			count = 400,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
-				{"high-tech-science-pack",1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"utility-science-pack",1},
 			},
 			time = 45,
 		},
@@ -205,11 +205,11 @@ data:extend({
 		count = 400,
 		ingredients =
 		{
-		{"science-pack-1", 1},
-		{"science-pack-2", 1},
-		{"science-pack-3", 1},
+		{"automation-science-pack", 1},
+		{"logistic-science-pack", 1},
+		{"chemical-science-pack", 1},
 		{"military-science-pack",1},
-		{"high-tech-science-pack",1},
+		{"utility-science-pack",1},
 		},
 		time = 45,
 	},
@@ -235,9 +235,9 @@ data:extend({
 			count = 200,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 				{"military-science-pack",1},
 			},
 			time = 20,
