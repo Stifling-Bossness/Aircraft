@@ -4,7 +4,7 @@ data:extend({
     name = "gunship",
     icon = "__Aircraft__/graphics/Gunship_Icon.png",
 	icon_size = 32,
-    flags = { "goes-to-quickbar" },
+    flags = {},
     subgroup = "transport",
 	order = "b[personal-transport]-e[gunship]",
     place_result= "gunship",
@@ -16,7 +16,7 @@ data:extend({
     name = "cargo-plane",
     icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
 	icon_size = 32,
-    flags = { "goes-to-quickbar" },
+    flags = {},
     subgroup = "transport",
 	order = "b[personal-transport]-f[cargo-plane]",
     place_result= "cargo-plane",
@@ -28,7 +28,7 @@ data:extend({
     name = "jet",
     icon = "__Aircraft__/graphics/Jet_Icon.png",
 	icon_size = 32,
-    flags = { "goes-to-quickbar" },
+    flags = {},
     subgroup = "transport",
 	order = "b[personal-transport]-g[jet]",
     place_result= "jet",
@@ -40,7 +40,7 @@ data:extend({
     name = "flying-fortress",
     icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
 	icon_size = 32,
-    flags = { "goes-to-quickbar" },
+    flags = {},
     subgroup = "transport",
 	order = "b[personal-transport]-h[flying-fortress]",
     place_result= "flying-fortress",
@@ -52,7 +52,7 @@ data:extend({
     name = "aircraft-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
 	icon_size = 32,
-    flags = {"goes-to-main-inventory", "hidden"},
+    flags = {"hidden"},
     subgroup = "gun",
     order = "a[basic-clips]-c[aircraft-machine-gun]",
     attack_parameters =
@@ -84,7 +84,7 @@ data:extend({
     name = "aircraft-rocket-launcher",
     icon = "__base__/graphics/icons/explosive-rocket.png",
 	icon_size = 32,
-    flags = {"goes-to-main-inventory", "hidden"},
+    flags = {"hidden"},
     subgroup = "gun",
     order = "e[aircraft-rocket-launcher]",
     attack_parameters =
@@ -112,7 +112,7 @@ data:extend({
     name = "cargo-plane-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
 	icon_size = 32,
-    flags = {"goes-to-main-inventory", "hidden"},
+    flags = {"hidden"},
     subgroup = "gun",
     order = "a[basic-clips]-c[cargo-plane-machine-gun]",
     attack_parameters =
@@ -144,7 +144,7 @@ data:extend({
     name = "aircraft-cannon",
     icon = "__base__/graphics/icons/explosive-cannon-shell.png",
 	icon_size = 32,
-    flags = {"goes-to-main-inventory", "hidden"},
+    flags = {"hidden"},
     subgroup = "gun",
     order = "z[tank]-a[cannon]",
     attack_parameters =
@@ -172,7 +172,7 @@ data:extend({
     name = "high-explosive-cannon-shell",
     icon = "__Aircraft__/graphics/High_Explosive_Shell_Icon.png",
 	icon_size = 32,
-    flags = {"goes-to-main-inventory"},
+    flags = {},
     ammo_type =
     {
       category = "cannon-shell",
@@ -207,7 +207,7 @@ data:extend({
     name = "flying-fortress-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
 	icon_size = 32,
-    flags = {"goes-to-main-inventory", "hidden"},
+    flags = {"hidden"},
     subgroup = "gun",
     order = "a[basic-clips]-c[aircraft-machine-gun]",
     attack_parameters =
@@ -239,7 +239,7 @@ data:extend({
     name = "flying-fortress-rocket-launcher",
     icon = "__base__/graphics/icons/explosive-rocket.png",
 	icon_size = 32,
-    flags = {"goes-to-main-inventory", "hidden"},
+    flags = {"hidden"},
     subgroup = "gun",
     order = "e[flying-fortress-rocket-launcher]",
     attack_parameters =
@@ -267,7 +267,7 @@ data:extend({
     name = "napalm-launcher",
     icon = "__base__/graphics/icons/flamethrower.png",
 	icon_size = 32,
-    flags = {"goes-to-main-inventory", "hidden"},
+    flags = {"hidden"},
     subgroup = "gun",
     order = "e[napalm-launcher]",
     attack_parameters =
@@ -314,7 +314,7 @@ data:extend({
     name = "cheat-machine",
     icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
 	icon_size = 32,
-    flags = { "goes-to-quickbar", "hidden"},
+    flags = {"hidden"},
     subgroup = "ammo",
     place_result= "cheat-machine",
     stack_size= 1,
@@ -326,7 +326,7 @@ data:extend({
 	icon = "__Aircraft__/graphics/Aircraft_Energy_Shield_Icon.png",
 	icon_size = 32,
 	placed_as_equipment_result = "aircraft-energy-shield",
-	flags = { "goes-to-main-inventory"},
+	flags = {},
 	subgroup = "equipment",
 	order = "b[shield]-c[aircraft-energy-shield]",
 	stack_size = 10,
@@ -339,7 +339,7 @@ data:extend({
     icon = "__Aircraft__/graphics/Aircraft_Afterburner_Icon.png",
 	icon_size = 32,
     placed_as_equipment_result = "aircraft-afterburner",
-    flags = {"goes-to-main-inventory"},
+    flags = {},
     subgroup = "equipment",
     order = "e[engine]-a[aircraft-afterburner]",
     stack_size = 10,
@@ -351,7 +351,7 @@ data:extend({
     name = "napalm",
     icon = "__base__/graphics/icons/flamethrower-ammo.png",
 	icon_size = 32,
-    flags = {"goes-to-main-inventory"},
+    flags = {},
     ammo_type =
 	  {
         {

@@ -48,5 +48,12 @@ data:extend(
 	setting_type = "startup",
 	default_value = false,
 	order="bd",
+  },
+  {
+  	type = "bool-setting",
+	name = "inserter-immunity",
+	setting_type = "startup",
+	default_value = false,
+	order="be",
   }
 })

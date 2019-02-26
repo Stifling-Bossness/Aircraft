@@ -130,3 +130,14 @@ if settings.startup["non-combat-mode"].value == true then
 	data.raw["technology"]["gunships"].enabled = false
 	data.raw["technology"]["flying-fortress"].enabled = false
 end
+--Inserter Immunity
+if settings.startup["inserter-immunity"].value == true then
+	table.insert(data.raw["car"]["gunship"].flags, "no-automated-item-removal")
+	table.insert(data.raw["car"]["gunship"].flags, "no-automated-item-insertion")
+	table.insert(data.raw["car"]["jet"].flags, "no-automated-item-removal")
+	table.insert(data.raw["car"]["jet"].flags, "no-automated-item-insertion")
+	table.insert(data.raw["car"]["cargo-plane"].flags, "no-automated-item-removal")
+	table.insert(data.raw["car"]["cargo-plane"].flags, "no-automated-item-insertion")
+	table.insert(data.raw["car"]["flying-fortress"].flags, "no-automated-item-removal")
+	table.insert(data.raw["car"]["flying-fortress"].flags, "no-automated-item-insertion")
+end

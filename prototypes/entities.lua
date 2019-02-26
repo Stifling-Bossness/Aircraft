@@ -274,7 +274,7 @@ data:extend({
     braking_power = "450kW",
     burner =
     {
-      effectivity = 0.80,
+      effectivity = 1,
       fuel_inventory_size = 2,
       smoke =
       {
@@ -371,7 +371,7 @@ data:extend({
     name = "cargo-plane",
     icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
+    flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "no-automated-item-removal"},
     has_belt_immunity = false,
     minable = {mining_time = 1, result = "cargo-plane"},
     max_health = 500,
@@ -415,7 +415,7 @@ data:extend({
     braking_power = "650kW",
     burner =
     {
-      effectivity = 0.50,
+      effectivity = 1,
       fuel_inventory_size = 6,
       smoke =
       {
@@ -555,7 +555,7 @@ data:extend({
     braking_power = "2000kW",
     burner =
     {
-      effectivity = 0.90,
+      effectivity = 1,
       fuel_inventory_size = 3,
       smoke =
       {
@@ -696,7 +696,7 @@ data:extend({
     braking_power = "850kW",
     burner =
     {
-      effectivity = 0.50,
+      effectivity = 1,
       fuel_inventory_size = 4,
       smoke =
       {

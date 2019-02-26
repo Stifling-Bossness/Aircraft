@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.0
+Date: 26. 2. 2019.
+  Changes:
+    - Updated to 0.17
+    - Advanced Aerodynamics now requires the "automobilism" and "robotics" technologies.
+    - Jets no longer requires "Rocket Silo" tech, now instead requires "explosive rocketry".
+    - Jets now requires Production science packs.
+    - Flying Fortress now requires "artillery" and "space science pack" technologies, but no longer requires "tanks".
+    - Flying Fortress now requires all science packs, including space science packs.
+    - High Explosive Cannon Shells now require "artillery", but no longer requires "tanks".
+    - All Aircraft now have a burner efficiency of 100%, to bring it in line with vanilla vehicles.
+    - Added "Inserter Immunity" setting, which gives all Aircraft immune to inserters, except for fuel insertion.
+---------------------------------------------------------------------------------------------------
+Version: 1.5.3
+Date: 20. 2. 2019.
+  Locale:
+    - New Korean translation. (Thanks to GimoXagros)
+---------------------------------------------------------------------------------------------------
 Version: 1.5.2
 Date: 21. 12. 2018.
   Bugfixes:
