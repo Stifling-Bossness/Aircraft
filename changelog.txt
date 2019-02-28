@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.2
+Date: 28. 2. 2019.
+  Locale:
+    - Updated Japanese translation, thanks to shelaf.
+---------------------------------------------------------------------------------------------------
 Version: 1.6.1
-Date: 26. 2. 2019
+Date: 26. 2. 2019.
   Changes:
     - Hid optional dependencies to reduce potential confusion.
     - Added thumbnail.
