@@ -1,16 +1,12 @@
 The Aircraft mod for Factorio
 
-  Factorio is a game about building and managing your ever-growing factory, while defending yourself from the native population that don't
-much care you for ruining their planet with pollution. In the late-game, it can be a bit of a chore to get to all your different outposts
-and to assault the natives in their distant homes, so I made this mod.
+The Aircraft mod adds various aircraft to Factorio. Factorio is a game about building and managing factories while also defending yourself from the native population who do not like the factory pollution destroying the planet. The later stages of the game can be boring due to the constant traveling back and forth between factories. The added aircraft all have different uses:
+  
+- The jet is very quick and can be used to commute back and forth between distant outposts
+- The cargo plane is very spacious and can be used to cargo numerous items far distances
+- The flying fortress is an attack aircraft that can easily destroy natives daring to protest the pollution
+- The gunship is a balance of the other three aircraft
 
-  The aircraft all have their different uses, the jet being primarily used to commute back and forth from distant outposts, the cargo plane 
-used to move large amounts of items between far-apart areas, the flying fortress designed to rain hell down upon the natives for daring
-to protest your unstoppable pollution, and the gunship, which tries to strike a balance between the other three.
+I also tried to make sure that Aircraft mod is compatible with other mods. The mod supports some of the larger mods, such as Bob's mods. I also attempted to make patches for some smaller mods like Raven and Helicopters. If there are any mods that are incompatible, let me know so I can try to fix it.
 
-  I also try to make sure that my mod is compatible with other mods. I've got support for some of the larger mods, such as Bob's mods, but
-I also attempt to make patches for some of the smaller mods, such as Raven and Helicopters. If there's anything incompatible, let me know
-so I can at least try to fix it.
-
-  Non-English translations are not maintained by me, they are generously donated by volunteers. If your language isn't translated, or there's
-an error, please feel free to make a pull request or a bug report.
+Non-English translations are not maintained by me, they are generously donated by volunteers. If your language isn't translated, or there's an error, please feel free to make a pull request or a bug report.
