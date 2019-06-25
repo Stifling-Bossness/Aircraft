@@ -55,5 +55,12 @@ data:extend(
 	setting_type = "startup",
 	default_value = false,
 	order="be",
+  },
+  {
+  	type = "bool-setting",
+	name = "disable-acid-splash",
+	setting_type = "startup",
+	default_value = false,
+	order="bf",
   }
 })

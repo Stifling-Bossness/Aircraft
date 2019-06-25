@@ -55,6 +55,13 @@ if data.raw["recipe"]["rifle"] then
 	table.insert(data.raw["recipe"]["flying-fortress"]["expensive"].ingredients, {"rifle", 30})
 end
 end
+if settings.startup["disable-acid-splash"].value == true then
+	for k, fire in pairs (data.raw.fire) do
+		if fire.name:find("acid%-splash%-fire") then
+		fire.on_damage_tick_effect = nil
+		end
+	end
+end
 --Hardmode changes
 if settings.startup["aircraft-hardmode"].value == true then
 	--Cargo Plane

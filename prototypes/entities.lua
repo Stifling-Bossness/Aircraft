@@ -262,7 +262,7 @@ data:extend({
       },
       {
         type = "acid",
-        decrease = 1,
+        decrease = 60,
         percent = 20
       }
     },
@@ -371,7 +371,7 @@ data:extend({
     name = "cargo-plane",
     icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
     icon_size = 32,
-    flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "no-automated-item-removal"},
+    flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
     minable = {mining_time = 1, result = "cargo-plane"},
     max_health = 500,
@@ -403,7 +403,7 @@ data:extend({
       },
       {
         type = "acid",
-        decrease = 0,
+        decrease = 60,
         percent = 20
       }
     },
@@ -543,7 +543,7 @@ data:extend({
       },
       {
         type = "acid",
-        decrease = 0,
+        decrease = 60,
         percent = 20
       }
     },
@@ -684,7 +684,7 @@ data:extend({
       },
       {
         type = "acid",
-        decrease = 7,
+        decrease = 60,
         percent = 20
       }
     },
