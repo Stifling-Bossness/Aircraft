@@ -74,7 +74,30 @@ data:extend({
       },
       projectile_creation_distance = 0.65,
       range = 30,
-      sound = make_heavy_gunshot_sounds(),
+      cyclic_sound =
+      {
+        begin_sound =
+        {
+          {
+            filename = "__base__/sound/fight/heavy-gunshot-1.ogg",
+            volume = 1
+          }
+        },
+        middle_sound =
+        {
+          {
+            filename = "__base__/sound/fight/heavy-gunshot-2.ogg",
+            volume = 1
+          }
+        },
+        end_sound =
+        {
+          {
+            filename = "__base__/sound/fight/heavy-gunshot-3.ogg",
+            volume = 1
+          }
+        }
+      }
     },
     stack_size = 1
   },
@@ -134,7 +157,30 @@ data:extend({
       },
       projectile_creation_distance = 0.65,
       range = 15,
-      sound = make_heavy_gunshot_sounds(),
+      cyclic_sound =
+      {
+        begin_sound =
+        {
+          {
+            filename = "__base__/sound/fight/heavy-gunshot-1.ogg",
+            volume = 1
+          }
+        },
+        middle_sound =
+        {
+          {
+            filename = "__base__/sound/fight/heavy-gunshot-2.ogg",
+            volume = 1
+          }
+        },
+        end_sound =
+        {
+          {
+            filename = "__base__/sound/fight/heavy-gunshot-3.ogg",
+            volume = 1
+          }
+        }
+      }
     },
     stack_size = 1
   },
@@ -229,7 +275,30 @@ data:extend({
       },
       projectile_creation_distance = 0.65,
       range = 40,
-      sound = make_heavy_gunshot_sounds(),
+      cyclic_sound =
+      {
+        begin_sound =
+        {
+          {
+            filename = "__base__/sound/fight/heavy-gunshot-1.ogg",
+            volume = 1
+          }
+        },
+        middle_sound =
+        {
+          {
+            filename = "__base__/sound/fight/heavy-gunshot-2.ogg",
+            volume = 1
+          }
+        },
+        end_sound =
+        {
+          {
+            filename = "__base__/sound/fight/heavy-gunshot-3.ogg",
+            volume = 1
+          }
+        }
+      }
     },
     stack_size = 1
   },
