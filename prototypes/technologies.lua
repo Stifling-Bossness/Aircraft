@@ -1,8 +1,10 @@
+local TECHPATH = "__Aircraft__/graphics/technology/"
+
 data:extend({
   { -- Advanced Aerodynamics
     type = "technology",
     name = "advanced-aerodynamics",
-    icon = "__Aircraft__/graphics/Gunship.png",
+    icon = TECHPATH .. "advanced_aerodynamics_tech.png",
     icon_size = 128,
     prerequisites = {"automobilism", "robotics"},
     unit =
@@ -22,7 +24,7 @@ data:extend({
   { -- Gunship
     type = "technology",
     name = "gunships",
-    icon = "__Aircraft__/graphics/Gunship.png",
+    icon = TECHPATH .. "gunship.png",
     icon_size = 128,
     effects =
     {
@@ -50,7 +52,7 @@ data:extend({
   { -- Cargo Plane
     type = "technology",
     name = "cargo-planes",
-    icon = "__Aircraft__/graphics/Cargo_Plane.png",
+    icon = TECHPATH .. "cargo_plane.png",
     icon_size = 128,
     effects =
     {
@@ -77,7 +79,7 @@ data:extend({
   { -- Jet
     type = "technology",
     name = "jets",
-    icon = "__Aircraft__/graphics/Jet.png",
+    icon = TECHPATH .. "jet.png",
     icon_size = 128,
     effects =
     {
@@ -106,7 +108,7 @@ data:extend({
   { -- Flying Fortress
     type = "technology",
     name = "flying-fortress",
-    icon = "__Aircraft__/graphics/Flying_Fortress.png",
+    icon = TECHPATH .. "flying_fortress.png",
     icon_size = 128,
     effects =
     {
@@ -137,7 +139,7 @@ data:extend({
   { -- High Explosive Cannon Shells
     type = "technology",
     name = "high-explosive-cannon-shells",
-    icon = "__Aircraft__/graphics/High_Explosive_Shell_Tech.png",
+    icon = TECHPATH .. "high_explosive_shell_tech.png",
     icon_size = 128,
     effects =
     {
@@ -165,7 +167,7 @@ data:extend({
   { -- Afterburner
     type = "technology",
     name = "afterburner",
-    icon = "__Aircraft__/graphics/Aircraft_Afterburner_Tech.png",
+    icon = TECHPATH .. "aircraft_afterburner_tech.png",
     icon_size = 128,
     effects =
 	  {
@@ -193,7 +195,7 @@ data:extend({
   { -- Aircraft Energy Shield
     type = "technology",
     name = "aircraft-energy-shield",
-    icon = "__Aircraft__/graphics/Aircraft_Energy_Shield_Tech.png",
+    icon = TECHPATH .. "aircraft_energy_shield_tech.png",
     icon_size=128,
     effects =
 	  {

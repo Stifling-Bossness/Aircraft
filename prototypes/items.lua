@@ -1,8 +1,10 @@
+local ICONPATH = "__Aircraft__/graphics/icons/"
+
 data:extend({
  { -- Gunship
     type = "item-with-entity-data",
     name = "gunship",
-    icon = "__Aircraft__/graphics/Gunship_Icon.png",
+    icon = ICONPATH .. "gunship_icon.png",
     icon_size = 32,
     flags = {},
     subgroup = "transport",
@@ -14,7 +16,7 @@ data:extend({
   { -- Cargo Plane
     type = "item-with-entity-data",
     name = "cargo-plane",
-    icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
+    icon = ICONPATH .. "cargo_plane_icon.png",
     icon_size = 32,
     flags = {},
     subgroup = "transport",
@@ -26,7 +28,7 @@ data:extend({
   { -- Jet
     type = "item-with-entity-data",
     name = "jet",
-    icon = "__Aircraft__/graphics/Jet_Icon.png",
+    icon = ICONPATH .. "jet_icon.png",
     icon_size = 32,
     flags = {},
     subgroup = "transport",
@@ -38,7 +40,7 @@ data:extend({
   { -- Flying Fortress
     type = "item-with-entity-data",
     name = "flying-fortress",
-    icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
+    icon = ICONPATH .. "flying_fortress_icon.png",
     icon_size = 32,
     flags = {},
     subgroup = "transport",
@@ -216,7 +218,7 @@ data:extend({
   { -- High explosive cannon shell
     type = "ammo",
     name = "high-explosive-cannon-shell",
-    icon = "__Aircraft__/graphics/High_Explosive_Shell_Icon.png",
+    icon = ICONPATH .. "high_explosive_shell_icon.png",
     icon_size = 32,
     flags = {},
     ammo_type =
@@ -381,7 +383,7 @@ data:extend({
 --[[ { -- Cheat machine (DO NOT USE)
     type = "item-with-entity-data",
     name = "cheat-machine",
-    icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
+    icon = ICONPATH .. "Flying_Fortress_icon.png",
     icon_size = 32,
     flags = {"hidden"},
     subgroup = "ammo",
@@ -392,7 +394,7 @@ data:extend({
   { -- Aircraft energy shield
     type = "item",
     name = "aircraft-energy-shield",
-    icon = "__Aircraft__/graphics/Aircraft_Energy_Shield_Icon.png",
+    icon = ICONPATH .. "aircraft_energy_shield_icon.png",
     icon_size = 32,
     placed_as_equipment_result = "aircraft-energy-shield",
     flags = {},
@@ -405,7 +407,7 @@ data:extend({
   { -- Aircraft afterburner
     type = "item",
     name = "aircraft-afterburner",
-    icon = "__Aircraft__/graphics/Aircraft_Afterburner_Icon.png",
+    icon = ICONPATH .. "aircraft_afterburner_icon.png",
     icon_size = 32,
     placed_as_equipment_result = "aircraft-afterburner",
     flags = {},

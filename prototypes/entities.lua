@@ -1,9 +1,31 @@
+local ICONPATH = "__Aircraft__/graphics/icons/"
+local ENTITYPATH = "__Aircraft__/graphics/entity/"
+
+local function airplaneAnimation(name)
+  return {
+    layers = {
+      {
+        filename = ENTITYPATH .. name .. "/" .. name .. "_spritesheet.png",
+        priority = "high",
+        width = 224,
+        height = 224,
+        frame_count = 1,
+        direction_count = 36,
+        line_length = 6,
+        line_height = 6,
+        shift = {0, 0},
+        max_advance = 1,
+      }
+    }
+  }
+end
+
 data:extend({
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --[[ { -- Cheat Machine (DO NOT USE, BREAKS GAME HILARIOUSLY)
       type = "car",
       name = "cheat-machine",
-      icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
+      icon = ICONPATH .. "Flying_Fortress_Icon.png",
     icon_size = 32,
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "cheat-machine"},
@@ -87,7 +109,7 @@ data:extend({
     final_render_layer = "air-object",
     animation =
     {
-          filename = "__Aircraft__/graphics/Flying_Fortress_Spritesheet.png",
+          filename = ENTITYPATH .. "Flying_Fortress_Spritesheet.png",
           priority = "high",
           width = 224,
           height = 224,
@@ -208,7 +230,7 @@ data:extend({
       height = 50,
       priority = "high"
     },
- },
+  },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 })
 
@@ -228,7 +250,7 @@ data:extend({
   { -- Gunship with Car sound
     type = "car",
     name = "gunship",
-    icon = "__Aircraft__/graphics/Gunship_Icon.png",
+    icon = ICONPATH .. "Gunship_Icon.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
@@ -313,19 +335,7 @@ data:extend({
     },
     render_layer = "air-object",
     final_render_layer = "air-object",
-    animation =
-    {
-          filename = "__Aircraft__/graphics/Gunship_Spritesheet.png",
-          priority = "high",
-          width = 224,
-          height = 224,
-          frame_count = 1,
-          direction_count = 36,
-          line_length = 6,
-          line_height = 6,
-          shift = {0, 0},
-          max_advance = 1,
-    },
+    animation = airplaneAnimation("gunship"),
     sound_no_fuel =
     {
       {
@@ -334,7 +344,7 @@ data:extend({
       },
     },
     sound_minimum_speed = 0.15;
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {
       sound =
@@ -364,13 +374,13 @@ data:extend({
     weight = 750,
     inventory_size = 30,
     guns = { "aircraft-machine-gun", "aircraft-rocket-launcher"},
-    equipment_grid="gunship-equipment-grid",
+    equipment_grid = "gunship-equipment-grid",
   },
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Cargo Plane with Car sound
     type = "car",
     name = "cargo-plane",
-    icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
+    icon = ICONPATH .. "Cargo_Plane_Icon.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
@@ -455,19 +465,7 @@ data:extend({
     },
     render_layer = "air-object",
     final_render_layer = "air-object",
-    animation =
-    {
-          filename = "__Aircraft__/graphics/Cargo_Plane_Spritesheet.png",
-          priority = "high",
-          width = 224,
-          height = 224,
-          frame_count = 1,
-          direction_count = 36,
-          line_length = 6,
-          line_height = 6,
-          shift = {0, 0},
-          max_advance = 1,
-    },
+    animation = airplaneAnimation("cargo_plane"),
     sound_no_fuel =
     {
       {
@@ -511,7 +509,7 @@ data:extend({
  { -- Jet with Car sound
     type = "car",
     name = "jet",
-    icon = "__Aircraft__/graphics/Jet_Icon.png",
+    icon = ICONPATH .. "Jet_Icon.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
@@ -596,19 +594,7 @@ data:extend({
     },
     render_layer = "air-object",
     final_render_layer = "air-object",
-    animation =
-    {
-          filename = "__Aircraft__/graphics/Jet_Spritesheet.png",
-          priority = "high",
-          width = 224,
-          height = 224,
-          frame_count = 1,
-          direction_count = 36,
-          line_length = 6,
-          line_height = 6,
-          shift = {0, 0},
-          max_advance = 1,
-    },
+    animation = airplaneAnimation("jet"),
     sound_no_fuel =
     {
       {
@@ -653,7 +639,7 @@ data:extend({
   { -- Flying Fortress with Car sound
     type = "car",
     name = "flying-fortress",
-    icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
+    icon = ICONPATH .. "Flying_Fortress_Icon.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
@@ -738,20 +724,8 @@ data:extend({
     },
     render_layer = "air-object",
     final_render_layer = "air-object",
-    animation =
-    {
-          filename = "__Aircraft__/graphics/Flying_Fortress_Spritesheet.png",
-          priority = "high",
-          width = 224,
-          height = 224,
-          frame_count = 1,
-          direction_count = 36,
-          line_length = 6,
-          line_height = 6,
-          shift = {0, 0},
-          max_advance = 1,
-    },
-      sound_no_fuel =
+    animation = airplaneAnimation("flying_fortress"),
+    sound_no_fuel =
     {
       {
         filename = "__base__/sound/fight/tank-no-fuel-1.ogg",
