@@ -4,15 +4,15 @@ data:extend({
       type = "car",
       name = "cheat-machine",
       icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
-	  icon_size = 32,
+    icon_size = 32,
       flags = {"placeable-neutral", "player-creation", "placeable-off-grid", "not-on-map"},
       minable = {mining_time = 1, result = "cheat-machine"},
       max_health = 1000000000,
-			corpse = "medium-remnants",
-			dying_explosion = "medium-explosion",
-			energy_per_hit_point = 0.8,
-			terrain_friction_modifier = 0,
-			resistances =
+      corpse = "medium-remnants",
+      dying_explosion = "medium-explosion",
+      energy_per_hit_point = 0.8,
+      terrain_friction_modifier = 0,
+      resistances =
     {
       {
         type = "fire",
@@ -40,9 +40,9 @@ data:extend({
         percent = 100
       }
     },
-		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
-		collision_mask = {},
-		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    collision_mask = {},
+    selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
     effectivity = 2.3,
     braking_power = "3000kW",
     burner =
@@ -63,9 +63,9 @@ data:extend({
         }
       }
     },
-		consumption = "9001kW",
+    consumption = "9001kW",
     friction = 0.001,
-		light =
+    light =
     {
       {
         type = "oriented",
@@ -83,18 +83,18 @@ data:extend({
         intensity = 0.8
       }
     },
-		render_layer = "air-object", 
-	  final_render_layer = "air-object",
-		animation =
+    render_layer = "air-object",
+    final_render_layer = "air-object",
+    animation =
     {
-			    filename = "__Aircraft__/graphics/Flying_Fortress_Spritesheet.png",
+          filename = "__Aircraft__/graphics/Flying_Fortress_Spritesheet.png",
           priority = "high",
-				  width = 224,
+          width = 224,
           height = 224,
           frame_count = 1,
           direction_count = 36,
-					line_length = 6,
-					line_height = 6,
+          line_length = 6,
+          line_height = 6,
           shift = {0, 0},
           max_advance = 1,
     },
@@ -105,7 +105,7 @@ data:extend({
         volume = 0.6
       },
     },
-		  sound_minimum_speed = 0.15;
+      sound_minimum_speed = 0.15;
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {
@@ -126,19 +126,19 @@ data:extend({
       },
       match_speed_to_activity = false,
     },
-			stop_trigger_speed = 0.1,
+      stop_trigger_speed = 0.1,
       acceleration_per_energy = 1,
       breaking_speed = 1,
-			open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
+      open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
       close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
       rotation_speed = 1,
-			tank_driving = true,
+      tank_driving = true,
       weight = 0.000001,
       inventory_size = 15,
-			guns = { "flying-fortress-machine-gun", "aircraft-cannon", "flying-fortress-rocket-launcher", "napalm-launcher"},
+      guns = { "flying-fortress-machine-gun", "aircraft-cannon", "flying-fortress-rocket-launcher", "napalm-launcher"},
   }, ]]
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- High explosive cannon projectile
+  { -- High explosive cannon projectile
     type = "projectile",
     name = "high-explosive-cannon-projectile",
     flags = {"not-on-map"},
@@ -213,11 +213,11 @@ data:extend({
 })
 
 -- list of planes with additional configuration parameters
--- current parameters: 
--- volume: jet sound volume 
+-- current parameters:
+-- volume: jet sound volume
 -- belt_immunity: set false if belt immunity option should not affect this plane
 local planes = {
-  ["gunship"] = {volume = 0.4, belt_immunity = true}, 
+  ["gunship"] = {volume = 0.4, belt_immunity = true},
   ["cargo-plane"] = {volume = 0.4, belt_immunity = true},
   ["jet"] = {volume = 0.4, belt_immunity = true},
   ["flying-fortress"] = {volume = 0.4, belt_immunity = true},
@@ -225,7 +225,7 @@ local planes = {
 
 -- add in planes
 data:extend({
- { -- Gunship with Car sound
+  { -- Gunship with Car sound
     type = "car",
     name = "gunship",
     icon = "__Aircraft__/graphics/Gunship_Icon.png",
@@ -266,10 +266,10 @@ data:extend({
         percent = 20
       }
     },
-		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
-		collision_mask = {},
-		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
-	selection_priority = 60,
+    collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    collision_mask = {},
+    selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    selection_priority = 60,
     effectivity = 0.7,
     braking_power = "450kW",
     burner =
@@ -291,9 +291,9 @@ data:extend({
         }
       }
     },
-		consumption = "650kW",
+    consumption = "650kW",
     friction = 0.003,
-		light =
+    light =
     {
       {
         type = "oriented",
@@ -311,29 +311,29 @@ data:extend({
         intensity = 0.8
       }
     },
-		render_layer = "air-object", 
-	  final_render_layer = "air-object",
-		animation =
+    render_layer = "air-object",
+    final_render_layer = "air-object",
+    animation =
     {
-			    filename = "__Aircraft__/graphics/Gunship_Spritesheet.png",
+          filename = "__Aircraft__/graphics/Gunship_Spritesheet.png",
           priority = "high",
-				  width = 224,
+          width = 224,
           height = 224,
           frame_count = 1,
           direction_count = 36,
-					line_length = 6,
-					line_height = 6,
+          line_length = 6,
+          line_height = 6,
           shift = {0, 0},
           max_advance = 1,
     },
-      sound_no_fuel =
+    sound_no_fuel =
     {
       {
         filename = "__base__/sound/fight/tank-no-fuel-1.ogg",
         volume = 0.6
       },
     },
-		  sound_minimum_speed = 0.15;
+    sound_minimum_speed = 0.15;
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {
@@ -354,20 +354,20 @@ data:extend({
       },
       match_speed_to_activity = true,
     },
-	  stop_trigger_speed = 0.2,
-      acceleration_per_energy = 0.35,
-      breaking_speed = 0.09,
-	  open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
-      close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-      rotation_speed = 0.01,
-	  tank_driving = true,
-      weight = 750,
-      inventory_size = 30,
-	  guns = { "aircraft-machine-gun", "aircraft-rocket-launcher"},
-	  equipment_grid="gunship-equipment-grid",
+    stop_trigger_speed = 0.2,
+    acceleration_per_energy = 0.35,
+    breaking_speed = 0.09,
+    open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
+    close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
+    rotation_speed = 0.01,
+    tank_driving = true,
+    weight = 750,
+    inventory_size = 30,
+    guns = { "aircraft-machine-gun", "aircraft-rocket-launcher"},
+    equipment_grid="gunship-equipment-grid",
   },
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Cargo Plane with Car sound
+  { -- Cargo Plane with Car sound
     type = "car",
     name = "cargo-plane",
     icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
@@ -408,10 +408,10 @@ data:extend({
         percent = 20
       }
     },
-		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
-		collision_mask = {},
-		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
-	selection_priority = 60,
+    collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    collision_mask = {},
+    selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    selection_priority = 60,
     effectivity = 1.0,
     braking_power = "650kW",
     burner =
@@ -433,9 +433,9 @@ data:extend({
         }
       }
     },
-		consumption = "1250kW",
+    consumption = "1250kW",
     friction = 0.010,
-		light =
+    light =
     {
       {
         type = "oriented",
@@ -453,29 +453,29 @@ data:extend({
         intensity = 0.8
       }
     },
-		render_layer = "air-object", 
-	  final_render_layer = "air-object",
-		animation =
+    render_layer = "air-object",
+    final_render_layer = "air-object",
+    animation =
     {
-			    filename = "__Aircraft__/graphics/Cargo_Plane_Spritesheet.png",
+          filename = "__Aircraft__/graphics/Cargo_Plane_Spritesheet.png",
           priority = "high",
-				  width = 224,
+          width = 224,
           height = 224,
           frame_count = 1,
           direction_count = 36,
-					line_length = 6,
-					line_height = 6,
+          line_length = 6,
+          line_height = 6,
           shift = {0, 0},
           max_advance = 1,
     },
-      sound_no_fuel =
+    sound_no_fuel =
     {
       {
         filename = "__base__/sound/fight/tank-no-fuel-1.ogg",
         volume = 0.6
       },
     },
-		  sound_minimum_speed = 0.15;
+    sound_minimum_speed = 0.15;
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {
@@ -496,16 +496,16 @@ data:extend({
       },
       match_speed_to_activity = true,
     },
-			stop_trigger_speed = 0.2,
-      acceleration_per_energy = 0.15,
-      breaking_speed = 0.15,
-			open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
-      close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-      rotation_speed = 0.006,
-			tank_driving = true,
-      weight = 3500,
-      inventory_size = 120,
-			guns = { "cargo-plane-machine-gun"},
+    stop_trigger_speed = 0.2,
+    acceleration_per_energy = 0.15,
+    breaking_speed = 0.15,
+    open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
+    close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
+    rotation_speed = 0.006,
+    tank_driving = true,
+    weight = 3500,
+    inventory_size = 120,
+    guns = { "cargo-plane-machine-gun"},
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  { -- Jet with Car sound
@@ -549,10 +549,10 @@ data:extend({
         percent = 20
       }
     },
-		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
-		collision_mask = {},
-		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
-	selection_priority = 60,
+    collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    collision_mask = {},
+    selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    selection_priority = 60,
     effectivity = 0.9,
     braking_power = "2000kW",
     burner =
@@ -574,9 +574,9 @@ data:extend({
         }
       }
     },
-		consumption = "850kW",
+    consumption = "850kW",
     friction = 0.001,
-		light =
+    light =
     {
       {
         type = "oriented",
@@ -594,29 +594,29 @@ data:extend({
         intensity = 0.8
       }
     },
-		render_layer = "air-object", 
-	  final_render_layer = "air-object",
-		animation =
+    render_layer = "air-object",
+    final_render_layer = "air-object",
+    animation =
     {
-			    filename = "__Aircraft__/graphics/Jet_Spritesheet.png",
+          filename = "__Aircraft__/graphics/Jet_Spritesheet.png",
           priority = "high",
-				  width = 224,
+          width = 224,
           height = 224,
           frame_count = 1,
           direction_count = 36,
-					line_length = 6,
-					line_height = 6,
+          line_length = 6,
+          line_height = 6,
           shift = {0, 0},
           max_advance = 1,
     },
-      sound_no_fuel =
+    sound_no_fuel =
     {
       {
         filename = "__base__/sound/fight/tank-no-fuel-1.ogg",
         volume = 0.6
       },
     },
-		  sound_minimum_speed = 0.15;
+    sound_minimum_speed = 0.15;
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {
@@ -637,20 +637,20 @@ data:extend({
       },
       match_speed_to_activity = true,
     },
-			stop_trigger_speed = 0.2,
-      acceleration_per_energy = 0.80,
-      breaking_speed = 0.03,
-			open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
-      close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-      rotation_speed = 0.01,
-			tank_driving = true,
-      weight = 500,
-      inventory_size = 5,
-			guns = { "aircraft-machine-gun", "aircraft-rocket-launcher", "napalm-launcher"},
-	  equipment_grid = "jet-equipment-grid",
+    stop_trigger_speed = 0.2,
+    acceleration_per_energy = 0.80,
+    breaking_speed = 0.03,
+    open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
+    close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
+    rotation_speed = 0.01,
+    tank_driving = true,
+    weight = 500,
+    inventory_size = 5,
+    guns = { "aircraft-machine-gun", "aircraft-rocket-launcher", "napalm-launcher"},
+    equipment_grid = "jet-equipment-grid",
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Flying Fortress with Car sound
+  { -- Flying Fortress with Car sound
     type = "car",
     name = "flying-fortress",
     icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
@@ -691,10 +691,10 @@ data:extend({
         percent = 20
       }
     },
-		collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
-		collision_mask = {},
-		selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
-	selection_priority = 60,
+    collision_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    collision_mask = {},
+    selection_box = {{-0.9, -1.3}, {0.9, 1.3}},
+    selection_priority = 60,
     effectivity = 2.3,
     braking_power = "850kW",
     burner =
@@ -716,9 +716,9 @@ data:extend({
         }
       }
     },
-		consumption = "1850kW",
+    consumption = "1850kW",
     friction = 0.015,
-		light =
+    light =
     {
       {
         type = "oriented",
@@ -736,18 +736,18 @@ data:extend({
         intensity = 0.8
       }
     },
-		render_layer = "air-object", 
-	  final_render_layer = "air-object",
-		animation =
+    render_layer = "air-object",
+    final_render_layer = "air-object",
+    animation =
     {
-			    filename = "__Aircraft__/graphics/Flying_Fortress_Spritesheet.png",
+          filename = "__Aircraft__/graphics/Flying_Fortress_Spritesheet.png",
           priority = "high",
-				  width = 224,
+          width = 224,
           height = 224,
           frame_count = 1,
           direction_count = 36,
-					line_length = 6,
-					line_height = 6,
+          line_length = 6,
+          line_height = 6,
           shift = {0, 0},
           max_advance = 1,
     },
@@ -758,7 +758,7 @@ data:extend({
         volume = 0.6
       },
     },
-		  sound_minimum_speed = 0.15;
+    sound_minimum_speed = 0.15;
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     working_sound =
     {
@@ -779,19 +779,19 @@ data:extend({
       },
       match_speed_to_activity = true,
     },
-			stop_trigger_speed = 0.1,
-      acceleration_per_energy = 0.30,
-      breaking_speed = 0.001,
-			open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
-      close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-      rotation_speed = 0.004,
-			tank_driving = true,
-      weight = 3000,
-      inventory_size = 20,
-			guns = { "flying-fortress-machine-gun", "aircraft-cannon", "flying-fortress-rocket-launcher"},
-	  equipment_grid = "flying-fortress-equipment-grid",
+    stop_trigger_speed = 0.1,
+    acceleration_per_energy = 0.30,
+    breaking_speed = 0.001,
+    open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
+    close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
+    rotation_speed = 0.004,
+    tank_driving = true,
+    weight = 3000,
+    inventory_size = 20,
+    guns = { "flying-fortress-machine-gun", "aircraft-cannon", "flying-fortress-rocket-launcher"},
+    equipment_grid = "flying-fortress-equipment-grid",
   },
- })
+})
 
 -- toggle startup options if necessary
 for k, v in pairs(planes) do
@@ -818,7 +818,7 @@ for k, v in pairs(planes) do
         match_speed_to_activity = false,
       }
     end
-    
+
     -- insert belt immunity
     if settings.startup["aircraft-belt-immunity"].value == true then
       plane.has_belt_immunity = v.belt_immunity

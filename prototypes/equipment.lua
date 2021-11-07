@@ -17,7 +17,7 @@ data:extend({
       height = 2,
       type = "full"
     },
-    sprite = 
+    sprite =
     {
       filename = "__Aircraft__/graphics/Aircraft_Energy_Shield.png",
       width = 64,
@@ -30,7 +30,7 @@ data:extend({
   { -- Aircraft Afterburner
     type = "movement-bonus-equipment",
     name = "aircraft-afterburner",
-    sprite = 
+    sprite =
     {
       filename = "__Aircraft__/graphics/Aircraft_Afterburner.png",
       width = 128,

@@ -3,55 +3,55 @@ data:extend({
     type = "item-with-entity-data",
     name = "gunship",
     icon = "__Aircraft__/graphics/Gunship_Icon.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {},
     subgroup = "transport",
-	order = "b[personal-transport]-e[gunship]",
+    order = "b[personal-transport]-e[gunship]",
     place_result= "gunship",
     stack_size= 1,
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Cargo Plane
+  { -- Cargo Plane
     type = "item-with-entity-data",
     name = "cargo-plane",
     icon = "__Aircraft__/graphics/Cargo_Plane_Icon.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {},
     subgroup = "transport",
-	order = "b[personal-transport]-f[cargo-plane]",
+    order = "b[personal-transport]-f[cargo-plane]",
     place_result= "cargo-plane",
     stack_size= 1,
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Jet
+  { -- Jet
     type = "item-with-entity-data",
     name = "jet",
     icon = "__Aircraft__/graphics/Jet_Icon.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {},
     subgroup = "transport",
-	order = "b[personal-transport]-g[jet]",
+    order = "b[personal-transport]-g[jet]",
     place_result= "jet",
     stack_size= 1,
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Flying Fortress
+  { -- Flying Fortress
     type = "item-with-entity-data",
     name = "flying-fortress",
     icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {},
     subgroup = "transport",
-	order = "b[personal-transport]-h[flying-fortress]",
+    order = "b[personal-transport]-h[flying-fortress]",
     place_result= "flying-fortress",
     stack_size= 1,
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Aircraft machine gun
+  { -- Aircraft machine gun
     type = "gun",
     name = "aircraft-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"hidden"},
     subgroup = "gun",
     order = "a[basic-clips]-c[aircraft-machine-gun]",
@@ -102,11 +102,11 @@ data:extend({
     stack_size = 1
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Aircraft rocket launcher
+  { -- Aircraft rocket launcher
     type = "gun",
     name = "aircraft-rocket-launcher",
     icon = "__base__/graphics/icons/explosive-rocket.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"hidden"},
     subgroup = "gun",
     order = "e[aircraft-rocket-launcher]",
@@ -130,11 +130,11 @@ data:extend({
     stack_size = 5
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Cargo plane machine gun
+  { -- Cargo plane machine gun
     type = "gun",
     name = "cargo-plane-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"hidden"},
     subgroup = "gun",
     order = "a[basic-clips]-c[cargo-plane-machine-gun]",
@@ -185,11 +185,11 @@ data:extend({
     stack_size = 1
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Aircraft cannon
+  { -- Aircraft cannon
     type = "gun",
     name = "aircraft-cannon",
     icon = "__base__/graphics/icons/explosive-cannon-shell.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"hidden"},
     subgroup = "gun",
     order = "z[tank]-a[cannon]",
@@ -213,11 +213,11 @@ data:extend({
     stack_size = 1
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- High explosive cannon shell
+  { -- High explosive cannon shell
     type = "ammo",
     name = "high-explosive-cannon-shell",
     icon = "__Aircraft__/graphics/High_Explosive_Shell_Icon.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {},
     ammo_type =
     {
@@ -234,7 +234,7 @@ data:extend({
           direction_deviation = 0.1,
           range_deviation = 0.1,
           max_range = 30,
-		  min_range = 5,
+          min_range = 5,
           source_effects =
           {
             type = "create-explosion",
@@ -248,11 +248,11 @@ data:extend({
     stack_size = 200
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Flying Fortress machine gun
+  { -- Flying Fortress machine gun
     type = "gun",
     name = "flying-fortress-machine-gun",
     icon = "__base__/graphics/icons/submachine-gun.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"hidden"},
     subgroup = "gun",
     order = "a[basic-clips]-c[aircraft-machine-gun]",
@@ -303,11 +303,11 @@ data:extend({
     stack_size = 1
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Flying Fortress rocket launcher
+  { -- Flying Fortress rocket launcher
     type = "gun",
     name = "flying-fortress-rocket-launcher",
     icon = "__base__/graphics/icons/explosive-rocket.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"hidden"},
     subgroup = "gun",
     order = "e[flying-fortress-rocket-launcher]",
@@ -331,11 +331,11 @@ data:extend({
     stack_size = 1
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Napalm launcher
+  { -- Napalm launcher
     type = "gun",
     name = "napalm-launcher",
     icon = "__base__/graphics/icons/flamethrower.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {"hidden"},
     subgroup = "gun",
     order = "e[napalm-launcher]",
@@ -382,67 +382,66 @@ data:extend({
     type = "item-with-entity-data",
     name = "cheat-machine",
     icon = "__Aircraft__/graphics/Flying_Fortress_Icon.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"hidden"},
     subgroup = "ammo",
     place_result= "cheat-machine",
     stack_size= 1,
   }, ]]
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Aircraft energy shield
-	type = "item",
-	name = "aircraft-energy-shield",
-	icon = "__Aircraft__/graphics/Aircraft_Energy_Shield_Icon.png",
-	icon_size = 32,
-	placed_as_equipment_result = "aircraft-energy-shield",
-	flags = {},
-	subgroup = "equipment",
-	order = "b[shield]-c[aircraft-energy-shield]",
-	stack_size = 10,
-	default_request_amount = 10,
+  { -- Aircraft energy shield
+    type = "item",
+    name = "aircraft-energy-shield",
+    icon = "__Aircraft__/graphics/Aircraft_Energy_Shield_Icon.png",
+    icon_size = 32,
+    placed_as_equipment_result = "aircraft-energy-shield",
+    flags = {},
+    subgroup = "equipment",
+    order = "b[shield]-c[aircraft-energy-shield]",
+    stack_size = 10,
+    default_request_amount = 10,
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Aircraft afterburner
+  { -- Aircraft afterburner
     type = "item",
     name = "aircraft-afterburner",
     icon = "__Aircraft__/graphics/Aircraft_Afterburner_Icon.png",
-	icon_size = 32,
+    icon_size = 32,
     placed_as_equipment_result = "aircraft-afterburner",
     flags = {},
     subgroup = "equipment",
     order = "e[engine]-a[aircraft-afterburner]",
     stack_size = 10,
-	default_request_amount = 10,
+    default_request_amount = 10,
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- { -- Napalm
+  { -- Napalm
     type = "ammo",
     name = "napalm",
     icon = "__base__/graphics/icons/flamethrower-ammo.png",
-	icon_size = 64,
+    icon_size = 64,
     flags = {},
     ammo_type =
-	  {
+    {
+      {
+        source_type = "vehicle",
+        consumption_modifier = 1.5,
+        category = "flamethrower",
+        target_type = "position",
+        clamp_position = true,
+        action =
         {
-          source_type = "vehicle",
-          consumption_modifier = 1.5,
-          category = "flamethrower",
-          target_type = "position",
-          clamp_position = true,
-
-          action =
+          type = "direct",
+          action_delivery =
           {
-            type = "direct",
-            action_delivery =
-            {
-              type = "stream",
-              stream = "handheld-flamethrower-fire-stream",
-              max_length = 30,
-              duration = 320,
-            }
+            type = "stream",
+            stream = "handheld-flamethrower-fire-stream",
+            max_length = 30,
+            duration = 320,
           }
         }
-      },
+      }
+    },
     magazine_size = 100,
     subgroup = "ammo",
     order = "e[napalm]",
