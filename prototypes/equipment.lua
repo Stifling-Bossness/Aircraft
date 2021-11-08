@@ -7,9 +7,10 @@ data:extend({
     sprite =
     {
       filename = EQUIPPATH .. "aircraft_energy_shield.png",
-      width = 64,
-      height = 64,
-      priority = "medium"
+      width = 128,
+      height = 128,
+      priority = "medium",
+      scale = 0.5
     },
     shape =
     {
@@ -35,9 +36,10 @@ data:extend({
     sprite =
     {
       filename = EQUIPPATH .. "aircraft_afterburner.png",
-      width = 128,
-      height = 64,
-      priority = "medium"
+      width = 256,
+      height = 128,
+      priority = "medium",
+      scale = 0.5
     },
     shape =
     {

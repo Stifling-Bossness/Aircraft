@@ -5,7 +5,7 @@ data:extend({
     type = "technology",
     name = "advanced-aerodynamics",
     icon = TECHPATH .. "advanced_aerodynamics_tech.png",
-    icon_size = 128,
+    icon_size = 256,
     prerequisites = {"automobilism", "robotics"},
     unit =
     {
@@ -25,7 +25,7 @@ data:extend({
     type = "technology",
     name = "gunships",
     icon = TECHPATH .. "gunship.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -53,7 +53,7 @@ data:extend({
     type = "technology",
     name = "cargo-planes",
     icon = TECHPATH .. "cargo_plane.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -80,7 +80,7 @@ data:extend({
     type = "technology",
     name = "jets",
     icon = TECHPATH .. "jet.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -109,7 +109,7 @@ data:extend({
     type = "technology",
     name = "flying-fortress",
     icon = TECHPATH .. "flying_fortress.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -140,7 +140,7 @@ data:extend({
     type = "technology",
     name = "high-explosive-cannon-shells",
     icon = TECHPATH .. "high_explosive_shell_tech.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -168,7 +168,7 @@ data:extend({
     type = "technology",
     name = "afterburner",
     icon = TECHPATH .. "aircraft_afterburner_tech.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
 	  {
 	    {
@@ -196,7 +196,7 @@ data:extend({
     type = "technology",
     name = "aircraft-energy-shield",
     icon = TECHPATH .. "aircraft_energy_shield_tech.png",
-    icon_size=128,
+    icon_size = 256,
     effects =
 	  {
 		  {
@@ -225,8 +225,8 @@ data:extend({
   { -- Napalm
     type = "technology",
     name = "napalm",
-    icon = "__base__/graphics/icons/flamethrower-ammo.png",
-    icon_size = 64,
+    icon = TECHPATH .. "napalm_tech.png",
+    icon_size = 256,
     effects =
 	  {
 	    {
