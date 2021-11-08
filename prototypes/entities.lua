@@ -5,20 +5,53 @@ local function airplaneAnimation(name)
   return {
     layers = {
       {
-        filename = ENTITYPATH .. name .. "/" .. name .. "_spritesheet.png",
-        priority = "high",
-        width = 224,
-        height = 224,
+        filename = ENTITYPATH .. name .. "/hr-" .. name .. "_spritesheet.png",
+        width = 448,
+        height = 448,
+        scale = 0.5,
         frame_count = 1,
         direction_count = 36,
         line_length = 6,
         line_height = 6,
-        shift = {0, 0},
+        shift = util.by_pixel(9, -10),
         max_advance = 1,
-      }
+      },
+      {
+        filename = ENTITYPATH .. name .. "/hr-" .. name .. "_spritesheet-light.png",
+        width = 448,
+        height = 448,
+        scale = 0.5,
+        frame_count = 1,
+        direction_count = 36,
+        line_length = 6,
+        line_height = 6,
+        shift = util.by_pixel(9, -10),
+        draw_as_light = true,
+        max_advance = 1,
+      },
+      {
+        filename = ENTITYPATH .. name .. "/hr-" .. name .. "_spritesheet-shadow.png",
+        width = 448,
+        height = 448,
+        scale = 0.5,
+        frame_count = 1,
+        direction_count = 36,
+        line_length = 6,
+        line_height = 6,
+        shift = util.by_pixel(54, 35),
+        draw_as_shadow = true,
+        max_advance = 1,
+      },
     }
   }
 end
+
+local lightcone = {
+  filename = ENTITYPATH .. "particle/hr-light-cone.png",
+  scale = 0.5,
+  width = 800,
+  height = 800
+}
 
 data:extend({
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -251,7 +284,7 @@ data:extend({
     type = "car",
     name = "gunship",
     icon = ICONPATH .. "Gunship_Icon.png",
-    icon_size = 32,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
     minable = {mining_time = 1, result = "gunship"},
@@ -303,14 +336,24 @@ data:extend({
       {
         {
           name = "smoke",
-          deviation = {0.25, 0.25},
+          deviation = {-0.5, -2.3},
           frequency = 50,
-          position = {0, 1.5},
+          position = {0, 2.3},
           starting_frame = 3,
           starting_frame_deviation = 5,
-          starting_frame_speed = 0,
-          starting_frame_speed_deviation = 5
-        }
+          starting_frame_speed = 5,
+          starting_frame_speed_deviation = 5,
+        },
+        {
+          name = "smoke",
+          deviation = {0.5, -2.3},
+          frequency = 50,
+          position = {0, 2.3},
+          starting_frame = 3,
+          starting_frame_deviation = 5,
+          starting_frame_speed = 5,
+          starting_frame_speed_deviation = 5,
+        },
       }
     },
     consumption = "650kW",
@@ -320,17 +363,18 @@ data:extend({
       {
         type = "oriented",
         minimum_darkness = 0.3,
-        picture =
-        {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
-          scale = 2,
-          width = 200,
-          height = 200
-        },
-        shift = {-0.1, -12},
+        picture = lightcone,
+        shift = {-1.34, -13},
         size = 2,
-        intensity = 0.8
+        intensity = 0.5
+      },
+      {
+        type = "oriented",
+        minimum_darkness = 0.3,
+        picture = lightcone,
+        shift = {1.34, -13},
+        size = 2,
+        intensity = 0.5
       }
     },
     render_layer = "air-object",
@@ -381,7 +425,7 @@ data:extend({
     type = "car",
     name = "cargo-plane",
     icon = ICONPATH .. "Cargo_Plane_Icon.png",
-    icon_size = 32,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
     minable = {mining_time = 1, result = "cargo-plane"},
@@ -433,9 +477,9 @@ data:extend({
       {
         {
           name = "smoke",
-          deviation = {0.25, 0.25},
+          deviation = {0, -1.5},
           frequency = 50,
-          position = {0, 1.5},
+          position = {0, 2},
           starting_frame = 3,
           starting_frame_deviation = 5,
           starting_frame_speed = 0,
@@ -450,15 +494,8 @@ data:extend({
       {
         type = "oriented",
         minimum_darkness = 0.3,
-        picture =
-        {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
-          scale = 2,
-          width = 200,
-          height = 200
-        },
-        shift = {-0.1, -12},
+        picture = lightcone,
+        shift = {0, -13},
         size = 2,
         intensity = 0.8
       }
@@ -510,7 +547,7 @@ data:extend({
     type = "car",
     name = "jet",
     icon = ICONPATH .. "Jet_Icon.png",
-    icon_size = 32,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
     minable = {mining_time = 1, result = "jet"},
@@ -557,18 +594,18 @@ data:extend({
     {
       effectivity = 1,
       fuel_category = "chemical",
-      fuel_inventory_size = 3,
+      fuel_inventory_size = 4,
       smoke =
       {
         {
           name = "smoke",
-          deviation = {0.25, 0.25},
-          frequency = 50,
-          position = {0, 1.5},
+          deviation = {0, -1.5},
+          frequency = 100,
+          position = {0, 2},
           starting_frame = 3,
           starting_frame_deviation = 5,
-          starting_frame_speed = 0,
-          starting_frame_speed_deviation = 5
+          starting_frame_speed = 5,
+          starting_frame_speed_deviation = 5,
         }
       }
     },
@@ -579,17 +616,18 @@ data:extend({
       {
         type = "oriented",
         minimum_darkness = 0.3,
-        picture =
-        {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
-          scale = 2,
-          width = 200,
-          height = 200
-        },
-        shift = {-0.1, -12},
+        picture = lightcone,
+        shift = {-0.7, -13},
         size = 2,
-        intensity = 0.8
+        intensity = 0.5
+      },
+      {
+        type = "oriented",
+        minimum_darkness = 0.3,
+        picture = lightcone,
+        shift = {0.7, -13},
+        size = 2,
+        intensity = 0.5
       }
     },
     render_layer = "air-object",
@@ -640,7 +678,7 @@ data:extend({
     type = "car",
     name = "flying-fortress",
     icon = ICONPATH .. "Flying_Fortress_Icon.png",
-    icon_size = 32,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     has_belt_immunity = false,
     minable = {mining_time = 1, result = "flying-fortress"},
@@ -692,13 +730,13 @@ data:extend({
       {
         {
           name = "smoke",
-          deviation = {0.25, 0.25},
-          frequency = 50,
-          position = {0, 1.5},
+          deviation = {0, -1.5},
+          frequency = 100,
+          position = {0, 2},
           starting_frame = 3,
           starting_frame_deviation = 5,
-          starting_frame_speed = 0,
-          starting_frame_speed_deviation = 5
+          starting_frame_speed = 5,
+          starting_frame_speed_deviation = 5,
         }
       }
     },
@@ -709,17 +747,18 @@ data:extend({
       {
         type = "oriented",
         minimum_darkness = 0.3,
-        picture =
-        {
-          filename = "__core__/graphics/light-cone.png",
-          priority = "medium",
-          scale = 2,
-          width = 200,
-          height = 200
-        },
-        shift = {-0.1, -12},
+        picture = lightcone,
+        shift = {-0.7, -13},
         size = 2,
-        intensity = 0.8
+        intensity = 0.5
+      },
+      {
+        type = "oriented",
+        minimum_darkness = 0.3,
+        picture = lightcone,
+        shift = {0.7, -13},
+        size = 2,
+        intensity = 0.5
       }
     },
     render_layer = "air-object",

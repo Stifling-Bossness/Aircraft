@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.0
+Date: 8.11.2021.
+  Graphics:
+    - Upscaled graphics to HR (using ESRGAN and photoshop)
+    - icons / tech icons / equipment: bigger and redone in HD.
+    - Aircrafts are a bit higher.
+    - Cargo ship is a bit lighter and bluer.
+    - Redone, adjusted and standarized shadows.
+    - Adjusted smokes.
+    - Added light layers and accurate light sources to each aircraft.
+---------------------------------------------------------------------------------------------------
 Version: 1.7.2
 Date: 24.11.2020.
   Changes:
