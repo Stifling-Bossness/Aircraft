@@ -1,17 +1,22 @@
 local TECHPATH = "__Aircraft__/graphics/technology/"
 
+local function unlock(recipe)
+  return {
+    type = "unlock-recipe",
+    recipe = recipe
+  }
+end
+
 data:extend({
-  { -- Advanced Aerodynamics
+  { -- Advanced Aerodynamics (base tech)
     type = "technology",
     name = "advanced-aerodynamics",
     icon = TECHPATH .. "advanced_aerodynamics_tech.png",
     icon_size = 256,
     prerequisites = {"automobilism", "robotics"},
-    unit =
-    {
+    unit = {
       count = 350,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1}
@@ -26,19 +31,11 @@ data:extend({
     name = "gunships",
     icon = TECHPATH .. "gunship.png",
     icon_size = 256,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "gunship"
-      },
-    },
+    effects = { unlock("gunship") },
     prerequisites = {"military-3", "advanced-aerodynamics", "rocketry"},
-    unit =
-    {
+    unit = {
       count = 500,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
@@ -54,19 +51,11 @@ data:extend({
     name = "cargo-planes",
     icon = TECHPATH .. "cargo_plane.png",
     icon_size = 256,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "cargo-plane"
-      },
-    },
+    effects = { unlock("cargo-plane") },
     prerequisites = {"advanced-aerodynamics"},
-    unit =
-    {
+    unit = {
       count = 500,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1}
@@ -81,19 +70,11 @@ data:extend({
     name = "jets",
     icon = TECHPATH .. "jet.png",
     icon_size = 256,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "jet"
-      },
-    },
+    effects = { unlock("jet") },
     prerequisites = {"gunships", "explosive-rocketry", "military-4"},
-    unit =
-    {
+    unit = {
       count = 1000,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
@@ -110,19 +91,11 @@ data:extend({
     name = "flying-fortress",
     icon = TECHPATH .. "flying_fortress.png",
     icon_size = 256,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "flying-fortress"
-      },
-    },
+    effects = { unlock("flying-fortress") },
     prerequisites = {"gunships", "cargo-planes", "jets", "artillery", "space-science-pack"},
-    unit =
-    {
+    unit = {
       count = 3000,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
@@ -141,19 +114,11 @@ data:extend({
     name = "high-explosive-cannon-shells",
     icon = TECHPATH .. "high_explosive_shell_tech.png",
     icon_size = 256,
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "high-explosive-cannon-shell"
-      },
-    },
+    effects = { unlock("high-explosive-cannon-shell") },
     prerequisites = {"artillery"},
-    unit =
-    {
+    unit = {
       count = 350,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
@@ -164,24 +129,36 @@ data:extend({
     order = "c-h-g"
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  { -- Napalm
+    type = "technology",
+    name = "napalm",
+    icon = TECHPATH .. "napalm_tech.png",
+    icon_size = 256,
+    effects = { unlock("napalm") },
+    prerequisites = {"flammables", "jets"},
+    unit = {
+      count = 200,
+      ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"military-science-pack", 1},
+      },
+      time = 20,
+    },
+    order = "c-h-h",
+  },
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Afterburner
     type = "technology",
     name = "afterburner",
     icon = TECHPATH .. "aircraft_afterburner_tech.png",
     icon_size = 256,
-    effects =
-	  {
-	    {
-	      type = "unlock-recipe",
-	      recipe = "aircraft-afterburner",
-	    },
-	  },
+    effects = { unlock("aircraft-afterburner") },
     prerequisites = {"advanced-aerodynamics"},
-    unit =
-    {
+    unit = {
       count = 400,
-      ingredients =
-      {
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
@@ -197,56 +174,20 @@ data:extend({
     name = "aircraft-energy-shield",
     icon = TECHPATH .. "aircraft_energy_shield_tech.png",
     icon_size = 256,
-    effects =
-	  {
-		  {
-		    type = "unlock-recipe",
-		    recipe = "aircraft-energy-shield",
-		  },
-	  },
-	  prerequisites = {"advanced-aerodynamics", "energy-shield-mk2-equipment"},
-	  unit =
-	  {
-	    count = 400,
-	    ingredients =
-	    {
-	      {"automation-science-pack", 1},
-	      {"logistic-science-pack", 1},
-	      {"chemical-science-pack", 1},
-	      {"military-science-pack",1},
-	      {"utility-science-pack", 1},
-	    },
-	    time = 45,
-	  },
-	  order = "c-h-i",
-	  --Hey,   ^^^^^   a lil' easter egg for ya
-  },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  { -- Napalm
-    type = "technology",
-    name = "napalm",
-    icon = TECHPATH .. "napalm_tech.png",
-    icon_size = 256,
-    effects =
-	  {
-	    {
-	      type = "unlock-recipe",
-	      recipe = "napalm",
-	    },
-	  },
-    prerequisites = {"flammables", "jets"},
-    unit =
-    {
-      count = 200,
-      ingredients =
-      {
+    effects = { unlock("aircraft-energy-shield") },
+    prerequisites = {"advanced-aerodynamics", "energy-shield-mk2-equipment"},
+    unit = {
+      count = 400,
+      ingredients = {
         {"automation-science-pack", 1},
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
-        {"military-science-pack",1},
+        {"military-science-pack", 1},
+        {"utility-science-pack", 1},
       },
-      time = 20,
+      time = 45,
     },
-    order = "c-h-h",
+    order = "c-h-i",
+    --Hey,   ^^^^^   a lil' easter egg for ya
   },
 })

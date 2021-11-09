@@ -1,6 +1,17 @@
 local ICONPATH = "__Aircraft__/graphics/icons/"
+local heavygunshotsounds = {
+  begin_sound = { { filename = "__base__/sound/fight/heavy-gunshot-1.ogg", volume = 1 } },
+  middle_sound = { { filename = "__base__/sound/fight/heavy-gunshot-2.ogg", volume = 1 } },
+  end_sound = { { filename = "__base__/sound/fight/heavy-gunshot-3.ogg", volume = 1 } } }
+local flamethrowersounds = {
+  begin_sound = { { filename = "__base__/sound/fight/flamethrower-start.ogg", volume = 0.7 } },
+  middle_sound = { { filename = "__base__/sound/fight/flamethrower-mid.ogg", volume = 0.7 } },
+  end_sound = { { filename = "__base__/sound/fight/flamethrower-end.ogg", volume = 0.7 } } }
+local rocketlaunchersound = { {filename = "__base__/sound/fight/rocket-launcher.ogg", volume = 0.7 } }
+local tankcannonsound = { { filename = "__base__/sound/fight/tank-cannon.ogg", volume = 1 } }
 
 data:extend({
+-----------------------------------------------AIRPLANES----------------------------------------------------
  { -- Gunship
     type = "item-with-entity-data",
     name = "gunship",
@@ -9,10 +20,9 @@ data:extend({
     flags = {},
     subgroup = "transport",
     order = "b[personal-transport]-e[gunship]",
-    place_result= "gunship",
-    stack_size= 1,
+    place_result = "gunship",
+    stack_size = 1,
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Cargo Plane
     type = "item-with-entity-data",
     name = "cargo-plane",
@@ -21,10 +31,9 @@ data:extend({
     flags = {},
     subgroup = "transport",
     order = "b[personal-transport]-f[cargo-plane]",
-    place_result= "cargo-plane",
-    stack_size= 1,
+    place_result = "cargo-plane",
+    stack_size = 1,
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Jet
     type = "item-with-entity-data",
     name = "jet",
@@ -33,10 +42,9 @@ data:extend({
     flags = {},
     subgroup = "transport",
     order = "b[personal-transport]-g[jet]",
-    place_result= "jet",
-    stack_size= 1,
+    place_result = "jet",
+    stack_size = 1,
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Flying Fortress
     type = "item-with-entity-data",
     name = "flying-fortress",
@@ -45,10 +53,10 @@ data:extend({
     flags = {},
     subgroup = "transport",
     order = "b[personal-transport]-h[flying-fortress]",
-    place_result= "flying-fortress",
-    stack_size= 1,
+    place_result = "flying-fortress",
+    stack_size = 1,
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------WEAPONS----------------------------------------------------
   { -- Aircraft machine gun
     type = "gun",
     name = "aircraft-machine-gun",
@@ -76,34 +84,10 @@ data:extend({
       },
       projectile_creation_distance = 0.65,
       range = 30,
-      cyclic_sound =
-      {
-        begin_sound =
-        {
-          {
-            filename = "__base__/sound/fight/heavy-gunshot-1.ogg",
-            volume = 1
-          }
-        },
-        middle_sound =
-        {
-          {
-            filename = "__base__/sound/fight/heavy-gunshot-2.ogg",
-            volume = 1
-          }
-        },
-        end_sound =
-        {
-          {
-            filename = "__base__/sound/fight/heavy-gunshot-3.ogg",
-            volume = 1
-          }
-        }
-      }
+      cyclic_sound = heavygunshotsounds,
     },
     stack_size = 1
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Aircraft rocket launcher
     type = "gun",
     name = "aircraft-rocket-launcher",
@@ -121,17 +105,10 @@ data:extend({
       projectile_creation_distance = 0.6,
       range = 35,
       projectile_center = {-0.17, 0},
-      sound =
-      {
-        {
-          filename = "__base__/sound/fight/rocket-launcher.ogg",
-          volume = 0.7
-        }
-      }
+      sound = rocketlaunchersound,
     },
     stack_size = 5
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Cargo plane machine gun
     type = "gun",
     name = "cargo-plane-machine-gun",
@@ -159,34 +136,10 @@ data:extend({
       },
       projectile_creation_distance = 0.65,
       range = 15,
-      cyclic_sound =
-      {
-        begin_sound =
-        {
-          {
-            filename = "__base__/sound/fight/heavy-gunshot-1.ogg",
-            volume = 1
-          }
-        },
-        middle_sound =
-        {
-          {
-            filename = "__base__/sound/fight/heavy-gunshot-2.ogg",
-            volume = 1
-          }
-        },
-        end_sound =
-        {
-          {
-            filename = "__base__/sound/fight/heavy-gunshot-3.ogg",
-            volume = 1
-          }
-        }
-      }
+      cyclic_sound = heavygunshotsounds,
     },
     stack_size = 1
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Aircraft cannon
     type = "gun",
     name = "aircraft-cannon",
@@ -204,52 +157,10 @@ data:extend({
       projectile_creation_distance = 1.6,
       projectile_center = {-0.15625, -0.07812},
       range = 50,
-      sound =
-      {
-        {
-          filename = "__base__/sound/fight/tank-cannon.ogg",
-          volume = 1.0
-        }
-      },
+      sound = tankcannonsound,
     },
     stack_size = 1
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  { -- High explosive cannon shell
-    type = "ammo",
-    name = "high-explosive-cannon-shell",
-    icon = ICONPATH .. "high_explosive_shell_icon.png",
-    icon_size = 64,
-    flags = {},
-    ammo_type =
-    {
-      category = "cannon-shell",
-      target_type = "direction",
-      action =
-      {
-        type = "direct",
-        action_delivery =
-        {
-          type = "projectile",
-          projectile = "high-explosive-cannon-projectile",
-          starting_speed = 1,
-          direction_deviation = 0.1,
-          range_deviation = 0.1,
-          max_range = 30,
-          min_range = 5,
-          source_effects =
-          {
-            type = "create-explosion",
-            entity_name = "explosion-gunshot"
-          },
-        }
-      },
-    },
-    subgroup = "ammo",
-    order = "d[cannon-shell]-c[explosive]",
-    stack_size = 200
-  },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Flying Fortress machine gun
     type = "gun",
     name = "flying-fortress-machine-gun",
@@ -258,14 +169,12 @@ data:extend({
     flags = {"hidden"},
     subgroup = "gun",
     order = "a[basic-clips]-c[aircraft-machine-gun]",
-    attack_parameters =
-    {
+    attack_parameters = {
       type = "projectile",
       ammo_category = "bullet",
       cooldown = 2.5,
       movement_slow_down_factor = 0.2,
-      shell_particle =
-      {
+      shell_particle = {
         name = "shell-particle",
         direction_deviation = 0.1,
         speed = 0.8,
@@ -277,34 +186,10 @@ data:extend({
       },
       projectile_creation_distance = 0.65,
       range = 40,
-      cyclic_sound =
-      {
-        begin_sound =
-        {
-          {
-            filename = "__base__/sound/fight/heavy-gunshot-1.ogg",
-            volume = 1
-          }
-        },
-        middle_sound =
-        {
-          {
-            filename = "__base__/sound/fight/heavy-gunshot-2.ogg",
-            volume = 1
-          }
-        },
-        end_sound =
-        {
-          {
-            filename = "__base__/sound/fight/heavy-gunshot-3.ogg",
-            volume = 1
-          }
-        }
-      }
+      cyclic_sound = heavygunshotsounds,
     },
     stack_size = 1
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Flying Fortress rocket launcher
     type = "gun",
     name = "flying-fortress-rocket-launcher",
@@ -313,8 +198,7 @@ data:extend({
     flags = {"hidden"},
     subgroup = "gun",
     order = "e[flying-fortress-rocket-launcher]",
-    attack_parameters =
-    {
+    attack_parameters = {
       type = "projectile",
       ammo_category = "rocket",
       movement_slow_down_factor = 0.9,
@@ -322,17 +206,10 @@ data:extend({
       projectile_creation_distance = 0.6,
       range = 50,
       projectile_center = {-0.17, 0},
-      sound =
-      {
-        {
-          filename = "__base__/sound/fight/rocket-launcher.ogg",
-          volume = 0.75
-        }
-      }
+      sound = rocketlaunchersound,
     },
     stack_size = 1
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Napalm launcher
     type = "gun",
     name = "napalm-launcher",
@@ -341,8 +218,7 @@ data:extend({
     flags = {"hidden"},
     subgroup = "gun",
     order = "e[napalm-launcher]",
-    attack_parameters =
-    {
+    attack_parameters = {
       type = "stream",
       ammo_category = "flamethrower",
       cooldown = 0.5,
@@ -352,45 +228,69 @@ data:extend({
       gun_center_shift = { 0, -1 },
       range = 25,
       min_range = 3,
-      cyclic_sound =
-      {
-        begin_sound =
-        {
-          {
-            filename = "__base__/sound/fight/flamethrower-start.ogg",
-            volume = 0.7
-          }
-        },
-        middle_sound =
-        {
-          {
-            filename = "__base__/sound/fight/flamethrower-mid.ogg",
-            volume = 0.7
-          }
-        },
-        end_sound =
-        {
-          {
-            filename = "__base__/sound/fight/flamethrower-end.ogg",
-            volume = 0.7
-          }
-        }
-      }
+      cyclic_sound = flamethrowersounds,
     },
     stack_size = 1
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
---[[ { -- Cheat machine (DO NOT USE)
-    type = "item-with-entity-data",
-    name = "cheat-machine",
-    icon = ICONPATH .. "Flying_Fortress_icon.png",
-    icon_size = 32,
-    flags = {"hidden"},
+-----------------------------------------------AMMO----------------------------------------------------
+  { -- High explosive cannon shell
+    type = "ammo",
+    name = "high-explosive-cannon-shell",
+    icon = ICONPATH .. "high_explosive_shell_icon.png",
+    icon_size = 64,
+    flags = {},
+    ammo_type = {
+      category = "cannon-shell",
+      target_type = "direction",
+      action = {
+        type = "direct",
+        action_delivery = {
+          type = "projectile",
+          projectile = "high-explosive-cannon-projectile",
+          starting_speed = 1,
+          direction_deviation = 0.1,
+          range_deviation = 0.1,
+          max_range = 30,
+          min_range = 5,
+          source_effects = {
+            type = "create-explosion",
+            entity_name = "explosion-gunshot"
+          },
+        }
+      },
+    },
     subgroup = "ammo",
-    place_result= "cheat-machine",
-    stack_size= 1,
-  }, ]]
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    order = "d[cannon-shell]-c[explosive]",
+    stack_size = 200
+  },
+  { -- Napalm
+    type = "ammo",
+    name = "napalm",
+    icon = ICONPATH .. "napalm-ammo.png",
+    icon_size = 64,
+    flags = {},
+    ammo_type = {
+      source_type = "vehicle",
+      consumption_modifier = 1.5,
+      category = "flamethrower",
+      target_type = "position",
+      clamp_position = true,
+      action = {
+        type = "direct",
+        action_delivery = {
+          type = "stream",
+          stream = "handheld-flamethrower-fire-stream",
+          max_length = 30,
+          duration = 320,
+        }
+      }
+    },
+    magazine_size = 100,
+    subgroup = "ammo",
+    order = "e[napalm]",
+    stack_size = 100
+  },
+-----------------------------------------------EQUIPMENT----------------------------------------------------
   { -- Aircraft energy shield
     type = "item",
     name = "aircraft-energy-shield",
@@ -403,7 +303,6 @@ data:extend({
     stack_size = 10,
     default_request_amount = 10,
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Aircraft afterburner
     type = "item",
     name = "aircraft-afterburner",
@@ -416,38 +315,4 @@ data:extend({
     stack_size = 10,
     default_request_amount = 10,
   },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  { -- Napalm
-    type = "ammo",
-    name = "napalm",
-    icon = "__base__/graphics/icons/flamethrower-ammo.png",
-    icon_size = 64,
-    flags = {},
-    ammo_type =
-    {
-      {
-        source_type = "vehicle",
-        consumption_modifier = 1.5,
-        category = "flamethrower",
-        target_type = "position",
-        clamp_position = true,
-        action =
-        {
-          type = "direct",
-          action_delivery =
-          {
-            type = "stream",
-            stream = "handheld-flamethrower-fire-stream",
-            max_length = 30,
-            duration = 320,
-          }
-        }
-      }
-    },
-    magazine_size = 100,
-    subgroup = "ammo",
-    order = "e[napalm]",
-    stack_size = 100
-  }
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 })

@@ -144,55 +144,6 @@ data:extend({
     },
   },
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  { -- Aircraft afterburner
-    type = "recipe",
-    name = "aircraft-afterburner",
-    category = "crafting-with-fluid",
-    normal = {
-	    enabled = false,
-	    energy_required = 3,
-	    ingredients = {
-        {"electric-engine-unit", 10},
-        {type = "fluid", name = "lubricant", amount = 5},
-        {"solid-fuel", 5},
-      },
-      result = "aircraft-afterburner",
-    },
-    expensive = {
-	    enabled = false,
-	    energy_required = 6,
-	    ingredients = {
-        {"electric-engine-unit",20},
-        {type = "fluid", name = "lubricant", amount = 10},
-        {"solid-fuel", 10},
-      },
-      result = "aircraft-afterburner",
-    },
-  },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  { -- Aircraft energy shield
-    type = "recipe",
-    name = "aircraft-energy-shield",
-    normal = {
-	    enabled = false,
-	    energy_required = 5,
-	    ingredients = {
-        {"energy-shield-mk2-equipment", 2},
-        {"battery", 20},
-      },
-      result = "aircraft-energy-shield",
-    },
-    expensive = {
-	    enabled = false,
-	    energy_required = 10,
-	    ingredients = {
-        {"energy-shield-mk2-equipment", 4},
-        {"battery", 40},
-      },
-      result = "aircraft-energy-shield",
-    },
-  },
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   { -- Napalm
     type = "recipe",
     name = "napalm",
@@ -213,6 +164,55 @@ data:extend({
         {"iron-plate", 4},
       },
       result = "napalm",
+    },
+  },
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  { -- Aircraft afterburner
+    type = "recipe",
+    name = "aircraft-afterburner",
+    category = "crafting-with-fluid",
+    normal = {
+      enabled = false,
+      energy_required = 3,
+      ingredients = {
+        {"electric-engine-unit", 10},
+        {type = "fluid", name = "lubricant", amount = 5},
+        {"solid-fuel", 5},
+      },
+      result = "aircraft-afterburner",
+    },
+    expensive = {
+      enabled = false,
+      energy_required = 6,
+      ingredients = {
+        {"electric-engine-unit",20},
+        {type = "fluid", name = "lubricant", amount = 10},
+        {"solid-fuel", 10},
+      },
+      result = "aircraft-afterburner",
+    },
+  },
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  { -- Aircraft energy shield
+    type = "recipe",
+    name = "aircraft-energy-shield",
+    normal = {
+      enabled = false,
+      energy_required = 5,
+      ingredients = {
+        {"energy-shield-mk2-equipment", 2},
+        {"battery", 20},
+      },
+      result = "aircraft-energy-shield",
+    },
+    expensive = {
+      enabled = false,
+      energy_required = 10,
+      ingredients = {
+        {"energy-shield-mk2-equipment", 4},
+        {"battery", 40},
+      },
+      result = "aircraft-energy-shield",
     },
   },
 })

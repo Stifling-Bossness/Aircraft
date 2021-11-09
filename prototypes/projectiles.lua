@@ -7,29 +7,22 @@ data:extend({
     acceleration = 0,
     direction_only = true,
     piercing_damage = 125,
-    action =
-    {
+    action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "instant",
-        target_effects =
-        {
-          {
+        target_effects = { {
             type = "damage",
             damage = { amount = 275, type = "physical"}
           }
         }
       }
     },
-    final_action =
-    {
+    final_action = {
       type = "direct",
-      action_delivery =
-      {
+      action_delivery = {
         type = "instant",
-        target_effects =
-        {
+        target_effects = {
           {
             type = "create-entity",
             entity_name = "big-explosion",
@@ -37,15 +30,12 @@ data:extend({
           },
           {
             type = "nested-result",
-            action =
-            {
+            action = {
               type = "area",
               radius = 6,
-              action_delivery =
-              {
+              action_delivery = {
                 type = "instant",
-                target_effects =
-                {
+                target_effects = {
                   {
                     type = "damage",
                     damage = {amount = 325, type = "explosion"}
@@ -61,8 +51,7 @@ data:extend({
         }
       }
     },
-    animation =
-    {
+    animation = {
       filename = "__base__/graphics/entity/bullet/bullet.png",
       frame_count = 1,
       width = 3,

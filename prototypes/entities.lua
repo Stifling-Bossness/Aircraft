@@ -2,48 +2,48 @@ local ICONPATH = "__Aircraft__/graphics/icons/"
 local ENTITYPATH = "__Aircraft__/graphics/entity/"
 
 local function airplaneAnimation(name)
-  return {
-    layers = {
-      {
+  local anim = {}
+  anim.layers = {
+    {
+      filename = ENTITYPATH .. name .. "/" .. name .. "_spritesheet.png",
+      shift = util.by_pixel(9, -10),
+      hr_version = {
         filename = ENTITYPATH .. name .. "/hr-" .. name .. "_spritesheet.png",
-        width = 448,
-        height = 448,
-        scale = 0.5,
-        frame_count = 1,
-        direction_count = 36,
-        line_length = 6,
-        line_height = 6,
         shift = util.by_pixel(9, -10),
-        max_advance = 1,
-      },
-      {
+      }
+    },
+    {
+      filename = ENTITYPATH .. name .. "/" .. name .. "_spritesheet-light.png",
+      shift = util.by_pixel(9, -10),
+      draw_as_light = true,
+      hr_version = {
         filename = ENTITYPATH .. name .. "/hr-" .. name .. "_spritesheet-light.png",
-        width = 448,
-        height = 448,
-        scale = 0.5,
-        frame_count = 1,
-        direction_count = 36,
-        line_length = 6,
-        line_height = 6,
         shift = util.by_pixel(9, -10),
         draw_as_light = true,
-        max_advance = 1,
-      },
-      {
+      }
+    },
+    {
+      filename = ENTITYPATH .. name .. "/" .. name .. "_spritesheet-shadow.png",
+      shift = util.by_pixel(54, 35),
+      draw_as_shadow = true,
+      hr_version = {
         filename = ENTITYPATH .. name .. "/hr-" .. name .. "_spritesheet-shadow.png",
-        width = 448,
-        height = 448,
-        scale = 0.5,
-        frame_count = 1,
-        direction_count = 36,
-        line_length = 6,
-        line_height = 6,
         shift = util.by_pixel(54, 35),
         draw_as_shadow = true,
-        max_advance = 1,
-      },
-    }
+      }
+    },
   }
+
+  for _,layer in pairs(anim.layers) do
+    layer.width, layer.height = 224, 224
+    layer.hr_version.width, layer.hr_version.height = 448, 448
+    layer.hr_version.scale = 0.5
+    layer.frame_count, layer.hr_version.frame_count = 1, 1
+    layer.direction_count, layer.hr_version.direction_count = 36, 36
+    layer.line_length, layer.hr_version.line_length = 6, 6
+    layer.max_advance, layer.hr_version.max_advance = 1, 1
+  end
+  return anim
 end
 
 local function lightdef(shift, distance, intensity)
@@ -75,6 +75,20 @@ local function smokedef(shift, distance, height)
   }
 end
 
+local jetsounds = {
+  sound = { filename = "__Aircraft__/sounds/jet-loop.ogg", volume = 0.4 },
+  activate_sound = { filename = "__Aircraft__/sounds/jet-start.ogg", volume = 0.4 },
+  deactivate_sound = { filename = "__Aircraft__/sounds/jet-stop.ogg", volume = 0.4 },
+  match_speed_to_activity = false,
+}
+
+local carsounds = {
+  sound = { filename = "__base__/sound/car-engine.ogg", volume = 0.6 },
+  activate_sound = { filename = "__base__/sound/car-engine-start.ogg", volume = 0.6 },
+  deactivate_sound = { filename = "__base__/sound/car-engine-stop.ogg", volume = 0.6 },
+  match_speed_to_activity = true,
+}
+
 ---add in one function all the common parameteres between aircrafts
 local function add_recurrent_params(craft)
   craft.icon_size = 64
@@ -89,26 +103,13 @@ local function add_recurrent_params(craft)
   craft.render_layer = "air-object"
   craft.final_render_layer = "air-object"
   craft.tank_driving = true
-  --craft.immune_to_tree_impacts = true
-  --craft.immune_to_rock_impacts = true
-
   craft.sound_no_fuel = { { filename = "__base__/sound/fight/tank-no-fuel-1.ogg", volume = 0.6 } }
   craft.sound_minimum_speed = 0.15
   craft.vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 }
-  craft.working_sound = settings.startup["aircraft-sound-setting"].value and {
-    sound = { filename = "__Aircraft__/sounds/jet-loop.ogg", volume = 0.4 },
-    activate_sound = { filename = "__Aircraft__/sounds/jet-start.ogg", volume = 0.4 },
-    deactivate_sound = { filename = "__Aircraft__/sounds/jet-stop.ogg", volume = 0.4 },
-    match_speed_to_activity = false,
-  } or {
-    sound = { filename = "__base__/sound/car-engine.ogg", volume = 0.6 },
-    activate_sound = { filename = "__base__/sound/car-engine-start.ogg", volume = 0.6 },
-    deactivate_sound = { filename = "__base__/sound/car-engine-stop.ogg", volume = 0.6 },
-    match_speed_to_activity = true,
-  }
+  craft.working_sound = settings.startup["aircraft-sound-setting"].value and jetsounds or carsounds
   craft.open_sound = { filename = "__base__/sound/car-door-open.ogg", volume = 0.7 }
   craft.close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 }
-}
+  --craft.immune_to_tree_impacts = true --craft.immune_to_rock_impacts = true
 end
 
 local function resist(type, decrease, percent)

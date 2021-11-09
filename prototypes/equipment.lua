@@ -4,24 +4,21 @@ data:extend({
   { -- Aircraft Energy Shield
     type = "energy-shield-equipment",
     name = "aircraft-energy-shield",
-    sprite =
-    {
+    sprite = {
       filename = EQUIPPATH .. "aircraft_energy_shield.png",
       width = 128,
       height = 128,
       priority = "medium",
       scale = 0.5
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
       type = "full"
     },
     max_shield_value = 250,
     energy_per_shield = "18kJ",
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       buffer_capacity = "480kJ",
       input_flow_limit = "480kW",
@@ -33,22 +30,19 @@ data:extend({
   { -- Aircraft Afterburner
     type = "movement-bonus-equipment",
     name = "aircraft-afterburner",
-    sprite =
-    {
+    sprite = {
       filename = EQUIPPATH .. "aircraft_afterburner.png",
       width = 256,
       height = 128,
       priority = "medium",
       scale = 0.5
     },
-    shape =
-    {
+    shape = {
       width = 4,
       height = 2,
       type = "full"
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input"
     },

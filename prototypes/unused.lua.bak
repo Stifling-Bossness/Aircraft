@@ -839,3 +839,14 @@ for k, v in pairs(planes) do
   end
 end
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--[[ { -- Cheat machine (DO NOT USE)
+    type = "item-with-entity-data",
+    name = "cheat-machine",
+    icon = ICONPATH .. "Flying_Fortress_icon.png",
+    icon_size = 32,
+    flags = {"hidden"},
+    subgroup = "ammo",
+    place_result= "cheat-machine",
+    stack_size= 1,
+  }, ]]
