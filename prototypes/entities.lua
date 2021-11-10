@@ -62,12 +62,13 @@ local function lightdef(shift, distance, intensity)
   }
 end
 
-local function smokedef(shift, distance, height)
+local function smokedef(shift, radius, height)
   return {
     name = "smoke",
-    deviation = util.by_pixel(shift, distance),
     frequency = 60,
-    position = util.by_pixel(0, height),
+    deviation = util.by_pixel(2, 2), --position randomness
+    position = util.by_pixel(shift, radius),
+    height = height/32,
     starting_frame = 3,
     starting_frame_deviation = 5,
     starting_frame_speed = 5,
@@ -146,7 +147,7 @@ local gunship = { -- Gunship with Car sound
     braking_power = "450kW",
     burner = {
       fuel_inventory_size = 2,
-      smoke = { smokedef(-16, -74, 74), smokedef(-16, -74, 74) }
+      smoke = { smokedef(-16, 60, 38), smokedef(16, 60, 38) }
     },
     consumption = "650kW",
     friction = 0.003,
@@ -182,7 +183,7 @@ local cargo_plane = { -- Cargo Plane with Car sound
     braking_power = "650kW",
     burner = {
       fuel_inventory_size = 6,
-      smoke = { smokedef(0, -48, 64) }
+      smoke = { smokedef(0, 40, 36) }
     },
     consumption = "1250kW",
     friction = 0.010,
@@ -219,7 +220,7 @@ local jet = { -- Jet with Car sound
     braking_power = "2000kW",
     burner = {
       fuel_inventory_size = 4,
-      smoke = { smokedef(0, -74, 74) }
+      smoke = { smokedef(0, 62, 38) }
     },
     consumption = "850kW",
     friction = 0.001,
@@ -256,7 +257,7 @@ local flying_fortress = { -- Flying Fortress with Car sound
     braking_power = "850kW",
     burner = {
       fuel_inventory_size = 4,
-      smoke = { smokedef(0, -74, 74) }
+      smoke = { smokedef(0, 65, 38) }
     },
     consumption = "1850kW",
     friction = 0.015,
