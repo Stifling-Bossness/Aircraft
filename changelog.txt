@@ -1,14 +1,26 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.0
-Date: 8.11.2021.
+Date: 10.11.2021.
+  Updated by:
+    - snouz
   Graphics:
     - Upscaled graphics to HR (using ESRGAN and photoshop).
-    - icons / tech icons / equipment: bigger and redone in HD.
+    - redone/reimagined graphics of icons, technologies and equipment (in HD).
     - Aircrafts are a bit higher.
     - Cargo plane is a bit lighter and bluer.
     - Redone, adjusted and standarized shadows.
-    - Adjusted smokes.
+    - Adjusted and replaced smoke with light trails.
     - Added light layers and accurate light sources to each aircraft.
+    - New mod icon.
+    - Added low res versions.
+    - Aircraft guns icons are now weapons and not ammo.
+  Sounds:
+    - Overhauled jet engine sound (slower base sound, adapts to speed, removed start sound).
+    - Fixed machine-gun sounds (now goes brrrrr).
+    - Added vehicle deconstruct sound.
+  Changes:
+    - Planes no longer create ghost on death.
+    - Stack size of aircraft rocket launcher changed to 1.
   Optimization:
     - Code factorisation.
     - PNG losslessly optimized.

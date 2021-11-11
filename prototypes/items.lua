@@ -1,8 +1,12 @@
 local ICONPATH = "__Aircraft__/graphics/icons/"
 local heavygunshotsounds = {
-  begin_sound = { { filename = "__base__/sound/fight/heavy-gunshot-1.ogg", volume = 1 } },
-  middle_sound = { { filename = "__base__/sound/fight/heavy-gunshot-2.ogg", volume = 1 } },
-  end_sound = { { filename = "__base__/sound/fight/heavy-gunshot-3.ogg", volume = 1 } } }
+  variations = {
+    { filename = "__base__/sound/fight/heavy-gunshot-1.ogg", volume = 0.8 },
+    { filename = "__base__/sound/fight/heavy-gunshot-2.ogg", volume = 0.8 },
+    { filename = "__base__/sound/fight/heavy-gunshot-3.ogg", volume = 0.8 },
+    { filename = "__base__/sound/fight/heavy-gunshot-4.ogg", volume = 0.8 }
+  }
+}
 local flamethrowersounds = {
   begin_sound = { { filename = "__base__/sound/fight/flamethrower-start.ogg", volume = 0.7 } },
   middle_sound = { { filename = "__base__/sound/fight/flamethrower-mid.ogg", volume = 0.7 } },
@@ -84,14 +88,14 @@ data:extend({
       },
       projectile_creation_distance = 0.65,
       range = 30,
-      cyclic_sound = heavygunshotsounds,
+      sound = heavygunshotsounds,
     },
     stack_size = 1
   },
   { -- Aircraft rocket launcher
     type = "gun",
     name = "aircraft-rocket-launcher",
-    icon = "__base__/graphics/icons/explosive-rocket.png",
+    icon = "__base__/graphics/icons/rocket-launcher.png",
     icon_size = 64,
     flags = {"hidden"},
     subgroup = "gun",
@@ -107,7 +111,7 @@ data:extend({
       projectile_center = {-0.17, 0},
       sound = rocketlaunchersound,
     },
-    stack_size = 5
+    stack_size = 1
   },
   { -- Cargo plane machine gun
     type = "gun",
@@ -136,14 +140,14 @@ data:extend({
       },
       projectile_creation_distance = 0.65,
       range = 15,
-      cyclic_sound = heavygunshotsounds,
+      sound = heavygunshotsounds,
     },
     stack_size = 1
   },
   { -- Aircraft cannon
     type = "gun",
     name = "aircraft-cannon",
-    icon = "__base__/graphics/icons/explosive-cannon-shell.png",
+    icon = "__base__/graphics/icons/tank-cannon.png",
     icon_size = 64,
     flags = {"hidden"},
     subgroup = "gun",
@@ -186,14 +190,14 @@ data:extend({
       },
       projectile_creation_distance = 0.65,
       range = 40,
-      cyclic_sound = heavygunshotsounds,
+      sound = heavygunshotsounds,
     },
     stack_size = 1
   },
   { -- Flying Fortress rocket launcher
     type = "gun",
     name = "flying-fortress-rocket-launcher",
-    icon = "__base__/graphics/icons/explosive-rocket.png",
+    icon = "__base__/graphics/icons/rocket-launcher.png",
     icon_size = 64,
     flags = {"hidden"},
     subgroup = "gun",

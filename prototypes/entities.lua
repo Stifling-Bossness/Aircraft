@@ -1,6 +1,19 @@
 local ICONPATH = "__Aircraft__/graphics/icons/"
 local ENTITYPATH = "__Aircraft__/graphics/entity/"
 
+local function addcommonanimlines(anim)
+  for _,layer in pairs(anim.layers) do
+    layer.width, layer.height = 224, 224
+    layer.hr_version.width, layer.hr_version.height = 448, 448
+    layer.hr_version.scale = 0.5
+    layer.frame_count, layer.hr_version.frame_count = 1, 1
+    layer.direction_count, layer.hr_version.direction_count = 36, 36
+    layer.line_length, layer.hr_version.line_length = 6, 6
+    layer.max_advance, layer.hr_version.max_advance = 1, 1
+  end
+  return anim
+end
+
 local function airplaneAnimation(name)
   local anim = {}
   anim.layers = {
@@ -13,16 +26,6 @@ local function airplaneAnimation(name)
       }
     },
     {
-      filename = ENTITYPATH .. name .. "/" .. name .. "_spritesheet-light.png",
-      shift = util.by_pixel(9, -10),
-      draw_as_light = true,
-      hr_version = {
-        filename = ENTITYPATH .. name .. "/hr-" .. name .. "_spritesheet-light.png",
-        shift = util.by_pixel(9, -10),
-        draw_as_light = true,
-      }
-    },
-    {
       filename = ENTITYPATH .. name .. "/" .. name .. "_spritesheet-shadow.png",
       shift = util.by_pixel(54, 35),
       draw_as_shadow = true,
@@ -31,18 +34,27 @@ local function airplaneAnimation(name)
         shift = util.by_pixel(54, 35),
         draw_as_shadow = true,
       }
-    },
+    }
   }
+  addcommonanimlines(anim)
+  return anim
+end
 
-  for _,layer in pairs(anim.layers) do
-    layer.width, layer.height = 224, 224
-    layer.hr_version.width, layer.hr_version.height = 448, 448
-    layer.hr_version.scale = 0.5
-    layer.frame_count, layer.hr_version.frame_count = 1, 1
-    layer.direction_count, layer.hr_version.direction_count = 36, 36
-    layer.line_length, layer.hr_version.line_length = 6, 6
-    layer.max_advance, layer.hr_version.max_advance = 1, 1
-  end
+local function airplaneLightAnimation(name)
+  local anim = {}
+  anim.layers = {
+    {
+      filename = ENTITYPATH .. name .. "/" .. name .. "_spritesheet-light.png",
+      shift = util.by_pixel(9, -10),
+      draw_as_light = true,
+      hr_version = {
+        filename = ENTITYPATH .. name .. "/hr-" .. name .. "_spritesheet-light.png",
+        shift = util.by_pixel(9, -10),
+        draw_as_light = true,
+      }
+    }
+  }
+  addcommonanimlines(anim)
   return anim
 end
 
@@ -64,9 +76,12 @@ end
 
 local function smokedef(shift, radius, height)
   return {
-    name = "smoke",
+    --name = "smoke",
+    name = "aircraft-trail",
+    --frequency = 200,
     frequency = 60,
-    deviation = util.by_pixel(2, 2), --position randomness
+    --deviation = util.by_pixel(2, 2), --position randomness
+    deviation = util.by_pixel(0, 0), --position randomness
     position = util.by_pixel(shift, radius),
     height = height/32,
     starting_frame = 3,
@@ -77,10 +92,12 @@ local function smokedef(shift, radius, height)
 end
 
 local jetsounds = {
-  sound = { filename = "__Aircraft__/sounds/jet-loop.ogg", volume = 0.4 },
-  activate_sound = { filename = "__Aircraft__/sounds/jet-start.ogg", volume = 0.4 },
-  deactivate_sound = { filename = "__Aircraft__/sounds/jet-stop.ogg", volume = 0.4 },
-  match_speed_to_activity = false,
+  sound = { filename = "__Aircraft__/sounds/jet-loop.ogg", volume = 0.5 },
+  --activate_sound = { filename = "__Aircraft__/sounds/jet-start.ogg", volume = 0.5 },
+  deactivate_sound = { filename = "__Aircraft__/sounds/jet-stop.ogg", volume = 0.5 },
+  --match_speed_to_activity = false,
+  match_speed_to_activity = true,
+  fade_in_ticks = 30,
 }
 
 local carsounds = {
@@ -105,12 +122,29 @@ local function add_recurrent_params(craft)
   craft.final_render_layer = "air-object"
   craft.tank_driving = true
   craft.sound_no_fuel = { { filename = "__base__/sound/fight/tank-no-fuel-1.ogg", volume = 0.6 } }
-  craft.sound_minimum_speed = 0.15
   craft.vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 }
   craft.working_sound = settings.startup["aircraft-sound-setting"].value and jetsounds or carsounds
+  craft.sound_minimum_speed = 0.19
+  craft.sound_scaling_ratio = 0.06
   craft.open_sound = { filename = "__base__/sound/car-door-open.ogg", volume = 0.7 }
   craft.close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 }
+  craft.mined_sound = {filename = "__core__/sound/deconstruct-large.ogg",volume = 0.8}
+  craft.create_ghost_on_death = false
+  --craft.alert_icon_shift = {0,-1}
+  craft.minimap_representation = {
+    filename = ICONPATH .. "aircraft-minimap-representation.png",
+    flags = {"icon"},
+    size = {40, 40},
+    scale = 0.5
+  }
+  craft.selected_minimap_representation = {
+    filename = ICONPATH .. "aircraft-minimap-representation-selected.png",
+    flags = {"icon"},
+    size = {40, 40},
+    scale = 0.5
+  }
   --craft.immune_to_tree_impacts = true --craft.immune_to_rock_impacts = true
+  --craft.created_smoke = { smoke_name = "smoke" }
 end
 
 local function resist(type, decrease, percent)
@@ -128,6 +162,7 @@ local gunship = { -- Gunship with Car sound
     minable = {mining_time = 1, result = "gunship"},
     light = { lightdef(-43, -416, 5), lightdef(43, -416, 5) },
     animation = airplaneAnimation("gunship"),
+    light_animation = airplaneLightAnimation("gunship"),
     corpse = "medium-remnants",
         ----SPECS
     max_health = 500,
@@ -165,6 +200,7 @@ local cargo_plane = { -- Cargo Plane with Car sound
     minable = {mining_time = 1, result = "cargo-plane"},
     light = { lightdef(0, -416, 8) },
     animation = airplaneAnimation("cargo_plane"),
+    light_animation = airplaneLightAnimation("cargo_plane"),
     corpse = "medium-remnants",
         --SPECS
     max_health = 500,
@@ -201,6 +237,7 @@ local jet = { -- Jet with Car sound
     minable = {mining_time = 1, result = "jet"},
     light = { lightdef(-22, -416, 5), lightdef(22, -416, 5) },
     animation = airplaneAnimation("jet"),
+    light_animation = airplaneLightAnimation("jet"),
     corpse = "medium-remnants",
         --SPECS
     max_health = 250,
@@ -238,6 +275,7 @@ local flying_fortress = { -- Flying Fortress with Car sound
     minable = {mining_time = 1, result = "flying-fortress"},
     light = { lightdef(-22, -416, 5), lightdef(22, -416, 5) },
     animation = airplaneAnimation("flying_fortress"),
+    light_animation = airplaneLightAnimation("flying_fortress"),
     corpse = "medium-remnants",
         --SPECS
     max_health = 2000,

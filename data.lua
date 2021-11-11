@@ -1,3 +1,4 @@
+require("prototypes.particles")
 require("prototypes.projectiles")
 require("prototypes.entities")
 require("prototypes.items")
