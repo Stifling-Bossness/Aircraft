@@ -1,28 +1,28 @@
+local EQUIPPATH = "__Aircraft__/graphics/equipment/"
+
 data:extend({
   { -- Aircraft Energy Shield
     type = "energy-shield-equipment",
     name = "aircraft-energy-shield",
-    max_shield_value = 250,
-    energy_per_shield = "18kJ",
-    energy_source =
-    {
-      type = "electric",
-      buffer_capacity = "480kJ",
-      input_flow_limit = "480kW",
-      usage_priority = "primary-input"
+    sprite = {
+      filename = EQUIPPATH .. "aircraft_energy_shield.png",
+      width = 128,
+      height = 128,
+      priority = "medium",
+      scale = 0.5
     },
-    shape =
-    {
+    shape = {
       width = 2,
       height = 2,
       type = "full"
     },
-    sprite = 
-    {
-      filename = "__Aircraft__/graphics/Aircraft_Energy_Shield.png",
-      width = 64,
-      height = 64,
-      priority = "medium"
+    max_shield_value = 250,
+    energy_per_shield = "18kJ",
+    energy_source = {
+      type = "electric",
+      buffer_capacity = "480kJ",
+      input_flow_limit = "480kW",
+      usage_priority = "primary-input"
     },
     categories = {"aircraft"}
   },
@@ -30,21 +30,19 @@ data:extend({
   { -- Aircraft Afterburner
     type = "movement-bonus-equipment",
     name = "aircraft-afterburner",
-    sprite = 
-    {
-      filename = "__Aircraft__/graphics/Aircraft_Afterburner.png",
-      width = 128,
-      height = 64,
-      priority = "medium"
+    sprite = {
+      filename = EQUIPPATH .. "aircraft_afterburner.png",
+      width = 256,
+      height = 128,
+      priority = "medium",
+      scale = 0.5
     },
-    shape =
-    {
+    shape = {
       width = 4,
       height = 2,
       type = "full"
     },
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input"
     },
