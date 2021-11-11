@@ -283,9 +283,9 @@ data:extend({
         type = "direct",
         action_delivery = {
           type = "stream",
-          stream = "handheld-flamethrower-fire-stream",
-          max_length = 30,
-          duration = 320,
+          stream = "napalm-flamethrower-fire-stream",
+          --max_length = 30,
+          --duration = 320,
         }
       }
     },

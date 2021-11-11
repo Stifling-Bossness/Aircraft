@@ -6,6 +6,7 @@ Date: 10.11.2021.
   Graphics:
     - Upscaled graphics to HR (using ESRGAN and photoshop).
     - redone/reimagined graphics of icons, technologies and equipment (in HD).
+    - Napalm reimagined (huge orange fire, thick smoke)
     - Aircrafts are a bit higher.
     - Cargo plane is a bit lighter and bluer.
     - Redone, adjusted and standarized shadows.
@@ -19,6 +20,7 @@ Date: 10.11.2021.
     - Fixed machine-gun sounds (now goes brrrrr).
     - Added vehicle deconstruct sound.
   Changes:
+    - Rebalanced Napalm (big fire area, long range, more expensive)
     - Planes no longer create ghost on death.
     - Stack size of aircraft rocket launcher changed to 1.
   Optimization:

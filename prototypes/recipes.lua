@@ -151,8 +151,8 @@ data:extend({
 	    enabled = false,
 	    energy_required = 1,
 	    ingredients = {
-        {"flamethrower-ammo", 2},
-        {"iron-plate", 2},
+        {"flamethrower-ammo", 4},
+        {"iron-plate", 10},
       },
       result = "napalm",
     },
@@ -160,8 +160,8 @@ data:extend({
 	    enabled = false,
 	    energy_required = 2,
 	    ingredients = {
-        {"flamethrower-ammo", 4},
-        {"iron-plate", 4},
+        {"flamethrower-ammo", 8},
+        {"iron-plate", 20},
       },
       result = "napalm",
     },
