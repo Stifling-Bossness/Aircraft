@@ -3,6 +3,14 @@ Version: 1.8.0
 Date: 10.11.2021.
   Updated by:
     - snouz
+  Bugfixes:
+    - Fixed compatibility with Alien Biomes.
+    - Made traintunnels 0.0.11 incompatible.
+---------------------------------------------------------------------------------------------------
+Version: 1.8.0
+Date: 10.11.2021.
+  Updated by:
+    - snouz
   Graphics:
     - Upscaled graphics to HR (using ESRGAN and photoshop).
     - redone/reimagined graphics of icons, technologies and equipment (in HD).
