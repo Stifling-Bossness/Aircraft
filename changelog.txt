@@ -5,6 +5,7 @@ Date: 11.11.2021.
     - snouz
   Bugfixes:
     - Fixed compatibility with mods using jet-start.ogg (AAI Programmable Vehicles, Better cargo planes...)
+    - Refixed compatibility with Alien Biomes.
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.1
 Date: 11.11.2021.

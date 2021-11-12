@@ -51,8 +51,10 @@ napalm_fire_flame.fade_out_duration = 300
 
 local norendertiles = { "water", "deepwater", "water-green", "deepwater-green", "water-shallow", "water-mud", "water-wube" }
 for _,tile in pairs(norendertiles) do
-  if data.raw["tile"][tile] then
-    table.insert(napalm_fire_flame.burnt_patch_alpha_variations, {tile = tile, alpha = 0})
+  if not mods["alien-biomes"] then
+    if data.raw["tile"][tile] then
+      table.insert(napalm_fire_flame.burnt_patch_alpha_variations, {tile = tile, alpha = 0})
+    end
   end
 end
 
