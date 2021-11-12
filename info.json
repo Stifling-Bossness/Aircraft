@@ -1,6 +1,6 @@
 {
   "name": "Aircraft",
-  "version": "1.8.0",
+  "version": "1.8.2",
   "factorio_version": "1.1",
   "title": "Aircraft",
   "author": "SuicidalKid",
@@ -13,6 +13,7 @@
     "? boblibrary >= 0.18.0",
     "? bobwarfare >= 0.18.0",
     "? bobvehicleequipment >= 0.18.0",
-    "? electric-vehicles-reborn >= 0.1.1"
+    "? electric-vehicles-reborn >= 0.1.1",
+    "! traintunnels <= 0.0.11"
   ]
 }
