@@ -118,7 +118,7 @@ end
 --Helicopters Equipment change
 if settings.startup["heli-equipment-grid"].value == true then
 	if data.raw["car"]["heli-entity-_-"] then
-		data.raw["car"]["heli-entity-_-"].equipment_grid = "gunship-equipment-grid"
+		table.insert(data.raw["equipment-grid"]["heli-equipment-grid"].equipment_categories, "aircraft")
 	end
 end
 --Potential fix for incompatibility with Alternative Oil Processing (https://mods.factorio.com/mod/AlternativeOil)

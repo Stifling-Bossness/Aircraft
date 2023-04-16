@@ -30,6 +30,13 @@ data:extend(
   },
   {
     type = "bool-setting",
+	name = "heli-equipment-grid",
+	setting_type = "startup",
+	default_value = false,
+	order = "bb",
+  },
+  {
+    type = "bool-setting",
     name = "raven-tech",
     setting_type = "startup",
     default_value = false,

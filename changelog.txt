@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.5
+Date: 4.16.2023.
+  Locale:
+    - Fixed typo in aircraft energy shield research description. (Thanks MsAeraki)
+  Changes:
+    - Reduced volume of jet sounds.
+	- Added disclaimers to potentially problematic settings until they're properly fixed.
+  Compatibility:
+    - Changed Helicopter Grid setting to enable Helicopters to use the aircraft energy shields and afterburners.
+---------------------------------------------------------------------------------------------------
 Version: 1.8.4
 Date: 11.14.2021.
   Locale:

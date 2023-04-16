@@ -92,9 +92,9 @@ local function smokedef(shift, radius, height)
 end
 
 local jetsounds = {
-  sound = { filename = "__Aircraft__/sounds/jet-loop.ogg", volume = 0.5 },
-  --activate_sound = { filename = "__Aircraft__/sounds/jet-start.ogg", volume = 0.5 },
-  deactivate_sound = { filename = "__Aircraft__/sounds/jet-stop.ogg", volume = 0.5 },
+  sound = { filename = "__Aircraft__/sounds/jet-loop.ogg", volume = 0.3 },
+  --activate_sound = { filename = "__Aircraft__/sounds/jet-start.ogg", volume = 0.3 },
+  deactivate_sound = { filename = "__Aircraft__/sounds/jet-stop.ogg", volume = 0.3 },
   --match_speed_to_activity = false,
   match_speed_to_activity = true,
   fade_in_ticks = 30,
