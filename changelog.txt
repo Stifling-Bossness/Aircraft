@@ -1,23 +1,28 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.6
+Date: 17.4.2023.
+  Fixes:
+    - Fixed changelog formatting to properly appear.
+---------------------------------------------------------------------------------------------------
 Version: 1.8.5
-Date: 4.16.2023.
+Date: 16.4.2023.
   Locale:
     - Fixed typo in aircraft energy shield research description. (Thanks MsAeraki)
   Changes:
     - Reduced volume of jet sounds.
-	- Added disclaimers to potentially problematic settings until they're properly fixed.
+    - Added disclaimers to potentially problematic settings until they're properly fixed.
   Compatibility:
     - Changed Helicopter Grid setting to enable Helicopters to use the aircraft energy shields and afterburners.
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.4
-Date: 11.14.2021.
+Date: 14.11.2021.
   Locale:
     - Updated German translation. (Thanks ST-DDT)
   Changes:
     - Updated outdated dependencies.
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.3
-Date: 11.14.2021.
+Date: 14.11.2021.
   Locale:
     - Updated Japanese translation. (Thanks shelaf)
 ---------------------------------------------------------------------------------------------------
