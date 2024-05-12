@@ -111,6 +111,8 @@ local carsounds = {
 local function add_recurrent_params(craft)
   craft.icon_size = 64
   craft.flags = {"placeable-neutral", "player-creation", "placeable-off-grid"}
+  -- Overriding the "car" default disables acid puddle damage.
+  craft.trigger_target_mask = { "common" }
   craft.has_belt_immunity = settings.startup["aircraft-belt-immunity"].value or false
   craft.dying_explosion = "medium-explosion"
   craft.terrain_friction_modifier = 0
