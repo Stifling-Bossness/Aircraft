@@ -130,6 +130,15 @@ if settings.startup["non-combat-mode"].value == true then
 	data.raw["technology"]["gunships"].enabled = false
 	data.raw["technology"]["flying-fortress"].enabled = false
 end
+if settings.startup["non-combat-mode"].value == false then
+	data.raw["recipe"]["gunship"].enabled = true
+	data.raw["recipe"]["jet"].enabled = true
+	data.raw["recipe"]["flying-fortress"].enabled = true
+	data.raw["technology"]["napalm"].prerequisites = {"flammables"}
+	data.raw["technology"]["jets"].enabled = true
+	data.raw["technology"]["gunships"].enabled = true
+	data.raw["technology"]["flying-fortress"].enabled = true
+end
 --Inserter Immunity
 if settings.startup["inserter-immunity"].value == true then
 	table.insert(data.raw["car"]["gunship"].flags, "no-automated-item-removal")

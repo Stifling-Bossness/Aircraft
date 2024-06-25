@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.9
+Date: 24-6-2024
+  Locale:
+    - Added Ukrainian translation. (Thanks IgorLutiy)
+  Changes:
+    - Changed the author name to my new username.
+  Fixes:
+    - Attempt at fixing the non-combat mode bug.
+---------------------------------------------------------------------------------------------------
 Version: 1.8.8
 Date: 26-5-2024
   Locale:

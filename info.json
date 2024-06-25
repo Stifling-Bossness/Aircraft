@@ -1,9 +1,9 @@
 {
   "name": "Aircraft",
-  "version": "1.8.8",
+  "version": "1.8.9",
   "factorio_version": "1.1",
   "title": "Aircraft",
-  "author": "SuicidalKid",
+  "author": "Thomasnotused",
   "description": "Adds 4 aircraft, each with their benefits and drawbacks, to allow for more biter-killing fun!",
   "homepage": "https://forums.factorio.com/viewtopic.php?f=120&t=18714",
   "dependencies": [
