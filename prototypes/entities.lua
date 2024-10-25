@@ -58,17 +58,6 @@ local function airplaneLightAnimation(name)
   return anim
 end
 
--- Updated collision mask definition for Factorio 2.0
-local function getCollisionMask()
-  return {
-    "object-layer",  -- Basic collision with objects
-    "player-layer",  -- Collision with players
-    "train-layer"    -- Collision with trains
-  }
-end
-
-
-
 local function lightdef(shift, distance, intensity)
   return {
     type = "oriented",
