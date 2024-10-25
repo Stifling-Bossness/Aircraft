@@ -117,7 +117,10 @@ local function add_recurrent_params(craft)
   craft.dying_explosion = "medium-explosion"
   craft.terrain_friction_modifier = 0
   craft.collision_box = {{-0.9, -1.3}, {0.9, 1.3}}
-  craft.collision_mask = {}
+  -- Original
+  --craft.collision_mask = getCollisionMask() -- Updated collision mask
+  -- added due to 2.0 modding API changes
+  craft.collision_mask = { layers = {} }
   craft.selection_box = {{-0.9, -1.3}, {0.9, 1.3}}
   craft.selection_priority = 60
   craft.render_layer = "air-object"
@@ -182,7 +185,8 @@ local gunship = { -- Gunship with Car sound
         --MOVEMENT
     effectivity = 0.7,
     braking_power = "450kW",
-    burner = {
+    energy_source = {
+      type = "burner",
       fuel_inventory_size = 2,
       smoke = { smokedef(-16, 60, 38), smokedef(16, 60, 38) }
     },
@@ -219,7 +223,8 @@ local cargo_plane = { -- Cargo Plane with Car sound
         --MOVEMENT
     effectivity = 1,
     braking_power = "650kW",
-    burner = {
+    energy_source = {
+      type = "burner",
       fuel_inventory_size = 6,
       smoke = { smokedef(0, 40, 36) }
     },
@@ -257,7 +262,8 @@ local jet = { -- Jet with Car sound
         --MOVEMENT
     effectivity = 0.9,
     braking_power = "2000kW",
-    burner = {
+    energy_source = {
+      type = "burner",
       fuel_inventory_size = 4,
       smoke = { smokedef(0, 62, 38) }
     },
@@ -295,7 +301,8 @@ local flying_fortress = { -- Flying Fortress with Car sound
         --MOVEMENT
     effectivity = 2.3,
     braking_power = "850kW",
-    burner = {
+	energy_source = {
+      type = "burner",
       fuel_inventory_size = 4,
       smoke = { smokedef(0, 65, 38) }
     },

@@ -29,7 +29,12 @@ napalm_particle.tint = napalm_tint
 
 local napalm_fire_flame = table.deepcopy(data.raw["fire"]["fire-flame"])
 napalm_fire_flame.name = "napalm_fire_flame"
-napalm_fire_flame.emissions_per_second = 0.050
+--napalm_fire_flame.emissions_per_second = 0.050
+--change in 2.0 modding API
+napalm_fire_flame.emissions = {
+    type = "pollution",
+    amount = 0.050
+}
 napalm_fire_flame.damage_per_tick = {amount = 9 / 60, type = "fire"}
 napalm_fire_flame.maximum_damage_multiplier = 6
 napalm_fire_flame.spread_delay = 5
