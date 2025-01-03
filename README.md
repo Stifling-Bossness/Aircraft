@@ -1,3 +1,5 @@
+## Succeeded by [Aircraft-space-age](https://github.com/nicholasgower/Aircraft-Space-Age)
+
 The Aircraft mod for Factorio
 
 The Aircraft mod adds various aircraft to Factorio. Factorio is a game about building and managing factories while also defending yourself from the native population who do not like the factory pollution destroying the planet. The later stages of the game can be boring due to the constant traveling back and forth between factories. The added aircraft all have different uses:
